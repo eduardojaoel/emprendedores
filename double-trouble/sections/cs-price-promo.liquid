@@ -1,0 +1,217 @@
+{{ 'cs-price-promo.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .price-promo-item {
+    background-color: {{ section.settings.color_scheme.settings.background | color_lighten: 2.5 }};
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .price-promo-item:hover {
+      background-color: {{ section.settings.color_scheme.settings.background | color_lighten: 4 }};
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="price-promo-title inline-richtext {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} title-wrapper--no-top-margin">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    {% if section.blocks.size > 0 %}
+      <div class="price-promo-container center">
+        {% for block in section.blocks %}
+          <a
+            {% if block.settings.url != blank %}
+              href="{{ block.settings.url }}"
+            {% endif %}
+            class="price-promo-item full-unstyled-link"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.title != blank %}
+              <h3 class="price-promo-item-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if section.settings.discount_label != blank %}
+              <p class="price-promo-item-discount">
+                {{ section.settings.discount_label }}
+              </p>
+            {% endif %}
+            {% if section.settings.from_label %}
+              <p class="price-promo-item-from">
+                {{ section.settings.from_label }}
+              </p>
+            {% endif %}
+            {% if block.settings.price != blank %}
+              <p class="price-promo-item-price">
+                {{ block.settings.price | times: 100 | money_without_trailing_zeros }}
+              </p>
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Precios de descuento",
+  "tag": "section",
+  "class": "section cs-price-promo",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Promociones de precios",
+      "label": "t:sections.collage.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center",
+      "label": "Alineación del título"
+    },
+    {
+      "type": "text",
+      "id": "discount_label",
+      "label": "Texto de descuento",
+      "default": "En descuento"
+    },
+    {
+      "type": "text",
+      "id": "from_label",
+      "label": "Texto de precio base",
+      "default": "desde"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount-item",
+      "name": "Descuento",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Categoría",
+          "default": "Categoría"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Precio base (desde)",
+          "default": 10
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Enlace a la colección"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Precios de descuento",
+      "blocks": [
+        {
+          "type": "discount-item",
+          "settings": {
+            "title": "Categoría",
+            "price": 10
+          }
+        },
+        {
+          "type": "discount-item",
+          "settings": {
+            "title": "Categoría",
+            "price": 20
+          }
+        },
+        {
+          "type": "discount-item",
+          "settings": {
+            "title": "Categoría",
+            "price": 30
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
