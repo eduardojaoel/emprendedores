@@ -27,6 +27,27 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  .banner.page-width {
+    padding: 0;
+  }
+  @media screen and (min-width: 750px) {
+    .banner.page-width {
+      padding: 0 5rem;
+    }
+    .banner.page-width .banner__media {
+      width: calc(100% - 10rem);
+      left: 5rem;
+      right: 5rem;
+    }
+    .banner.page-width::after, .banner.page-width .banner__media::after {
+      width: calc(100% - 10rem);
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .banner:not(.banner--mobile-bottom) .banner__box {
+      padding: 10rem 1.5rem;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -53,7 +74,7 @@
 
 <div
   id="Banner-{{ section.id }}"
-  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="banner {% if section.settings.reduce_to_page_width == true %}page-width {% endif %}banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -84,7 +105,7 @@
     </div>
   {%- elsif section.settings.image_2 == blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
@@ -193,7 +214,7 @@
       "step": 10,
       "unit": "%",
       "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
-      "default": 0
+      "default": 40
     },
     {
       "type": "select",
@@ -267,7 +288,7 @@
     {
       "type": "checkbox",
       "id": "show_text_box",
-      "default": true,
+      "default": false,
       "label": "t:sections.image-banner.settings.show_text_box.label"
     },
     {
@@ -294,7 +315,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "default": "scheme-4"
     },
     {
       "type": "header",
@@ -359,6 +380,12 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "reduce_to_page_width",
+      "label": "Ajustar al ancho de página en escritorio",
+      "default": true
     }
   ],
   "blocks": [
@@ -423,7 +450,7 @@
               "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
             }
           ],
-          "default": "body",
+          "default": "subtitle",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
         }
       ]
