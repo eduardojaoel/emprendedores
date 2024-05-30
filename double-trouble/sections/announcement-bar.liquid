@@ -18,6 +18,13 @@
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+{% style %}
+  #shopify-section-{{ section.id }} .announcement-bar__message {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{% endstyle %}
+
 <div
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
   {{ block.shopify_attributes }}
@@ -42,9 +49,11 @@
           {%- endif -%}
           <p class="announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
-              {% render 'icon-arrow' %}
-            {%- endif -%}
+            {% comment %}
+              {%- if section.blocks.first.settings.link != blank -%}
+                {% render 'icon-arrow' %}
+              {%- endif -%}
+            {% endcomment %}
           </p>
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
@@ -101,9 +110,11 @@
                     {%- endif -%}
                     <p class="announcement-bar__message h5">
                       <span>{{ block.settings.text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
-                        {% render 'icon-arrow' %}
-                      {%- endif -%}
+                      {% comment %}
+                        {%- if block.settings.link != blank -%}
+                          {% render 'icon-arrow' %}
+                        {%- endif -%}
+                      {% endcomment %}
                     </p>
                     {%- if block.settings.link != blank -%}
                       </a>
@@ -233,6 +244,28 @@
       "id": "enable_language_selector",
       "default": false,
       "label": "t:sections.announcement-bar.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "Ajustes de espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1
     }
   ],
   "blocks": [
