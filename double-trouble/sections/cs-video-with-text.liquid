@@ -37,8 +37,8 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding page-width">
-    <div class="video-with-text-container">
-      <div class="video-with-text__video">
+    <div class="cs-video-with-text-container">
+      <div class="cs-video-with-text__video">
         <deferred-media
           class="video-section__media deferred-media gradient {% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           data-media-id="{{ video_id }}"
@@ -59,7 +59,7 @@
                 | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
               }}
             {%- else -%}
-              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
             {%- endif -%}
             <span class="deferred-media__poster-button motion-reduce">
               {%- render 'icon-play' -%}
@@ -105,7 +105,7 @@
         </deferred-media>
       </div>
 
-      <div class="video-with-text__text">
+      <div class="cs-video-with-text__text">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
