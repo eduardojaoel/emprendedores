@@ -1,0 +1,25 @@
+/* Heading */
+.cs-product-slider .cs-heading {
+  margin-top: 0;
+  line-height: 1.15;
+}
+/* Splide */
+.cs-product-slider .cs-slider.is-overflow.has-pagination .splide__track {
+  margin-bottom: 4.2rem;
+}
+.cs-product-slider .cs-slider.insufficent-slides:not(.is-loop) .splide__list {
+  justify-content: center;
+}
+.cs-product-slider .splide__pagination {
+  top: 100%;
+  bottom: auto;
+  padding: 2.5rem 1rem 0;
+}
+.cs-product-slider .splide__pagination__page {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cs-product-slider .splide__pagination__page.is-active {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1);
+}
+/* Custom */
