@@ -2,13 +2,66 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_NQiaC4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_aarfwH": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aarfwH"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_DDrRhV": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WKBNGt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Double Trouble nace de la unión de dos personas con el mismo nombre. El primero, un exitoso comerciante llamado Jacky, con más de 20 años distribuyendo moda para cada esquina de Latinoamérica. La segunda, Jacky, una emprendedora diseñadora de modas graduada con los más altos honores en la Universidad de Palermo, Buenos Aires, Argentina. De este increíble enlace, sale la más divertida y vanguardista empresa de moda femenina, Double Jacky,  Double Trouble, donde tienes lo último de las capitales de la moda como son New York, Los Angeles, Milán, París, Sao Pãulo, en la puerta de tu casa, a sólo un click de distancia.  A su vez, tienes la oportunidad de pertencer al prestigioso DT club, donde inclusive pedirás la moda mucho antes de que este en el mercado.  Así que a acomodarse, relajarse y entrar a la suprema diversión que te brinda esta ventana de fashion para Latinoamérica y el mundo!<br\/><br\/><br\/>Con mucho amor y cariño,<br\/><br\/>Double Trouble Inc.😘<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_WKBNGt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_NQiaC4",
+    "rich_text_DDrRhV"
   ]
 }

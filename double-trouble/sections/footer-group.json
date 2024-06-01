@@ -5,6 +5,7 @@
     "cs_newsletter_row_gm4T8d": {
       "type": "cs-newsletter-row",
       "settings": {
+        "submit_label": "Suscríbete",
         "show_border": true,
         "social_title": "Síguenos en nuestras redes sociales",
         "color_scheme": "",
@@ -24,11 +25,11 @@
             "show_icons": false,
             "email_label": "correo@correocorp.com",
             "email_link": "",
-            "whatsapp_label": "6XXXXXXX",
+            "whatsapp_label": "",
             "whatsapp_link": "",
-            "phone_label": "6XXXXXXX",
+            "phone_label": "Tel. 507 6XXX-XXXX",
             "phone_link": "",
-            "location_label": "Dirección",
+            "location_label": "",
             "location_link": ""
           }
         },

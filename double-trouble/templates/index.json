@@ -129,7 +129,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": false,
-        "reduce_to_page_width": true
+        "reduce_to_page_width": false
       }
     },
     "cs_product_slider_qCFUCL": {
@@ -152,7 +152,7 @@
         "slides_gap": 24,
         "slides_padding": 0,
         "enable_arrows_mobile": false,
-        "slides_mobile_per_view": "1",
+        "slides_mobile_per_view": "2",
         "slides_mobile_gap": 10,
         "slides_mobile_padding": 0,
         "color_scheme": "",
@@ -180,7 +180,7 @@
         "slides_gap": 24,
         "slides_padding": 0,
         "enable_arrows_mobile": false,
-        "slides_mobile_per_view": "1",
+        "slides_mobile_per_view": "2",
         "slides_mobile_gap": 10,
         "slides_mobile_padding": 0,
         "color_scheme": "",
@@ -270,7 +270,7 @@
         "slides_gap": 24,
         "slides_padding": 0,
         "enable_arrows_mobile": false,
-        "slides_mobile_per_view": "1",
+        "slides_mobile_per_view": "2",
         "slides_mobile_gap": 10,
         "slides_mobile_padding": 0,
         "color_scheme": "",
@@ -331,7 +331,7 @@
         "heading": "Los más vendidos",
         "heading_size": "2.5",
         "heading_alignment": "center",
-        "collection": "",
+        "collection": "10-rack",
         "image_ratio": "portrait",
         "enable_animation": false,
         "show_secondary_image": false,
@@ -345,7 +345,7 @@
         "slides_gap": 24,
         "slides_padding": 0,
         "enable_arrows_mobile": false,
-        "slides_mobile_per_view": "1",
+        "slides_mobile_per_view": "2",
         "slides_mobile_gap": 10,
         "slides_mobile_padding": 0,
         "color_scheme": "",
