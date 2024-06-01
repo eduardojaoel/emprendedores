@@ -1,0 +1,9 @@
+.icon {
+  overflow: visible;
+}
+.card-information .price-item {
+  color: #1e2a50;
+}
+.card__information .card__heading.h5 {
+  font-size: 1.4rem;
+}
