@@ -59,10 +59,10 @@
 .cs-product-slider .splide__arrow {
   height: 4rem;
   width: 4rem;
-  top: 40%;
+  top: 42.5%;
 }
 .cs-product-slider .cs-slider:not(.has-items) .splide__arrow {
-  top: 41.2%;
+  top: 44.5%;
 }
 .cs-product-slider .splide__arrow svg {
   fill: rgb(var(--color-foreground));
