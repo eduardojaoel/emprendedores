@@ -2,6 +2,16 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "cs_newsletter_row_gm4T8d": {
+      "type": "cs-newsletter-row",
+      "settings": {
+        "show_border": true,
+        "social_title": "Síguenos en nuestras redes sociales",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -9,38 +19,38 @@
           "type": "brand_information",
           "settings": {
             "image": "shopify:\/\/shop_images\/dt_footer_logo_300.png",
-            "image_width": 115,
-            "alignment": "center",
-            "show_icons": true,
+            "image_width": 100,
+            "alignment": "left",
+            "show_icons": false,
             "email_label": "correo@correocorp.com",
             "email_link": "",
             "whatsapp_label": "6XXXXXXX",
             "whatsapp_link": "",
             "phone_label": "6XXXXXXX",
             "phone_link": "",
-            "location_label": "",
+            "location_label": "Dirección",
             "location_link": ""
           }
         },
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Información",
+            "menu": "v2-footer-1"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Políticas",
             "menu": "footer"
           }
         },
-        "footer-2": {
+        "text_r4qjfL": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Contáctanos",
+            "subtext": "<p>Ubicación del local<\/p><p>Lunes-Viernes 8am a 5pm<\/p><p>Sábados - 10am a 4pm<\/p><p>Domingos & Días feriados - Cerrado <\/p>"
           }
         }
       },
@@ -48,25 +58,26 @@
         "brand_information_DgAhNf",
         "footer-0",
         "footer-1",
-        "footer-2"
+        "text_r4qjfL"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "cs_newsletter_row_gm4T8d",
     "footer"
   ]
 }
