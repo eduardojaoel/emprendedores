@@ -1472,3 +1472,82 @@ a.product__text {
     border: none;
   }
 }
+/* Custom */
+/* @media only screen and (min-width: 750px) {
+  .vertical-thumbnails media-gallery {
+    display: flex;
+    gap: 2rem;
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider {
+    width: 15%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider .slider-button {
+    width: 100%;
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider .slider-button .icon {
+    height: 0.9rem;
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider .slider-button--prev .icon {
+    transform: rotate(180deg);
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider .slider-button--next .icon {
+    transform: rotate(0deg);
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider ul.thumbnail-list {
+    width: 100%;
+    flex: none;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+  .vertical-thumbnails media-gallery slider-component.thumbnail-slider ul.thumbnail-list li.thumbnail-list__item {
+    width: 100%;
+  }
+  .vertical-thumbnails media-gallery slider-component:not(.thumbnail-slider) {
+    order: 1;
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .thumbnail-slider .thumbnail-list.slider--tablet-up {
+    display: flex;
+    padding: 0.5rem;
+    flex: 1;
+    scroll-padding-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .slider.slider--tablet-up {
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media screen and (min-width: 900px) {
+  .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+    width: calc(20% - 0.8rem);
+  }
+}
+ */
+@media only screen and (min-width: 750px) {
+  .thumbnail-slider.hide-desktop {
+    display: none;
+  }
+  .vertical-thumbnails .media-gallery {
+    display: flex;
+  }
+  .vertical-thumbnails .vertical-slider {
+    flex: 1 0 auto;
+  }
+  .vertical-thumbnails .gallery-slider {
+    flex: 1 1 100%;
+  }
+}
