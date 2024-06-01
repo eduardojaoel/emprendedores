@@ -508,3 +508,26 @@
     }
   }
 }
+/* Custom */
+
+.footer-block__icons .icon {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+.footer-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-block__icons .icon-wrapper {
+  display: flex;
+}
+.footer-email__label {
+  line-height: 1.25;
+}
+.footer-block__icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}

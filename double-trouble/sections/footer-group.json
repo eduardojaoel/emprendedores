@@ -5,6 +5,23 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_information_DgAhNf": {
+          "type": "brand_information",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dt_footer_logo_300.png",
+            "image_width": 115,
+            "alignment": "center",
+            "show_icons": true,
+            "email_label": "correo@correocorp.com",
+            "email_link": "",
+            "whatsapp_label": "6XXXXXXX",
+            "whatsapp_link": "",
+            "phone_label": "6XXXXXXX",
+            "phone_link": "",
+            "location_label": "",
+            "location_link": ""
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -28,6 +45,7 @@
         }
       },
       "block_order": [
+        "brand_information_DgAhNf",
         "footer-0",
         "footer-1",
         "footer-2"
@@ -36,6 +54,7 @@
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
