@@ -277,6 +277,81 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "collection_list_8yFxE8": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_MfjWqF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_cqdnpd": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_3rA7BU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_NAKiiD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_MfjWqF",
+        "featured_collection_cqdnpd",
+        "featured_collection_3rA7BU",
+        "featured_collection_NAKiiD"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_alignment": "left",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "collection_title_alignment": "center",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_product_slider_jf9RJf": {
+      "type": "cs-product-slider",
+      "settings": {
+        "heading": "Los más vendidos",
+        "heading_size": "2.5",
+        "heading_alignment": "center",
+        "collection": "",
+        "image_ratio": "portrait",
+        "enable_animation": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "content_alignment": "center",
+        "products_to_show": 16,
+        "slider_type": "loop",
+        "enable_arrows": true,
+        "enable_pagination": true,
+        "slides_per_view": 4,
+        "slides_gap": 24,
+        "slides_padding": 0,
+        "enable_arrows_mobile": false,
+        "slides_mobile_per_view": "1",
+        "slides_mobile_gap": 10,
+        "slides_mobile_padding": 0,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -286,6 +361,8 @@
     "cs_product_slider_qCFUCL",
     "cs_product_slider_pczf6m",
     "cs_collage_ejn8VB",
-    "cs_product_slider_cQkJjw"
+    "cs_product_slider_cQkJjw",
+    "collection_list_8yFxE8",
+    "cs_product_slider_jf9RJf"
   ]
 }
