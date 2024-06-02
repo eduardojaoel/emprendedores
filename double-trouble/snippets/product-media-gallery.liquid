@@ -41,13 +41,6 @@
     assign media_width = 0.45
   endif
 -%}
-<div>
-  <p>
-    Tiene slider vertical: {% if vertical_slider == true %}Sí{% else %}No{% endif %}
-  </p>
-  <p>Tiene {{ media_count }} miniaturas</p>
-  <p>El layout de la galería es: {{ gallery_layout }}</p>
-</div>
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
@@ -56,13 +49,87 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  {% if vertical_slider == true %}
+  {% if vertical_slider == true and media_count > 0 and gallery_layout == 'thumbnail_slider' %}
     <div class="vertical-slider">
-      <p>Galería Splide JS</p>
+      <div
+        id="cs-slider__{{ section.id }}"
+        class="cs-slider splide{% if media_count < 6 %} insufficent-slides{% endif %}"
+        section-id="shopify-section-{{ section.id }}"
+        role="group"
+        aria-label="Vertical slider"
+        data-splide='
+          {
+            "type": "slide",
+            "direction": "ttb",
+            "height": 580,
+            {% if media_count > 5 %}"focus": "center",{% endif %}
+            "isNavigation": true,
+            "perPage": 5,
+            "drag": true,
+            "arrows": true,
+            "pagination": false,
+            "gap": "20px",
+            "perMove": 1,
+            "breakpoints": {
+              "749": {
+                "destroy": true
+              }
+            }
+          }
+        '
+      >
+        <div
+          class="splide__track"
+        >
+          <ul class="splide__list">
+            {% for media in product.media %}
+              <li class="vertical-slider__item splide__slide">
+                <button class="vertical-slider__button" data-scroll-to="{{ media.position }}">
+                  {{
+                    media.preview_image
+                    | image_url: width: 416
+                    | image_tag:
+                      loading: 'lazy',
+                      sizes: '100px',
+                      widths: '54, 74, 104, 162, 208, 324, 416',
+                      id: thumbnail_id,
+                      alt: media.alt
+                    | escape
+                  }}
+                </button>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
+    <script>
+      function scrollTo() {
+        const buttons = document.querySelectorAll('.vertical-slider__button');
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const scrollToIndex = parseInt(button.getAttribute('data-scroll-to'), 10);
+            setActiveClass(scrollToIndex);
+          });
+        });
+      }
+
+      function setActiveClass(index) {
+        const items = document.querySelectorAll('ul.product__media-list li');
+        items.forEach((item) => item.classList.remove('is-active'));
+
+        if (index > 0 && index <= items.length) {
+          items[index - 1].classList.add('is-active');
+        }
+      }
+
+      // Inicializar la función scrollTo cuando se carga el documento
+      document.addEventListener('DOMContentLoaded', scrollTo);
+      document.addEventListener('shopify:section:load', scrollTo);
+    </script>
   {% endif %}
   <slider-component id="GalleryViewer-{{ section.id }}" class="gallery-slider slider-mobile-gutter">
-    <p>Slider #1</p>
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
@@ -189,7 +256,6 @@
       id="GalleryThumbnails-{{ section.id }}"
       class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% if vertical_slider == true %} hide-desktop{% endif %}{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
-      <p>Slider #2</p>
       <button
         type="button"
         class="slider-button slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
