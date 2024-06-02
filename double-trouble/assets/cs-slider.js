@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', findSliders);
 
 document.addEventListener('shopify:section:load', (event) => {
   document.querySelectorAll('.cs-slider').forEach((slider) => {
+    /* console.log(event.target.id);
+    console.log(slider.getAttribute('section-id')); */
     if (event.target.id == slider.getAttribute('section-id')) {
       new Splide(`#${slider.id}`).mount();
     }
