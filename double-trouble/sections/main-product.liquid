@@ -463,7 +463,13 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                <div class="variant-picker-container color-{{ block.settings.variant_color_scheme }}">
+                  {% render 'product-variant-picker',
+                    product: product,
+                    block: block,
+                    product_form_id: product_form_id
+                  %}
+                </div>
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -926,6 +932,12 @@
             }
           ],
           "default": "circle"
+        },
+        {
+          "type": "color_scheme",
+          "id": "variant_color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
         }
       ]
     },
