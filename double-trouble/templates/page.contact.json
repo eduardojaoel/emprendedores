@@ -2,17 +2,113 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "form": {
+    "cs_contact_info_e3hDTz": {
+      "type": "cs-contact-info",
+      "blocks": {
+        "item_tiDTiK": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Escríbenos al WhatsApp",
+            "content": "",
+            "button_label": "Whatsapp",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "whatsapp",
+            "social_icons": false
+          }
+        },
+        "item_Y6AW9X": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Teléfono",
+            "content": "",
+            "button_label": "+507 6XXX-XXXX",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "phone",
+            "social_icons": false
+          }
+        },
+        "item_NhEmtk": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Correo electrónico",
+            "content": "",
+            "button_label": "email@email.com",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "mail",
+            "social_icons": false
+          }
+        },
+        "item_XL6BWR": {
+          "type": "item",
+          "settings": {
+            "column": "second",
+            "title": "Horario",
+            "content": "Lunes a Sábado: 9:30 a.m. - 6:30 p.m.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "icon": "none",
+            "social_icons": false
+          }
+        },
+        "item_gPfFBn": {
+          "type": "item",
+          "settings": {
+            "column": "second",
+            "title": "Redes Sociales",
+            "content": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "icon": "none",
+            "social_icons": true
+          }
+        }
+      },
+      "block_order": [
+        "item_tiDTiK",
+        "item_Y6AW9X",
+        "item_NhEmtk",
+        "item_XL6BWR",
+        "item_gPfFBn"
+      ],
+      "settings": {
+        "heading": "Contáctanos",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "desktop_columns": "1",
+        "location_title": "Ubicación",
+        "location_content": "Calle, Numero de Calle, descripción detallada del local",
+        "image_aspect_ratio": "3-2",
+        "location_iframe": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3940.9546680801373!2d-79.52306962632747!3d8.9763187898141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9b87958da3d%3A0xfeb3bc0ea2df1a40!2sDouble%20trouble%20panama!5e0!3m2!1ses-419!2spa!4v1717384538843!5m2!1ses-419!2spa\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+        "location_button_label": "Visítanos",
+        "location_button_link": "https:\/\/maps.app.goo.gl\/XxtFXD9mtCBm4F3Q9",
+        "location_button_style": "secondary",
+        "location_icon": "map",
+        "location_social_icons": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "contact_form_tE8rhH": {
       "type": "contact-form",
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -20,6 +116,7 @@
   },
   "order": [
     "main",
-    "form"
+    "cs_contact_info_e3hDTz",
+    "contact_form_tE8rhH"
   ]
 }
