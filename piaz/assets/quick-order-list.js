@@ -106,6 +106,7 @@ if (!customElements.get('quick-order-list')) {
       }
 
       cartUpdateUnsubscriber = undefined;
+      sectionRefreshUnsubscriber = undefined;
 
       onSubmit(event) {
         event.preventDefault();
@@ -115,11 +116,12 @@ if (!customElements.get('quick-order-list')) {
         this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
           const variantIds = [];
           this.querySelectorAll('.variant-item').forEach((item) => {
-            variantIds.push(parseInt(item.dataset.variantId));
+            variantIds.push(item.dataset.variantId);
           });
+
           if (
             event.source === this.quickOrderListId ||
-            !event.cartData.items?.some((element) => variantIds.includes(element.variant_id))
+            (event.cartData.items && variantIds.some((element) => !event.cartData.items.includes(element)))
           ) {
             return;
           }
@@ -129,11 +131,21 @@ if (!customElements.get('quick-order-list')) {
             this.addMultipleDebounce();
           });
         });
+
+        this.sectionRefreshUnsubscriber = subscribe(PUB_SUB_EVENTS.sectionRefreshed, (event) => {
+          const isParentSectionUpdated =
+            this.sectionId && (event.data?.sectionId ?? '') === `${this.sectionId.split('__')[0]}__main`;
+
+          if (isParentSectionUpdated) {
+            this.refresh();
+          }
+        });
         this.sectionId = this.dataset.section;
       }
 
       disconnectedCallback() {
         this.cartUpdateUnsubscriber?.();
+        this.sectionRefreshUnsubscriber?.();
       }
 
       defineInputsAndQuickOrderTable() {

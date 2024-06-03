@@ -91,7 +91,7 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
+        color: rgba(var(--color-foreground), 1);
         background-color: rgb(var(--color-background));
       }
 
@@ -252,6 +252,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -283,6 +284,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <!-- cs-head-scripts-start -->
+    <link rel="stylesheet" href="{{ 'splide.min.css' |  asset_url }}">
+    <script class="cs-head-script" src="{{ 'splide.min.js' | asset_url }}" defer></script>
+    <!-- cs-head-scripts-end -->
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -355,5 +361,9 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <!-- cs-body-scripts-start -->
+    <script class="cs-body-script" src="{{ 'cs-slider.js' | asset_url }}" defer="defer"></script>
+    <!-- cs-body-scripts-end -->
   </body>
 </html>

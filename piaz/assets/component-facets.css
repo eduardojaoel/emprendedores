@@ -1239,3 +1239,9 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
+/* Custom */
+@media screen and (min-width: 750px) {
+  .facets-vertical-form {
+    padding-bottom: 2rem;
+  }
+}

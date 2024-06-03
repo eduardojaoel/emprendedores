@@ -1989,7 +1989,7 @@ input[type='checkbox'] {
   position: relative;
 }
 
-.product__info-container .loading__spinner:not(.hidden) ~ *,
+product-info .loading__spinner:not(.hidden) ~ *,
 .quantity__rules-cart .loading__spinner:not(.hidden) ~ * {
   visibility: hidden;
 }
@@ -3454,4 +3454,24 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+/* Custom */
+.badge {
+  padding: 0.9rem 1.3rem 0.6rem 1.3rem;
+}
+.cart-count-bubble > span {
+  padding-top: 0.3rem;
+}
+.cart-count-bubble {
+  bottom: 0.8rem;
+  left: 1.5rem;
+}
+.icon {
+  overflow: visible;
+}
+.card-information .price-item {
+  color: #1e2a50;
+}
+.card__information .card__heading.h5 {
+  font-size: 1.4rem;
 }

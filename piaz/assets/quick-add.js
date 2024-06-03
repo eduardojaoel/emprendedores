@@ -5,10 +5,6 @@ if (!customElements.get('quick-add-modal')) {
       constructor() {
         super();
         this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
-
-        this.addEventListener('product-info:loaded', ({ target }) => {
-          target.addPreProcessCallback(this.preprocessHTML.bind(this));
-        });
       }
 
       hide(preventFocus = false) {
@@ -29,10 +25,10 @@ if (!customElements.get('quick-add-modal')) {
           .then((response) => response.text())
           .then((responseText) => {
             const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
-            const productElement = responseHTML.querySelector('product-info');
+            const productElement = responseHTML.querySelector('section[id^="MainProduct-"]');
 
             this.preprocessHTML(productElement);
-            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.outerHTML);
+            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.innerHTML);
 
             if (window.Shopify && Shopify.PaymentButton) {
               Shopify.PaymentButton.init();
@@ -42,10 +38,22 @@ if (!customElements.get('quick-add-modal')) {
             super.show(opener);
           })
           .finally(() => {
+            this.bindProductChangeCallbacks();
             opener.removeAttribute('aria-disabled');
             opener.classList.remove('loading');
             opener.querySelector('.loading__spinner').classList.add('hidden');
           });
+      }
+
+      bindProductChangeCallbacks() {
+        const swapProductUtility = this.querySelector('variant-selects')?.swapProductUtility;
+        if (swapProductUtility) {
+          swapProductUtility.addPreProcessCallback(this.preprocessHTML.bind(this));
+          swapProductUtility.addPostProcessCallback(() => {
+            this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
+            this.bindProductChangeCallbacks();
+          });
+        }
       }
 
       preprocessHTML(productElement) {
@@ -61,7 +69,10 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       preventVariantURLSwitching(productElement) {
-        productElement.setAttribute('data-update-url', 'false');
+        const variantPicker = productElement.querySelector('variant-selects');
+        if (!variantPicker) return;
+
+        variantPicker.setAttribute('data-update-url', 'false');
       }
 
       removeDOMElements(productElement) {
@@ -77,8 +88,10 @@ if (!customElements.get('quick-add-modal')) {
 
       preventDuplicatedIDs(productElement) {
         const sectionId = productElement.dataset.section;
-        productElement.outerHTML = productElement.outerHTML.replaceAll(sectionId, `quickadd-${sectionId}`);
-        productElement.dataset.originalSection = sectionId;
+        productElement.innerHTML = productElement.innerHTML.replaceAll(sectionId, `quickadd-${sectionId}`);
+        productElement.querySelectorAll('variant-selects, product-info').forEach((element) => {
+          element.dataset.originalSection = sectionId;
+        });
       }
 
       removeGalleryListSemantic(productElement) {
