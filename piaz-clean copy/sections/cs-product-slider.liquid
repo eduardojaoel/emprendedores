@@ -1,0 +1,441 @@
+{{ 'cs-product-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  :root {
+    --cs-body-font-size: 16px
+  }
+  #cs-{{ section.id }} .cs-heading {
+    font-size: calc((var(--cs-body-font-size) * {{ section.settings.heading_size }}) * 0.8);
+    text-align: {{ section.settings.heading_alignment }};
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} .cs-heading {
+      font-size: calc(var(--cs-body-font-size) * {{ section.settings.heading_size }});
+    }
+  }
+  /* Quita la animación de la imagen (escala) en hover */
+  {% if section.settings.enable_animation != true %}
+    #cs-{{ section.id }} .card:hover .media.media--hover-effect > img:first-child:only-child,
+    #cs-{{ section.id }} .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
+      transform: scale(1);
+    }
+  {% endif %}
+{%- endstyle -%}
+<div id="cs-{{ section.id }}" class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {% comment %} Section heading {% endcomment %}
+    {% if section.settings.heading != blank %}
+      <div class="cs-section-heading">
+        <h2 class="cs-heading">{{ section.settings.heading }}</h2>
+      </div>
+    {% endif %}
+    {% comment %} Slider {% endcomment %}
+    {% comment %} for product in section.settings.collection.products limit: section.settings.products_to_show {% endcomment %}
+
+    {% assign enable_drag = true %}
+    {% assign enable_arrows = true %}
+    {% assign enable_pagination = true %}
+    {% assign insufficent_slides = false %}
+
+    {% if section.settings.collection.products.size <= section.settings.slides_per_view %}
+      {% assign insufficent_slides = true %}
+    {% endif %}
+    {% if insufficent_slides and section.settings.slider_type != 'loop' %}
+      {% assign enable_drag = false %}
+    {% endif %}
+    {% if section.settings.enable_arrows != true %}
+      {% assign enable_arrows = false %}
+    {% elsif insufficent_slides and section.settings.slider_type != 'loop' %}
+      {% assign enable_arrows = false %}
+    {% endif %}
+    {% if insufficent_slides or section.settings.enable_pagination != true %}
+      {% assign enable_pagination = false %}
+    {% endif %}
+
+    <div
+      id="cs-slider__{{ section.id }}"
+      class="
+        cs-slider splide
+        {% if enable_pagination %}has-pagination{% endif %}
+        {% if insufficent_slides %}insufficent-slides{% endif %}
+        {% if section.settings.slider_type == 'loop' %}is-loop{% endif %}
+        {% if section.settings.collection.products.size > 0 %}has-items{% endif %}
+      "
+      section-id="shopify-section-{{ section.id }}"
+      role="group"
+      aria-label="Carrusel de productos"
+      data-splide='
+        {
+          "type": "{{ section.settings.slider_type }}",
+          "perPage": {{ section.settings.slides_per_view }},
+          "drag": {{ enable_drag }},
+          "arrows": {{ enable_arrows }},
+          "pagination": {{ enable_pagination }},
+          "perPage": {{ section.settings.slides_per_view }},
+          "gap": "{{ section.settings.slides_gap }}px",
+          "perMove": 1,
+          "easing": "ease",
+          "breakpoints": {
+            "749": {
+              "perPage": {{ section.settings.slides_mobile_per_view }},
+              "gap": "{{ section.settings.slides_mobile_gap }}px",
+              "arrows": {{ section.settings.enable_arrows_mobile }},
+              "speed": 600
+            }
+          }
+        }
+      '
+    >
+      <div
+        class="splide__track"
+        style="
+          margin-left: {{ section.settings.slides_mobile_padding }}px;
+          margin-right: {{ section.settings.slides_mobile_padding }}px;
+          @media screen and (min-width: 750px) {
+            margin-left: {{ section.settings.slides_padding }}px;
+            margin-right: {{ section.settings.slides_padding }}px;
+          }
+        "
+      >
+        <ul class="splide__list">
+          {% if section.settings.collection.products.size > 0 %}
+            {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
+              <li class="cs-product-slider-item splide__slide">
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  section_id: section.id,
+                  quick_add: section.settings.quick_add
+                %}
+              </li>
+            {% endfor %}
+          {% else %}
+            {% for i in (1..6) %}
+              <li class="placeholder-item splide__slide">
+                {% render 'card-product',
+                  show_vendor: section.settings.show_vendor,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  placeholder_image: 'image'
+                %}
+              </li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carrusel de productos",
+  "tag": "section",
+  "class": "section cs-product-slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Título de la sección"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Carrusel de productos"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        {
+          "value": "3.0",
+          "label": "Muy grande"
+        },
+        {
+          "value": "2.5",
+          "label": "Extra grande"
+        },
+        {
+          "value": "2.0",
+          "label": "Grande"
+        },
+        {
+          "value": "1.7",
+          "label": "Mediano"
+        },
+        {
+          "value": "1.4",
+          "label": "Pequeño"
+        },
+        {
+          "value": "1.2",
+          "label": "Muy pequeño"
+        }
+      ],
+      "default": "2.5"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Alineación del título",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Colección de productos"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección de productos"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adaptar a la imagen"
+        },
+        {
+          "value": "portrait",
+          "label": "Retrato"
+        },
+        {
+          "value": "square",
+          "label": "Cuadrado"
+        }
+      ],
+      "default": "portrait",
+      "label": "Relación de aspecto de imagen"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Habilitar animación de la imagen",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "Mostrar segunda imagen al pasar el cursor"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "Mostrar proveedor"
+    },
+    {
+      "type": "header",
+      "content": "Carrusel"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Alineación del contenido",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes generales del carrusel"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 25,
+      "step": 1,
+      "default": 16,
+      "label": "Máximo de productos para mostrar"
+    },
+    {
+      "type": "select",
+      "id": "slider_type",
+      "label": "Tipo de carrusel",
+      "default": "loop",
+      "options": [
+        {
+          "value": "slide",
+          "label": "Deslizante"
+        },
+        {
+          "value": "loop",
+          "label": "Bucle"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Habilitar flechas",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Habilitar paginación",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para escritorio"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view",
+      "label": "Productos por vista",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "slides_gap",
+      "label": "Espaciado entre items",
+      "default": 24,
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_padding",
+      "label": "Espaciado lateral",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para dispositivos móviles"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows_mobile",
+      "label": "Habilitar flechas (móvil)",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "slides_mobile_per_view",
+      "label": "Items por vista (móvil)",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_gap",
+      "label": "Espaciado entre items (móvil)",
+      "default": 10,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_padding",
+      "label": "Espaciado lateral (móvil)",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de colores",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Relleno de sección"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Relleno superior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Relleno inferior",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrusel de productos"
+    }
+  ]
+}
+{% endschema %}
