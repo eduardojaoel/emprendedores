@@ -1,3 +1,7 @@
+.cs-slideshow-with-text {
+  max-width: 2000px;
+  margin: 0 auto;
+}
 .cs-slideshow-with-text .cs-slideshow-with-text__pagination .splide__arrow {
   position: static;
   transform: none;
@@ -70,11 +74,11 @@
     display: flex;
   }
   .cs-slideshow-with-text .splide__track {
-    width: 66.6666%;
+    width: 60%;
     cursor: grab;
   }
   .cs-slideshow-with-text .cs-slideshow-with-text__text-wrapper {
-    width: 33.3333%;
+    width: 40%;
   }
   .cs-slideshow-with-text .cs-slideshow.reversed {
     flex-direction: row-reverse;
@@ -82,6 +86,11 @@
   .cs-slideshow-with-text .cs-slideshow-with-text__item-title {
     font-size: 3.6rem;
     line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .cs-slideshow-with-text .cs-slideshow-with-text__text-wrapper {
+    padding: 8rem 10rem;
   }
 }
 .cs-slideshow-with-text__image-container {
