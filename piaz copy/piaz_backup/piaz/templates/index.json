@@ -1,0 +1,121 @@
+{
+  "sections": {
+    "cs_collage_JLhDrb": {
+      "type": "cs-collage",
+      "blocks": {
+        "category_KNHcJT": {
+          "type": "category",
+          "settings": {
+            "heading": "Necklaces",
+            "link_label": "Botón",
+            "link": ""
+          }
+        },
+        "category_FWwUAz": {
+          "type": "category",
+          "settings": {
+            "heading": "Bracelets",
+            "link_label": "Botón",
+            "link": ""
+          }
+        },
+        "category_MrQhrY": {
+          "type": "category",
+          "settings": {
+            "heading": "Earrings",
+            "link_label": "Botón",
+            "link": ""
+          }
+        },
+        "category_E7iDUz": {
+          "type": "category",
+          "settings": {
+            "heading": "Rings",
+            "link_label": "Botón",
+            "link": ""
+          }
+        },
+        "category_ecEhHy": {
+          "type": "category",
+          "settings": {
+            "heading": "Custom",
+            "link_label": "Botón",
+            "link": ""
+          }
+        },
+        "category_FceX6q": {
+          "type": "category",
+          "settings": {
+            "heading": "Wedding",
+            "link_label": "Botón",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_KNHcJT",
+        "category_FWwUAz",
+        "category_MrQhrY",
+        "category_E7iDUz",
+        "category_ecEhHy",
+        "category_FceX6q"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "2.5",
+        "large_item_position": "right",
+        "overlay_opacity": 40,
+        "border_radius": 0,
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 30
+      }
+    },
+    "cs_slideshow_with_text_WJGcwg": {
+      "type": "cs-slideshow-with-text",
+      "blocks": {
+        "slide_aHgtUq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5EE56AC9-790C-43E7-ADFB-F011BA18DAF7.jpg",
+            "pretitle": "Diapositiva",
+            "title": "Wedding",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_9UNmPE": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "Presentación con texto",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_aHgtUq",
+        "slide_9UNmPE"
+      ],
+      "settings": {
+        "image_position": "first",
+        "image_aspect_ratio": "16-9",
+        "content_alignment": "center",
+        "slider_type": "loop",
+        "page_width": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "cs_collage_JLhDrb",
+    "cs_slideshow_with_text_WJGcwg"
+  ]
+}
