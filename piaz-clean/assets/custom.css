@@ -69,3 +69,16 @@
 .field__label {
   font-size: 1.5rem;
 }
+.button {
+  text-transform: uppercase;
+}
+.button,
+.button-label,
+.shopify-challenge__button,
+.customer button {
+  font-size: 1.4rem;
+}
+.cs-icon-grid .cs-icon-grid__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}

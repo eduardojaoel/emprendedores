@@ -111,10 +111,147 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_d37pde": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JRjJez": {
+          "type": "heading",
+          "settings": {
+            "heading": "Agenda una cita",
+            "heading_size": "h1"
+          }
+        },
+        "text_tVRpJN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Visítanos junto a tu futuro esposo o esposa en nuestro taller privado para recibir nuestra asesoría en cuanto a dimensiones, kilataje, tallas y grabados.<\/p>"
+          }
+        },
+        "button_BXM9Mb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Make an Appointment",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JRjJez",
+        "text_tVRpJN",
+        "button_BXM9Mb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_slideshow_with_text_CWLWrq": {
+      "type": "cs-slideshow-with-text",
+      "blocks": {
+        "slide_qQRmnX": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "Meaningful Gifts",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_kHg6R4": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "Presentación con texto",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_qQRmnX",
+        "slide_kHg6R4"
+      ],
+      "settings": {
+        "image_position": "second",
+        "image_aspect_ratio": "16-9",
+        "content_alignment": "center",
+        "slider_type": "loop",
+        "page_width": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_icon_grid_4RQgy4": {
+      "type": "cs-icon-grid",
+      "blocks": {
+        "card_LBGjnW": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/return-box-cycle.svg",
+            "icon_width": 80,
+            "content_alignment": "center",
+            "title": "Garantía de Felicidad",
+            "description": "No estaremos contentos hasta que usted (o su regalo)esté encantado."
+          }
+        },
+        "card_Gr9bi7": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/gift.svg",
+            "icon_width": 70,
+            "content_alignment": "center",
+            "title": "Embalaje Tipográfico",
+            "description": "Diseñado por nosotros con una tarjeta de cuidado y un paño de limpieza en el interior, no es necesario envolverlo."
+          }
+        },
+        "card_mhwxX6": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/delivery-truck.svg",
+            "icon_width": 75,
+            "content_alignment": "center",
+            "title": "Envío Gratis",
+            "description": "Envío estándar gratuito en pedidos superiores a $125."
+          }
+        }
+      },
+      "block_order": [
+        "card_LBGjnW",
+        "card_Gr9bi7",
+        "card_mhwxX6"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "icon_position": "top",
+        "color_scheme": "scheme-cef2f430-755c-470e-ad54-e24135c28766",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "cs_collage_JLhDrb",
-    "cs_slideshow_with_text_WJGcwg"
+    "cs_slideshow_with_text_WJGcwg",
+    "rich_text_d37pde",
+    "cs_slideshow_with_text_CWLWrq",
+    "cs_icon_grid_4RQgy4"
   ]
 }
