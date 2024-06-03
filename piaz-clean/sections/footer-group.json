@@ -8,38 +8,41 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "",
+            "menu": "v2-footer-1"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "",
+            "menu": "v2-footer-2"
           }
         }
       },
-      "block_order": ["footer-0", "footer-1", "footer-2"],
+      "block_order": ["footer-0", "footer-1"],
       "settings": {
-        "color_scheme": "scheme-1",
+        "title": "It takes time",
+        "subtitle": "Nuestras piezas son confeccionadas a mano, por pedido y a la medida en nuestro taller ubicado en Panamá.",
+        "contact_title": "Contáctanos",
+        "contact_subtitle": "Visitas a nuestro showroom por cita privada.",
+        "email_label": "vicky@piazshop.com",
+        "email_link": "mailto:vicky@piazshop.com",
+        "whatsapp_label": "(+507) 6277-9950",
+        "whatsapp_link": "https://api.whatsapp.com/send?phone=50762779950",
+        "newsletter_title": "Suscríbete y recibe 10% OFF en tu primera compra.",
+        "newsletter_subtitle": "Lanzamientos, historias, nuestro propósito y mucho más en nuestro newsletter.",
+        "color_scheme": "scheme-4",
+        "newsletter_color_scheme": "scheme-2",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_top": 0
       }
     }
   },
