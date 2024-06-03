@@ -593,3 +593,16 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+/* Custom */
+/* Elimina la escala de la segunda imagen en hover */
+@media screen and (min-width: 990px) {
+  .card-wrapper:hover .media.media--hover-effect > img + img {
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 990px) {
+  .card:hover .media.media--hover-effect > img:first-child:only-child,
+  .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
+    transform: scale(1);
+  }
+}
