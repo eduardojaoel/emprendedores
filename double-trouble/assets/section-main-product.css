@@ -1596,3 +1596,32 @@ a.product__text {
     display: none;
   }
 }
+/* Custom */
+.variant-picker-container {
+  background-color: transparent;
+}
+/* Botón */
+.variant-picker-container .product-form__input--pill input[type='radio'] + label {
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  background-color: rgba(var(--color-background), 1);
+  color: rgb(var(--color-foreground));
+}
+/* Botón en hover */
+.variant-picker-container .product-form__input--pill input[type='radio'] + label:hover {
+  background-color: rgba(var(--color-background), 0.9);
+  border: 1px solid rgba(var(--color-foreground), 0.3);
+}
+/* Botón activo */
+.variant-picker-container .product-form__input--pill input[type='radio']:checked + label {
+  border: 1px solid rgba(var(--color-button), 1);
+  background-color: rgba(var(--color-button), 1);
+  color: rgb(var(--color-button-text));
+}
+/* Botón activo en hover */
+.variant-picker-container .product-form__input--pill input[type='radio']:checked + label:hover {
+  border: 1px solid rgba(var(--color-button), 1);
+  background-color: rgba(var(--color-button), 0.9);
+}
+.variant-picker-container .form__label {
+  color: rgb(var(--color-foreground));
+}
