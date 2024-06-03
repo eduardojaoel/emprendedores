@@ -1,0 +1,267 @@
+{{ 'cs-icon-grid.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .cs-icon-grid .cs-icon-grid__container {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+    grid-gap: 2.4rem;
+  }
+  @media screen and (min-width: 750px) {
+    .cs-icon-grid .cs-icon-grid__container {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+{%- endstyle -%}
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="cs-icon-grid__heading inline-richtext {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    {% if section.blocks.size > 0 %}
+      <div class="cs-icon-grid__container">
+        {% for block in section.blocks %}
+          <div
+            class="cs-icon-grid__wrapper icon-position-{{ section.settings.icon_position }}"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.icon != blank %}
+              <div class="cs-icon-grid__icon-wrapper">
+                {% style %}
+                  @media screen and (max-width: 749px) {
+                    #shopify-section-{{ section.id }} .cs-icon-grid__icon {
+                      width: {{ block.settings.icon_width | times: 0.75 }}px;
+                    }
+                  }
+                {% endstyle %}
+                {{
+                  block.settings.icon
+                  | image_url: width: block.settings.icon_width
+                  | image_tag: widths: '50, 75, 150, 200, 300, 400, 500', class: 'cs-icon-grid__icon'
+                }}
+              </div>
+            {% endif %}
+            <div class="cs-icon-grid__content {{ block.settings.content_alignment }}">
+              {% if block.settings.title != blank %}
+                <h3 class="cs-icon-grid__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <p class="cs-icon-grid__description">{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cuadrícula de íconos",
+  "tag": "section",
+  "class": "section cs-icon-grid",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Cuadrícula de íconos",
+      "label": "t:sections.collage.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left",
+      "label": "Alineación del título"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.multicolumn.settings.columns_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.multicolumn.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.multicolumn.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "2",
+      "label": "t:sections.multicolumn.settings.columns_mobile.label"
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Posición del ícono",
+      "options": [
+        {
+          "value": "top",
+          "label": "Arriba"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Tarjeta",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Ícono"
+        },
+        {
+          "type": "range",
+          "id": "icon_width",
+          "min": 10,
+          "max": 150,
+          "step": 5,
+          "unit": "px",
+          "label": "Ancho del ícono",
+          "default": 75
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Izquierda"
+            },
+            {
+              "value": "center",
+              "label": "Centro"
+            },
+            {
+              "value": "right",
+              "label": "Derecha"
+            }
+          ],
+          "default": "center",
+          "label": "Alineación del contenido"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Título",
+          "default": "Título"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Descripción",
+          "default": "Descripción de la tarjeta"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cuadrícula de íconos",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
