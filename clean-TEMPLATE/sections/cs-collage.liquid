@@ -1,0 +1,297 @@
+{{ 'cs-collage.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  :root {
+    --cs-body-font-size: 16px
+  }
+
+  #cs-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #cs-{{ section.id }} .cs-heading {
+    font-size: calc((var(--cs-body-font-size) * {{ section.settings.heading_size }}) * 0.8);
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} .cs-heading {
+      font-size: calc(var(--cs-body-font-size) * {{ section.settings.heading_size }});
+    }
+  }
+
+  #cs-{{ section.id }} .cs-grid-item__heading,
+  #cs-{{ section.id }} .cs-grid-item__button {
+    color: {{ section.settings.text_color }};
+  }
+
+  #cs-{{ section.id }} .cs-overlay-gradient {
+    opacity: {{ section.settings.overlay_opacity | times: 0.01 }};
+  }
+  #cs-{{ section.id }} .cs-grid-item {
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+{% endstyle %}
+
+<div id="cs-{{ section.id }}" class="cs-container page-width">
+  <div class="cs-wrapper{% if section.settings.large_item_position == 'right' %} is-reverse{% endif %}">
+    {% comment %} Section heading {% endcomment %}
+    {% if section.settings.heading != blank %}
+      <div class="cs-section-heading">
+        <h2 class="cs-heading">{{ section.settings.heading }}</h2>
+      </div>
+    {% endif %}
+    {% comment %} Section grid {% endcomment %}
+    <div class="cs-grid cs-grid-size-{{ section.blocks.size }}">
+      {% for block in section.blocks %}
+        {{ block.settings.product_drop }}
+        {% case block.type %}
+          {% when 'category' %}
+            <a
+              class="cs-item-wrapper cs-item-wrapper__category"
+              {% if block.settings.link != blank %}
+                href="{{ block.settings.link }}"
+              {% endif %}
+            >
+              <div class="cs-grid-item">
+                {% if block.settings.image != blank %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1000
+                    | image_tag:
+                      widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500',
+                      class: 'cs-grid-item__image'
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'cs-grid-item__image placeholder-svg' }}
+                {% endif %}
+                <div class="cs-overlay-gradient"></div>
+                {% if block.settings.heading != blank %}
+                  <h3 class="cs-grid-item__heading">{{ block.settings.heading }}</h3>
+                {% endif %}
+                {% if block.settings.link_label != blank %}
+                  <span class="cs-grid-item__button">{{ block.settings.link_label }}</span>
+                {% endif %}
+              </div>
+            </a>
+
+          {% when 'product' %}
+            <div class="cs-item-wrapper cs-item-wrapper__product">
+              <div class="cs-grid-item">
+                {% assign product_list = block.settings.product_list %}
+                {% if product_list != empty %}
+                  {% for product in product_list limit: 1 %}
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: 'square',
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      section_id: section.id,
+                      quick_add: section.settings.quick_add
+                    %}
+                    {% break %}
+                  {% endfor %}
+                {% else %}
+                  {% render 'card-product',
+                    show_vendor: section.settings.show_vendor,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    placeholder_image: 'image'
+                  %}
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collage",
+  "class": "cs-collage",
+  "tag": "section",
+  "max_blocks": 7,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título de la sección",
+      "default": "Nuestras colecciones"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        {
+          "value": "3.0",
+          "label": "Muy grande"
+        },
+        {
+          "value": "2.5",
+          "label": "Extra grande"
+        },
+        {
+          "value": "2.0",
+          "label": "Grande"
+        },
+        {
+          "value": "1.7",
+          "label": "Mediano"
+        },
+        {
+          "value": "1.4",
+          "label": "Pequeño"
+        },
+        {
+          "value": "1.2",
+          "label": "Muy pequeño"
+        }
+      ],
+      "default": "2.5"
+    },
+    {
+      "type": "header",
+      "content": "Cuadrícula"
+    },
+    {
+      "type": "select",
+      "id": "large_item_position",
+      "label": "Posición del elemento grande",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacidad de la sobreposición de imagen",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Radio de borde",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Categoría",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Título de la categoría",
+          "default": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Texto del botón",
+          "default": "Botón"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "URL del botón"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Producto",
+      "settings": [
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Producto",
+          "limit": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collage",
+      "blocks": [
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
