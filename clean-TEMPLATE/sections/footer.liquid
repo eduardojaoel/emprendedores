@@ -483,12 +483,56 @@
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+            {% comment %}
+              <ul class="list list-payment" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class="list-payment__item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {% endcomment %}
             <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
+              {%- if section.settings.payment_enable -%}
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class="list-payment__item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              {%- endif -%}
+
+              {%- if section.settings.show_payments -%}
+                {%- if section.settings.payment_visa -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'visa' %}
+                  </li>
+                {%- endif -%}
+                {%- if section.settings.payment_mastercard -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'mastercard' %}
+                  </li>
+                {%- endif -%}
+                {%- if section.settings.payment_yappy -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'yappy' %}
+                  </li>
+                {%- endif -%}
+                {%- if section.settings.payment_clave -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'clave' %}
+                  </li>
+                {%- endif -%}
+                {%- if section.settings.payment_efectivo -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'efectivo' %}
+                  </li>
+                {%- endif -%}
+                {%- if section.settings.payment_ach -%}
+                  <li class="list-payment__item">
+                    {% render 'icons-payment', name: 'ach' %}
+                  </li>
+                {%- endif -%}
+              {%- endif -%}
             </ul>
           </div>
         {%- endif -%}
@@ -774,6 +818,56 @@
       "id": "payment_enable",
       "default": true,
       "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+      "type": "header",
+      "content": "Local payment icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payments",
+      "label": "Show local payment icons",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Payment icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_visa",
+      "label": "Show Visa icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_mastercard",
+      "label": "Show Mastercard icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_ach",
+      "label": "Show ACH icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_yappy",
+      "label": "Show Yappy icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_clave",
+      "label": "Show Clave icon",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_efectivo",
+      "label": "Show Efectivo icon",
+      "default": false
     },
     {
       "type": "header",
