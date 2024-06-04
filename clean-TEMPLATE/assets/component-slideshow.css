@@ -199,3 +199,39 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(0.8);
 }
+/* Custom */
+@media screen and (min-width: 750px) {
+  .slideshow__controls {
+    position: static;
+  }
+  .slideshow__controls .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(var(--color-foreground), 0.75);
+    border-radius: 50%;
+  }
+  .slideshow__controls .slider-button:hover {
+    background-color: rgb(var(--color-foreground));
+  }
+  .slideshow__controls .slider-button--prev {
+    left: 5rem;
+  }
+  .slideshow__controls .slider-button--next {
+    right: 5rem;
+  }
+  .slideshow__controls .slider-button .icon {
+    color: rgba(var(--color-background), 0.75);
+    height: 0.9rem;
+  }
+  .slideshow__controls .slider-counter {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+.slideshow__controls {
+  background-color: transparent;
+}
