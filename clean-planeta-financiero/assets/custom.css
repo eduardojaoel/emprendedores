@@ -1,1 +1,51 @@
-
+/* Custom */
+.account-button-header {
+  gap: 0.8rem;
+}
+.account-button-header svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.account-button-header account-icon {
+  display: flex;
+}
+.account-button-header span {
+  text-align: center;
+}
+.header__icons {
+  align-items: center;
+}
+.link,
+.customer a {
+  font-size: 1.6rem;
+}
+.header__menu-item {
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.button {
+  text-transform: uppercase;
+}
+.header__heading a {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 990px) {
+  .header--middle-left {
+    grid-template-areas: 'heading navigation icons';
+    grid-template-columns: auto 1fr auto;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 990px) {
+  .header__inline-menu .list-menu {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.header__inline-menu .list-menu > li .header__menu-item:hover span {
+  text-decoration: underline !important;
+  text-underline-offset: 0.8rem !important;
+  text-decoration-thickness: 0.2rem !important;
+  text-decoration-color: rgb(var(--color-button)) !important;
+}

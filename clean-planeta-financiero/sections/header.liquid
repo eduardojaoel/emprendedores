@@ -140,16 +140,23 @@
     opacity: 0.8;
   }
   /* Ajusta el width de los íconos personalizados en el header */
-  .header__icon .icon, .header__icon--cart .icon, .header__icon {
-    width: 2.2rem;
-    height: 2.2rem;
+  .header__icon .icon,
+  .header__icon--cart .icon,
+  .header__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .header__icon--cart svg.icon,
+  .header__icon--cart.header__icon {
+    width: 2.8rem;
+    height: 2.8rem;
   }
   .header__icons {
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
   @media screen and (min-width: 750px) {
     .header__icons {
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
   }
 {%- endstyle -%}
@@ -298,43 +305,45 @@
   {%- endif -%}
 
   <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
-    <div class="desktop-localization-wrapper">
-      {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-        <localization-form class="small-hide medium-hide" data-prevent-hide>
-          {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-              {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {% endif %}
+    {% comment %}
+      <div class="desktop-localization-wrapper">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <localization-form class="small-hide medium-hide" data-prevent-hide>
+            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
 
-      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        <localization-form class="small-hide medium-hide" data-prevent-hide>
-          {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-              {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {%- endif -%}
-    </div>
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <localization-form class="small-hide medium-hide" data-prevent-hide>
+            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
+      </div>
 
-    {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {% render 'header-search', input_id: 'Search-In-Modal' %}
 
-    <a
-      href="#"
-      class="header__icon header__icon--heart link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
-    >
-      {% render 'icon-heart' %}
-    </a>
+      <a
+        href="#"
+        class="header__icon header__icon--heart link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+      >
+        {% render 'icon-heart' %}
+      </a>
+    {% endcomment %}
 
     {%- if shop.customer_accounts_enabled -%}
       <a
         href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-        class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+        class="button button--secondary account-button-header{% if section.settings.menu != blank %} small-hide{% endif %}"
       >
         <account-icon>
           {%- if customer and customer.has_avatar? -%}
@@ -343,10 +352,10 @@
             {% render 'icon-account' %}
           {%- endif -%}
         </account-icon>
-        <span class="visually-hidden">
+        <span>
           {%- liquid
             if customer
-              echo 'customer.account_fallback' | t
+              echo 'Mi cuenta'
             else
               echo 'customer.log_in' | t
             endif
