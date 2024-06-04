@@ -4,7 +4,7 @@
 }
 .collection-list div.card__inner,
 .cs-item-wrapper.cs-item-wrapper__category {
-  border: 2px solid rgb(var(--color-button));
+  border: 1px solid rgb(var(--color-button));
 }
 .product-card-wrapper .card__heading {
   font-size: 1.7rem;
