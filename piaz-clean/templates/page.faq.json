@@ -2,13 +2,113 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_w63Epk": {
+      "type": "image-banner",
+      "blocks": {
+        "text_y9acXp": {
+          "type": "text",
+          "settings": {
+            "text": "Joyas hechas a mano",
+            "text_style": "body"
+          }
+        },
+        "heading_axfEjW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Resuelve tus dudas",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "text_y9acXp",
+        "heading_axfEjW"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "collapsible_content_EBwiNK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_WrfER9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_R6e6r8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_yB6UL9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_PLAVYB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_WrfER9",
+        "collapsible_row_R6e6r8",
+        "collapsible_row_yB6UL9",
+        "collapsible_row_PLAVYB"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Preguntas frecuentes",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_w63Epk",
+    "collapsible_content_EBwiNK"
   ]
 }

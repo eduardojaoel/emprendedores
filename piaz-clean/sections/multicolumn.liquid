@@ -13,6 +13,15 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  #shopify-section-{{ section.id }} .multicolumn__title.center {
+    justify-content: center;
+  }
+  #shopify-section-{{ section.id }} .multicolumn__title.left {
+    justify-content: flex-start;
+  }
+  #shopify-section-{{ section.id }} .multicolumn__title.right {
+    justify-content: flex-end;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -31,7 +40,7 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title {% if section.settings.button_label == blank and show_mobile_slider != true %}{{ section.settings.heading_alignment }}{% endif %}">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -222,6 +231,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center",
+      "label": "Alineación del título"
     },
     {
       "type": "select",

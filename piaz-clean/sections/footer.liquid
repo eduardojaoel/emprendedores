@@ -217,9 +217,9 @@
       {%- endform -%}
     </div>
     <div class="footer-wrapper footer-wrapper__image">
-      {% if section.settings.image != blank %}
+      {% if section.settings.footer_image != blank %}
         {{
-          section.settings.image
+          section.settings.footer_image
           | image_url: width: 3200
           | image_tag:
             widths: '300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',

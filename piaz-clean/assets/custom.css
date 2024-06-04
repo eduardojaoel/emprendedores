@@ -82,3 +82,55 @@
   font-size: 2rem;
   text-transform: uppercase;
 }
+.price-item {
+  font-family: var(--font-heading-family);
+}
+.price--large .price-item {
+  font-size: 2.5rem;
+}
+.product__tax {
+  color: rgba(var(--color-foreground), 0.6);
+}
+.product__info-container > * + * {
+  margin: 3rem 0;
+}
+@media screen and (max-width: 749px) {
+  .hide-mobile.image-with-text__media {
+    display: none;
+  }
+}
+@media screen and (min-width: 790px) {
+  .hide-desktop.image-with-text__media {
+    display: none;
+  }
+}
+.collection-banner-with-text .image-with-text__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-contact-info h3.cs-contact-info__info-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+}
+.cs-contact-info p.cs-contact-info__info-content {
+  color: rgba(var(--color-foreground), 1);
+}
+.citaJoyas {
+  width: 100%;
+  justify-content: center;
+}
+.template-citas .main-page-title {
+  display: none;
+}
+.template-citas .citaJoyas h2 {
+  font-size: 4.5rem;
+  margin-top: 0;
+}
+.template-citas .citaJoyas .jewels-lft {
+  width: 100%;
+}
+.header__menu-item {
+  text-transform: uppercase;
+}

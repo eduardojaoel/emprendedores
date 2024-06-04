@@ -20,7 +20,10 @@
           }
         }
       },
-      "block_order": ["footer-0", "footer-1"],
+      "block_order": [
+        "footer-0",
+        "footer-1"
+      ],
       "settings": {
         "title": "It takes time",
         "subtitle": "Nuestras piezas son confeccionadas a mano, por pedido y a la medida en nuestro taller ubicado en Panamá.",
@@ -29,14 +32,12 @@
         "email_label": "vicky@piazshop.com",
         "email_link": "mailto:vicky@piazshop.com",
         "whatsapp_label": "(+507) 6277-9950",
-        "whatsapp_link": "https://api.whatsapp.com/send?phone=50762779950",
+        "whatsapp_link": "https:\/\/api.whatsapp.com\/send?phone=50762779950",
         "newsletter_title": "Suscríbete y recibe 10% OFF en tu primera compra.",
         "newsletter_subtitle": "Lanzamientos, historias, nuestro propósito y mucho más en nuestro newsletter.",
         "color_scheme": "scheme-4",
         "newsletter_color_scheme": "scheme-2",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "footer_image": "shopify:\/\/shop_images\/blog.png",
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
@@ -46,5 +47,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

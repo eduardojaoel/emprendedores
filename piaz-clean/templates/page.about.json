@@ -2,13 +2,392 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_jQbLMC": {
+      "type": "image-banner",
+      "blocks": {
+        "text_36Hqt3": {
+          "type": "text",
+          "settings": {
+            "text": "Joyas hechas a mano",
+            "text_style": "body"
+          }
+        },
+        "heading_VakqbG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Acerca de joyería PIAZ",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "text_36Hqt3",
+        "heading_VakqbG"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "image_with_text_iQKR48": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_r3fTEH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Creemos fielmente en la belleza de las cosas simples.",
+            "heading_size": "h2"
+          }
+        },
+        "caption_zg4kfJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "PIAZ, fundada en el 2017 y basada actualmente en Panamá.",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_7wxqLW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Joyería diseñada con significado y confeccionada bajo estrictos estándares de calidad, bajo la visión de su actual head designer Pía Vázquez Zepeda, quien destaca la importancia de las piezas minimalistas, que guardan elegancia, sin dejar de ser atemporales y funcionales.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_r3fTEH",
+        "caption_zg4kfJ",
+        "text_7wxqLW"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_fEa44q": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hxgnnh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_1080_8ede71d7-1ab3-4433-9157-b4ba5d06deae.png",
+            "title": "Plata .925",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FTJNqV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_1080_8ede71d7-1ab3-4433-9157-b4ba5d06deae.png",
+            "title": "Oro sólido 10k",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xDMxPn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_1080_8ede71d7-1ab3-4433-9157-b4ba5d06deae.png",
+            "title": "Oro sólido 14k",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zmJ4aR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_1080_8ede71d7-1ab3-4433-9157-b4ba5d06deae.png",
+            "title": "Oro sólido 18k",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hxgnnh",
+        "column_FTJNqV",
+        "column_xDMxPn",
+        "column_zmJ4aR"
+      ],
+      "settings": {
+        "title": "Especializados en el uso de la mejor calidad de metales",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "video_XEwRT4": {
+      "type": "video",
+      "settings": {
+        "heading": "Sostenibilidad PIAZ",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_pjCQeW": {
+      "type": "rich-text",
+      "blocks": {
+        "text_zQ9HVB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PIAZ Jewelry es una marca consciente del impacto que la fabricación de joyería puede tener con el medio ambiente, por lo que la confección de nuestras piezas, uso de materiales, uso de energía, y sobretodo ética de trabajo, está alineado con valores de impacto positivo con la sociedad y el medio ambiente.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zQ9HVB"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "cs_slideshow_with_text_AiYfhz": {
+      "type": "cs-slideshow-with-text",
+      "blocks": {
+        "slide_LiYbLF": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "¿Cómo lo hacemos?",
+            "title": "",
+            "subtitle": "Nuestro packaging está en proceso de ser cada vez más eco-friendly, y mientras lo logramos, te permitimos elegir si deseas packaging completo o no al realizar tu pedido.",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_FwWRhD": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_LhJNHp": {
+          "type": "slide",
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_jx7BC4": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slide_6pwJbk": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "pretitle": "Diapositiva",
+            "title": "",
+            "subtitle": "Tell your brand's story through images",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_LiYbLF",
+        "slide_FwWRhD",
+        "slide_LhJNHp",
+        "slide_jx7BC4",
+        "slide_6pwJbk"
+      ],
+      "settings": {
+        "image_position": "first",
+        "image_aspect_ratio": "16-9",
+        "content_alignment": "center",
+        "slider_type": "loop",
+        "page_width": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_GiNxmi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JBYRYi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Un Espacio con Magia",
+            "heading_size": "h1"
+          }
+        },
+        "text_LLrtPN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En el año 2021 decidimos construir nuestro espacio con magia, nuestro pequeño y acogedor showroom donde podrás vivir la experiencia de diseñar tu pieza paso a paso, entendiendo los aspectos técnicos y también estéticos de una pieza de joyería.<br\/><br\/>Nos encanta escuchar sobre tus gustos y lo que quieres transmitir con esa pieza tan especial, dejamos tu creatividad y la nuestra fluir, y el resultado siempre superará tus expectativas.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JBYRYi",
+        "text_LLrtPN"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_7jGXtC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ypcdEc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reserva tu espacio haciendo Click <a href=\"\/pages\/reserva-de-cita\" title=\"Reserva de cita\">aquí<\/a> y cuéntanos qué pieza sueñas para hacerla realidad.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ypcdEc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_GXhKNG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TBeitY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Agenda una cita",
+            "heading_size": "h1"
+          }
+        },
+        "text_pQJc4f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Visítanos junto a tu futuro esposo o esposa en nuestro taller privado para recibir nuestra asesoría en cuanto a dimensiones, kilataje, tallas y grabados.<br\/><\/p>"
+          }
+        },
+        "button_m3nQN3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Make an Appointment",
+            "button_link": "shopify:\/\/pages\/reserva-de-cita",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TBeitY",
+        "text_pQJc4f",
+        "button_m3nQN3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-8695f3e1-6f17-4ffe-9b80-36aa603bbb11",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_jQbLMC",
+    "image_with_text_iQKR48",
+    "multicolumn_fEa44q",
+    "video_XEwRT4",
+    "rich_text_pjCQeW",
+    "cs_slideshow_with_text_AiYfhz",
+    "image_with_text_GiNxmi",
+    "rich_text_7jGXtC",
+    "rich_text_GXhKNG"
   ]
 }
