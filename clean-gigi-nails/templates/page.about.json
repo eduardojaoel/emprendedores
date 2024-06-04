@@ -1,0 +1,178 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_MALKQm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PxUP9m": {
+          "type": "heading",
+          "settings": {
+            "heading": "WELCOME TO REUV",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PxUP9m"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-dc6b76e1-97c3-4432-8413-fd6a8c7f9391",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_nLKCwX": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_aMHDqM": {
+          "type": "caption",
+          "settings": {
+            "caption": "¡Hola!",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_APG4Pt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Soy <em>Gigi<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_JRiXET": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La orgullosa fundadora de REUV, una marca nacida del amor y la pasión por la belleza de las uñas. Como manicurista de corazón, siempre he creído que cada detalle importa, y cada manicura cuenta una historia única. Fue esta creencia la que me inspiró a crear REUV, con el objetivo de proporcionar a mis colegas manicuristas herramientas que no solo aceleraran su trabajo, sino que también garantizaran uñas duraderas y clientes felices.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_aMHDqM",
+        "heading_APG4Pt",
+        "text_JRiXET"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_jdqzGV": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_B4t7Lm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La idea de REUV surgió de mi propia experiencia en el mundo de las uñas. Como manicurista, siempre me esforzaba por ofrecer resultados impecables en el menor tiempo posible. Sin embargo, me encontraba constantemente en la búsqueda de productos que no solo agilizaran el proceso, sino que también mantuvieran la calidad y la satisfacción de mis clientes. Este desafío me llevó a crear REUV, con la firme convicción de que la excelencia en las uñas no debería comprometerse por la velocidad.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_B4t7Lm"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_dc4rU8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4r3eB8": {
+          "type": "heading",
+          "settings": {
+            "heading": "En los últimos 4 años,",
+            "heading_size": "h1"
+          }
+        },
+        "text_VkzX7K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>los productos de REUV han sido la elección preferida de más de 30 manicuristas dedicadas y han adornado las uñas de más de 3000 clientes satisfechas. Cada uno de nuestros productos ha sido meticulosamente probado y perfeccionado, hasta que finalmente encontramos la fórmula ideal que no solo es funcional, sino que también redefine los estándares de calidad en el mundo de la manicura.<br\/><br\/>Hoy, en REUV, compartimos con ustedes no solo productos excepcionales, sino también el fruto de una dedicación apasionada. Estamos encantados de formar parte de su viaje de belleza y esperamos seguir brindándoles productos que hagan brillar cada detalle de sus uñas.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4r3eB8",
+        "text_VkzX7K"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_jnYcAf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TN7Fqa": {
+          "type": "heading",
+          "settings": {
+            "heading": "¡Gracias por elegir REUV, <em>donde la excelencia y la velocidad se encuentran<\/em> para crear arte en cada manicura!",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TN7Fqa"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-dc6b76e1-97c3-4432-8413-fd6a8c7f9391",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_MALKQm",
+    "image_with_text_nLKCwX",
+    "image_with_text_jdqzGV",
+    "image_with_text_dc4rU8",
+    "rich_text_jnYcAf"
+  ]
+}

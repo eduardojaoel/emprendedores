@@ -1,8 +1,84 @@
 .header__menu-item {
-  font-size: 1.34rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 .collection-list div.card__inner,
 .cs-item-wrapper.cs-item-wrapper__category {
-  border: 1px solid rgb(var(--color-button));
+  border: 2px solid rgb(var(--color-button));
+}
+.product-card-wrapper .card__heading {
+  font-size: 1.7rem;
+}
+.footer-block__heading {
+  color: rgb(var(--color-button));
+}
+.footer__list-social .icon {
+  color: rgb(var(--color-button));
+}
+.footer .footer__content-bottom {
+  padding-top: 0;
+}
+.customer .field::after,
+.contact .field::after {
+  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-button), var(--inputs-border-opacity));
+}
+.field:hover.field:after,
+.select:hover.select:after,
+.select__select:hover.select__select:after,
+.customer .field:hover.field:after,
+.customer select:hover.select:after,
+.localization-form__select:hover.localization-form__select:after {
+  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-button), var(--inputs-border-opacity));
+}
+
+.field__input:focus,
+.select__select:focus,
+.customer .field input:focus,
+.customer select:focus,
+.localization-form__select:focus.localization-form__select:after {
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-button));
+}
+.cart__footer .totals__total-value {
+  font-weight: 600;
+}
+.cart__footer .totals {
+  align-items: center;
+}
+@media screen and (min-width: 750px) {
+  details.facets__disclosure-vertical {
+    border-top: 0.1rem solid rgba(var(--color-button), 0.5);
+    margin-right: 0;
+  }
+}
+footer.footer {
+  padding-bottom: 0;
+}
+.footer .footer__content-bottom-wrapper {
+  background-color: rgba(var(--color-button));
+  color: rgb(var(--color-button-text));
+}
+.footer .footer__content-bottom {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 750px) {
+  .footer .footer__content-bottom {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.footer .footer__content-bottom-wrapper {
+  align-items: center;
+}
+.footer .footer__copyright {
+  color: rgba(var(--color-button-text), 0.8);
+}
+.footer .footer__copyright.caption {
+}
+div.accordion {
+  border-top: 0.1rem solid rgba(var(--color-button), 0.5);
+  border-bottom: 0.1rem solid rgba(var(--color-button), 0.5);
+}
+div.accordion summary {
+  padding-left: 1.5rem;
 }

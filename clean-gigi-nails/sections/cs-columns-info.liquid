@@ -1,0 +1,335 @@
+{% comment %}
+  Requiere snippet cs-icon-accordion.liquid
+{% endcomment %}
+
+{{ 'cs-columns-info.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    <div class="cs-columns-info__container">
+      {% if section.blocks.size > 0 %}
+        <div class="cs-columns-info__wrapper">
+          {% for block in section.blocks %}
+            <div class="cs-columns-info__item cs-columns-info__item-{{ block.type }}" {{ block.shopify_attributes }}>
+              {% case block.type %}
+                {% when 'text' %}
+                  {% if block.settings.title != blank %}
+                    <h3 class="title cs-columns-info__info-title">
+                      {{ block.settings.title }}
+                    </h3>
+                  {% endif %}
+                  {% if block.settings.caption != blank %}
+                    <h3 class="caption cs-columns-info__info-caption">
+                      {{ block.settings.caption }}
+                    </h3>
+                  {% endif %}
+                  {% if block.settings.content != blank %}
+                    <p class="rte subtitle cs-columns-info__info-content">
+                      {{ block.settings.content }}
+                    </p>
+                  {% endif %}
+                {% when 'image' %}
+                  <div class="cs-columns-info__image-container cs-columns-info__aspect-ratio--{{ block.settings.image_aspect_ratio }}">
+                    {% if block.settings.image %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                          widths: '300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                          sizes: '(min-width: 750px) calc(100vw / 3), calc(100vw / 1)',
+                          class: 'cs-columns-info__image'
+                      }}
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag: 'cs-columns-info__image placeholder-svg' }}
+                    {% endif %}
+                  </div>
+                {% when 'buttons' %}
+                  {% if block.settings.button_label_1 != blank %}
+                    <a
+                      {% if block.settings.button_link_1 == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_1 }}"
+                      {% endif %}
+                      class="button cs-columns-info__item-button button--{{ block.settings.button_style_1 }}"
+                    >
+                      <span>{{ block.settings.button_label_1 | escape }}</span>
+                    </a>
+                  {% endif %}
+                  {% if block.settings.button_label_2 != blank %}
+                    <a
+                      {% if block.settings.button_link_2 == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_2 }}"
+                      {% endif %}
+                      class="button cs-columns-info__item-button button--{{ block.settings.button_style_2 }}"
+                    >
+                      <span>{{ block.settings.button_label_2 | escape }}</span>
+                    </a>
+                  {% endif %}
+                  {% if block.settings.button_label_3 != blank %}
+                    <a
+                      {% if block.settings.button_link_3 == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_3 }}"
+                      {% endif %}
+                      class="button cs-columns-info__item-button button--{{ block.settings.button_style_3 }}"
+                    >
+                      <span>{{ block.settings.button_label_3 | escape }}</span>
+                    </a>
+                  {% endif %}
+              {% endcase %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Columnas de información",
+  "tag": "section",
+  "class": "section cs-columns-info",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Texto",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Columnas de información"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Leyenda",
+          "default": "Agrega una leyenda"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "content",
+          "label": "Contenido",
+          "default": "Contenido de la columna"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Imagen",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen del local o ubicación"
+        },
+        {
+          "type": "select",
+          "id": "image_aspect_ratio",
+          "label": "Relación de aspecto",
+          "default": "3-4",
+          "options": [
+            {
+              "value": "none",
+              "label": "Adaptar a la imagen"
+            },
+            {
+              "value": "1-1",
+              "label": "Cuadrada"
+            },
+            {
+              "value": "4-3",
+              "label": "Horizontal (4:3)"
+            },
+            {
+              "value": "16-9",
+              "label": "Horizontal (16:9)"
+            },
+            {
+              "value": "3-2",
+              "label": "Horizontal (3:2)"
+            },
+            {
+              "value": "3-4",
+              "label": "Vertical (3:4)"
+            },
+            {
+              "value": "2-3",
+              "label": "Vertical (2:3)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Botones",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "label": "Etiqueta de botón",
+          "info": "Deja la etiqueta en blanco para ocultar el botón.",
+          "default": "Botón 1"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Enlace de botón"
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "default": "primary",
+          "label": "Estilo del botón",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Principal"
+            },
+            {
+              "value": "secondary",
+              "label": "Secundario"
+            },
+            {
+              "value": "tertiary",
+              "label": "Enlace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Etiqueta de botón",
+          "info": "Deja la etiqueta en blanco para ocultar el botón.",
+          "default": "Botón 2"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Enlace de botón"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "default": "primary",
+          "label": "Estilo del botón",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Principal"
+            },
+            {
+              "value": "secondary",
+              "label": "Secundario"
+            },
+            {
+              "value": "tertiary",
+              "label": "Enlace"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "button_label_3",
+          "label": "Etiqueta de botón",
+          "info": "Deja la etiqueta en blanco para ocultar el botón.",
+          "default": "Botón 3"
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
+          "label": "Enlace de botón"
+        },
+        {
+          "type": "select",
+          "id": "button_style_3",
+          "default": "primary",
+          "label": "Estilo del botón",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Principal"
+            },
+            {
+              "value": "secondary",
+              "label": "Secundario"
+            },
+            {
+              "value": "tertiary",
+              "label": "Enlace"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Columnas de información",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

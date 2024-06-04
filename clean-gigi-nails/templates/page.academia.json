@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cs_columns_info_CDdPrM": {
+      "type": "cs-columns-info",
+      "blocks": {
+        "text_qPcT6G": {
+          "type": "text",
+          "settings": {
+            "title": "Sobre nuestra Academia",
+            "caption": "Para las líderes de la belleza en uñas",
+            "content": "¡Eleva tu <em>productividad<\/em> con nuestros cursos personalizados!"
+          }
+        },
+        "image_bX4YDY": {
+          "type": "image",
+          "settings": {
+            "image_aspect_ratio": "3-4"
+          }
+        },
+        "buttons_adzX8Q": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contáctanos",
+            "button_link_1": "shopify:\/\/pages\/contacto",
+            "button_style_1": "secondary",
+            "button_label_2": "Ver cursos disponibles",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_label_3": "Próximos cursos",
+            "button_link_3": "",
+            "button_style_3": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "text_qPcT6G",
+        "image_bX4YDY",
+        "buttons_adzX8Q"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cs_columns_info_CDdPrM"
+  ]
+}

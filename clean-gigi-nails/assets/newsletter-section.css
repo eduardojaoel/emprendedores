@@ -48,3 +48,15 @@
     margin: 0 0 0 1rem;
   }
 }
+/* Custom */
+.newsletter-section .newsletter-form .field__input {
+  background-color: #fff;
+  padding-right: 9rem;
+}
+.newsletter-section .newsletter-form__button {
+  width: 8rem;
+  background-color: rgb(var(--color-button)) !important;
+  color: rgb(var(--color-button-text)) !important;
+  font-family: var(--font-body-family);
+  font-size: 1.5rem;
+}

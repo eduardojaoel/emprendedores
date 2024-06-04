@@ -6,7 +6,7 @@
     "heading_scale": 110,
     "type_body_font": "raleway_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -34,7 +34,7 @@
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "left",
-    "card_color_scheme": "scheme-2",
+    "card_color_scheme": "scheme-1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 0,
@@ -45,7 +45,7 @@
     "collection_card_style": "standard",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "scheme-2",
+    "collection_card_color_scheme": "scheme-1",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
     "collection_card_corner_radius": 0,
@@ -96,9 +96,9 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
     "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_instagram_link": "#",
     "social_youtube_link": "",
-    "social_tiktok_link": "",
+    "social_tiktok_link": "#",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -182,6 +182,28 @@
           "button": "#ffffff",
           "button_label": "#f93943",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-487ba886-07e4-46d2-9011-5254b28df6a6": {
+        "settings": {
+          "background": "#fceced",
+          "background_gradient": "",
+          "text": "#540000",
+          "button": "#540000",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#540000",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-dc6b76e1-97c3-4432-8413-fd6a8c7f9391": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#540000",
+          "button": "#540000",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#540000",
           "shadow": "#121212"
         }
       }

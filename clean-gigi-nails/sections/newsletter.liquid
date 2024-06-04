@@ -2,6 +2,14 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  #shopify-section-{{ section.id }}.newsletter-section {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }}.newsletter-section {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -85,7 +93,7 @@
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    {% render 'icon-arrow' %}
+                    {{ block.settings.button_label }}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -118,7 +126,7 @@
 {
   "name": "t:sections.newsletter.name",
   "tag": "section",
-  "class": "section",
+  "class": "section newsletter-section",
   "disabled_on": {
     "groups": ["header"]
   },
@@ -138,6 +146,20 @@
     {
       "type": "paragraph",
       "content": "t:sections.newsletter.settings.paragraph.content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.footer.settings.margin_top.label",
+      "default": 0
     },
     {
       "type": "header",
@@ -214,7 +236,15 @@
     {
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Botón de enviar",
+          "default": "Enviar"
+        }
+      ]
     },
     {
       "type": "@app"

@@ -97,3 +97,11 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+/* Custom */
+.collection .placeholder-svg {
+  background-color: rgba(var(--color-foreground), 0.04);
+  color: rgba(var(--color-foreground), 0.55);
+  fill: rgba(var(--color-foreground), 0.55);
+  height: 100%;
+}
