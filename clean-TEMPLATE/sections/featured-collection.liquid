@@ -132,7 +132,7 @@
                     assign ridx = 2
                 endcase
               %}
-              {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
+              {%- assign placeholder_image = 'image' -%}
               {% render 'card-product',
                 show_vendor: section.settings.show_vendor,
                 media_aspect_ratio: section.settings.image_ratio,
