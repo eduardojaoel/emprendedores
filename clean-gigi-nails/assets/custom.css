@@ -1,0 +1,8 @@
+.header__menu-item {
+  font-size: 1.34rem;
+  text-transform: uppercase;
+}
+.collection-list div.card__inner,
+.cs-item-wrapper.cs-item-wrapper__category {
+  border: 1px solid rgb(var(--color-button));
+}
