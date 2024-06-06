@@ -1,0 +1,60 @@
+.cs-collection-slider .cs-slider.is-overflow.has-pagination .splide__track {
+  margin-bottom: 4.2rem;
+}
+.cs-collection-slider .cs-slider.insufficent-slides:not(.is-loop) .splide__list {
+  justify-content: center;
+}
+.cs-collection-slider .splide__pagination {
+  top: 100%;
+  bottom: auto;
+  padding: 2.5rem 1rem 0;
+}
+.cs-collection-slider .splide__pagination__page {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cs-collection-slider .splide__pagination__page.is-active {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1);
+}
+.cs-collection-slider .splide__arrow {
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: rgba(var(--color-background), 0.75);
+  top: 43%;
+}
+.cs-collection-slider .splide__arrow svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: rgb(var(--color-foreground));
+}
+.cs-collection-slider__image-container .cs-collection-slider__image {
+  width: 100%;
+  height: auto;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--1-1 {
+  aspect-ratio: 1/1;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--3-2 {
+  aspect-ratio: 3/2;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--2-3 {
+  aspect-ratio: 2/3;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--4-3 {
+  aspect-ratio: 4/3;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--3-4 {
+  aspect-ratio: 3/4;
+}
+.cs-collection-slider__image-container.cs-collection-slider__aspect-ratio--16-9 {
+  aspect-ratio: 16/9;
+}
+.cs-collection-slider__image-container .cs-collection-slider__image-placeholder {
+  background-color: #f7f7f7;
+  fill: #aaa;
+}
+.cs-collection-slider__image-container:not(.cs-collection-slider__aspect-ratio--none) .cs-collection-slider__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

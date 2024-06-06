@@ -11,3 +11,29 @@
 .header__icon--cart {
   margin-top: 0.1rem;
 }
+.cs-info-bar__item span {
+  padding-top: 0.1rem;
+}
+.cs-info-bar__item span {
+  font-weight: 500;
+}
+
+.button {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 750px) {
+  .button {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 749px) {
+  .slider-counter__link--dots span.dot {
+    border: 0.1rem solid rgba(var(--color-background), 0.5);
+  }
+  .slider-counter__link--active.slider-counter__link--dots span.dot {
+    background-color: rgba(var(--color-background), 0.7);
+  }
+}
+.shopify-section {
+  overflow: hidden;
+}

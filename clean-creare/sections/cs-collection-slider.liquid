@@ -1,0 +1,421 @@
+{{ 'cs-collection-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+  	padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+  	padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+  	.section-{{ section.id }}-padding {
+  		padding-top: {{ section.settings.padding_top }}px;
+  		padding-bottom: {{ section.settings.padding_bottom }}px;
+  	}
+  }
+  #shopify-section-{{ section.id }} .splide__track {
+    margin-left: {{ section.settings.slides_mobile_padding }}px;
+    margin-right: {{ section.settings.slides_mobile_padding }}px;
+  }
+  @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} .splide__track {
+      margin-left: {{ section.settings.slides_padding }}px;
+      margin-right: {{ section.settings.slides_padding }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {% comment %} Heading {% endcomment %}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="cs-collection-slider__heading inline-richtext {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    {% comment %} Main {% endcomment %}
+    <div class="cs-collection-slider__container">
+      {% if section.blocks.size > 0 %}
+        {% assign enable_drag = true %}
+        {% assign enable_arrows = true %}
+        {% assign enable_pagination = true %}
+        {% assign insufficent_slides = false %}
+
+        {% if section.blocks.size <= section.settings.slides_per_view %}
+          {% assign insufficent_slides = true %}
+        {% endif %}
+        {% if insufficent_slides and section.settings.slider_type != 'loop' %}
+          {% assign enable_drag = false %}
+        {% endif %}
+        {% if section.settings.enable_arrows != true %}
+          {% assign enable_arrows = false %}
+        {% elsif insufficent_slides and section.settings.slider_type != 'loop' %}
+          {% assign enable_arrows = false %}
+        {% endif %}
+        {% if insufficent_slides or section.settings.enable_pagination != true %}
+          {% assign enable_pagination = false %}
+        {% endif %}
+
+        <div
+          id="cs-slider__{{ section.id }}"
+          class="
+            cs-slider splide
+            {% if enable_pagination %}has-pagination{% endif %}
+            {% if insufficent_slides %}insufficent-slides{% endif %}
+            {% if section.settings.slider_type == 'loop' %}is-loop{% endif %}
+          "
+          role="group"
+          section-id="shopify-section-{{ section.id }}"
+          aria-label="Carrusel de colecciones"
+          data-splide='
+            {
+              "type": "{{ section.settings.slider_type }}",
+              "perPage": {{ section.settings.slides_per_view }},
+              "drag": {{ enable_drag }},
+              "arrows": {{ enable_arrows }},
+              "pagination": {{ enable_pagination }},
+              "perPage": {{ section.settings.slides_per_view }},
+              "gap": "{{ section.settings.slides_gap }}px",
+              "perMove": 1,
+              "arrowPath": "M9.5,0.7c-0.9,0.9-0.9,2.3,0,3.1c0,0,0,0,0,0L25.7,20L9.5,36.2c-0.9,0.9-0.9,2.3,0,3.1c0.9,0.9,2.3,0.9,3.1,0 l17.8-17.8c0.9-0.9,0.9-2.3,0-3.1c0,0,0,0,0,0L12.7,0.7C11.8-0.2,10.4-0.2,9.5,0.7C9.5,0.7,9.5,0.7,9.5,0.7",
+              "breakpoints": {
+                "749": {
+                  "perPage": {{ section.settings.slides_mobile_per_view }},
+                  "gap": "{{ section.settings.slides_mobile_gap }}px",
+                  "arrows": {{ section.settings.enable_arrows_mobile }}
+                }
+              }
+            }
+          '
+        >
+          <div
+            class="splide__track"
+          >
+            <ul class="splide__list">
+              {% for block in section.blocks %}
+                <li class="cs-collection-slider-item splide__slide">
+                  <a href="{{ block.settings.link }}" class="cs-collection-slider-item__content full-unstyled-link">
+                    <div class="cs-collection-slider__image-container cs-collection-slider__aspect-ratio--{{ section.settings.image_aspect_ratio }} {% if block.settings.image == blank %}cs-collection-slider__image-container-placeholder{% endif %}">
+                      {% if block.settings.image %}
+                        {% capture sizes %}(min-width: 750px) calc((100vw / {{ section.settings.slides_per_view }}) / 2), calc((100vw / {{ section.settings.slides_mobile_per_view }}) / 2){% endcapture %}
+                        {{
+                          block.settings.image
+                          | image_url: width: 1000
+                          | image_tag:
+                            widths: '200, 250, 300, 400, 500, 750, 900, 1000',
+                            sizes: sizes,
+                            class: 'cs-collection-slider__image'
+                        }}
+                      {% else %}
+                        {{
+                          'image'
+                          | placeholder_svg_tag: 'cs-collection-slider__image cs-collection-slider__image-placeholder placeholder'
+                        }}
+                      {% endif %}
+                    </div>
+                    <h3 class="cs-collection-slider-item__title">{{ block.settings.title }}</h3>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carrusel de colecciones",
+  "tag": "section",
+  "class": "section cs-collection-slider",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Carrusel de colecciones",
+      "label": "Título"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Pequeño"
+        },
+        {
+          "value": "h1",
+          "label": "Mediano"
+        },
+        {
+          "value": "h0",
+          "label": "Grande"
+        }
+      ],
+      "default": "h1",
+      "label": "Tamaño del título"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center",
+      "label": "Alineación del título"
+    },
+    {
+      "type": "header",
+      "content": "Carrusel"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Radio de borde",
+      "default": 8,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Relación de aspecto",
+      "default": "1-1",
+      "options": [
+        {
+          "value": "none",
+          "label": "Adaptar a la imagen"
+        },
+        {
+          "value": "1-1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "4-3",
+          "label": "Horizontal (4:3)"
+        },
+        {
+          "value": "16-9",
+          "label": "Horizontal (16:9)"
+        },
+        {
+          "value": "3-2",
+          "label": "Horizontal (3:2)"
+        },
+        {
+          "value": "3-4",
+          "label": "Vertical (3:4)"
+        },
+        {
+          "value": "2-3",
+          "label": "Vertical (2:3)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes generales del carrusel"
+    },
+    {
+      "type": "select",
+      "id": "slider_type",
+      "label": "Tipo de carrusel",
+      "default": "loop",
+      "options": [
+        {
+          "value": "slide",
+          "label": "Deslizante"
+        },
+        {
+          "value": "loop",
+          "label": "Bucle"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Habilitar flechas",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Habilitar paginación",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para escritorio"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view",
+      "label": "Items por vista",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "slides_gap",
+      "label": "Espaciado entre items",
+      "default": 24,
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_padding",
+      "label": "Espaciado lateral",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para dispositivos móviles"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows_mobile",
+      "label": "Habilitar flechas (móvil)",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "slides_mobile_per_view",
+      "label": "Items por vista (móvil)",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_gap",
+      "label": "Espaciado entre items (móvil)",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_padding",
+      "label": "Espaciado lateral (móvil)",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Colección",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nombre de la colección",
+          "default": "Colección"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrusel de colecciones",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

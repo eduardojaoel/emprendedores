@@ -1,0 +1,42 @@
+.cs-comparison-cards .placeholder-image {
+  opacity: 0.4;
+}
+.cs-comparison-cards .placeholder-image__before {
+  background-color: rgba(var(--color-foreground), 0.5);
+}
+.cs-comparison-cards .placeholder-image__after {
+  background-color: rgba(var(--color-foreground), 0.5);
+}
+.cs-comparison-cards .cs-comparison-cards__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.cs-comparison-cards img-comparison-slider {
+  --divider-color: rgba(var(--color-background), 1);
+  --default-handle-color: rgba(var(--color-background), 1);
+  --divider-width: 2px;
+  --default-handle-width: 80px;
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+}
+.cs-comparison-cards .icon-arrow {
+  color: rgb(var(--color-button));
+}
+.cs-comparison-cards .cs-comparison-cards__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .cs-comparison-cards .cs-comparison-cards__title svg {
+    transition: transform 0.2s ease;
+  }
+  .cs-comparison-cards .cs-comparison-cards__title:hover svg {
+    transform: translateX(0.5rem);
+  }
+}
+.cs-comparison-cards .handle svg {
+  stroke-width: 2px;
+}

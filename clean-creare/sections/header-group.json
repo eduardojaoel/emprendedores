@@ -2,21 +2,16 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+    "cs_info_bar_Mbgxam": {
+      "type": "cs-info-bar",
       "settings": {
+        "whatsapp_label": "+507 6378-3384",
+        "whatsapp_link": "https:\/\/wa.me\/50763783384",
+        "email_label": "info@creare.com.pa",
+        "email_link": "mailto:info@creare.com.pa",
+        "color_scheme": "scheme-3",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "header": {
@@ -24,10 +19,12 @@
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
+        "highlighted_links": "",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
+        "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "mobile_logo_position": "center",
@@ -38,7 +35,7 @@
     }
   },
   "order": [
-    "announcement-bar",
+    "cs_info_bar_Mbgxam",
     "header"
   ]
 }

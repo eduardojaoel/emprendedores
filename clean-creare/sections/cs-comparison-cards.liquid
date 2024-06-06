@@ -1,0 +1,278 @@
+{{ 'cs-comparison-cards.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+  	padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+  	padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+  	.section-{{ section.id }}-padding {
+  		padding-top: {{ section.settings.padding_top }}px;
+  		padding-bottom: {{ section.settings.padding_bottom }}px;
+  	}
+  }
+  #shopify-section-{{ section.id }} .cs-comparison-cards__image {
+    aspect-ratio: {{ section.settings.aspect_ratio }};
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {% comment %} Heading {% endcomment %}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="cs-comparison-cards__heading inline-richtext {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    {% comment %} Main {% endcomment %}
+    <div class="cs-comparison-cards__container">
+      <div class="cs-comparison-cards__wrapper grid grid--1-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
+        {% for block in section.blocks %}
+          <div class="cs-comparison-cards__item grid__item">
+            <div class="cs-comparison-cards__item-compare">
+              <img-comparison-slider>
+                {% if block.settings.image_before != blank %}
+                  {% capture sizes %}
+                    (min-width: 750px) calc(100vw / {{ section.settings.columns_desktop }}), 100vw
+                  {% endcapture %}
+                  {{
+                    block.settings.image_before
+                    | image_url: width: 3200
+                    | image_tag:
+                      slot: 'first',
+                      widths: '300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                      sizes: sizes,
+                      class: 'cs-comparison-cards__image'
+                  }}
+                {% else %}
+                  <img
+                    class="placeholder-image placeholder-image__before cs-comparison-cards__image"
+                    slot="first"
+                    src="{{ 'placeholder.svg' | asset_url }}"
+                    width="1000"
+                    height="1000"
+                  >
+                {% endif %}
+                {% if block.settings.image_after != blank %}
+                  {% capture sizes %}
+                    (min-width: 750px) calc(100vw / {{ section.settings.columns_desktop }}), 100vw
+                  {% endcapture %}
+                  {{
+                    block.settings.image_after
+                    | image_url: width: 3200
+                    | image_tag:
+                      slot: 'second',
+                      widths: '300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                      sizes: sizes,
+                      class: 'cs-comparison-cards__image'
+                  }}
+                {% else %}
+                  <img
+                    class="placeholder-image placeholder-image__after cs-comparison-cards__image"
+                    slot="second"
+                    src="{{ 'placeholder.svg' | asset_url }}"
+                    width="1000"
+                    height="1000"
+                  >
+                {% endif %}
+                <svg slot="handle" xmlns="http://www.w3.org/2000/svg" width="80px" viewBox="0 0 14.2 4.2">
+                  <path fill="none" stroke="#fff" stroke-width="2" d="m2.1.1L.1,2.1l2,2M12.1.1l2,2-2,2" vector-effect="non-scaling-stroke"/>
+                </svg>
+              </img-comparison-slider>
+            </div>
+            {% if block.settings.title %}
+              <a
+                {% if block.settings.link != blank %}
+                  href="{{ block.settings.link }}"
+                {% endif %}
+                class="cs-comparison-cards__title-link full-unstyled-link"
+              >
+                <h3 class="cs-comparison-cards__title">
+                  {{ block.settings.title -}}
+                  {%- render 'icon-arrow' %}
+                </h3>
+              </a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tarjetas de comparación",
+  "tag": "section",
+  "class": "section cs-comparison-cards",
+  "settings": [
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Relación de aspecto de las imágenes",
+      "default": "4/3",
+      "options": [
+        {
+          "value": "1/1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "4/3",
+          "label": "Horizontal (4:3)"
+        },
+        {
+          "value": "16/9",
+          "label": "Horizontal (16:9)"
+        },
+        {
+          "value": "3/2",
+          "label": "Horizontal (3:2)"
+        },
+        {
+          "value": "3/4",
+          "label": "Vertical (3:4)"
+        },
+        {
+          "value": "2/3",
+          "label": "Vertical (2:3)"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 columna"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "2",
+      "label": "Número de columnas en el escritorio"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Tarjetas de comparación",
+      "label": "Título"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Pequeño"
+        },
+        {
+          "value": "h1",
+          "label": "Mediano"
+        },
+        {
+          "value": "h0",
+          "label": "Grande"
+        }
+      ],
+      "default": "h1",
+      "label": "Tamaño del título"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center",
+      "label": "Alineación del título"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Tarjeta de comparación",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_before",
+          "label": "Imagen antes"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_after",
+          "label": "Imagen después"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Título de la colección"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tarjetas de comparación",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
