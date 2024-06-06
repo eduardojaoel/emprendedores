@@ -55,7 +55,7 @@
         {% case block.type %}
           {% when 'category' %}
             <a
-              class="cs-item-wrapper cs-item-wrapper__category"
+              class="cs-item-wrapper cs-item-wrapper__category color-{{ section.settings.text_box_color_scheme }}"
               {% if block.settings.link != blank %}
                 href="{{ block.settings.link }}"
               {% endif %}
@@ -71,13 +71,6 @@
                   }}
                 {% else %}
                   {{ 'image' | placeholder_svg_tag: 'cs-grid-item__image placeholder-svg' }}
-                {% endif %}
-                <div class="cs-overlay-gradient"></div>
-                {% if block.settings.heading != blank %}
-                  <h3 class="cs-grid-item__heading">{{ block.settings.heading }}</h3>
-                {% endif %}
-                {% if block.settings.link_label != blank %}
-                  <span class="cs-grid-item__button">{{ block.settings.link_label }}</span>
                 {% endif %}
               </div>
             </a>
@@ -108,6 +101,32 @@
                 {% endif %}
               </div>
             </div>
+          {% when 'text-box' %}
+            <div class="cs-item-wrapper cs-item-wrapper__text-box">
+              <div class="cs-grid-item color-{{ section.settings.text_box_color_scheme }}">
+                {% if block.settings.caption != blank %}
+                  <p class="text-box__caption caption">{{ block.settings.caption }}</p>
+                {% endif %}
+                {% if block.settings.title != blank %}
+                  <h3 class="text-box__title {{ block.settings.title_size }}{% if block.settings.accent_color == true %} accent-color{% endif %}">
+                    {{ block.settings.title }}
+                  </h3>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="text-box__description subtitle">{{ block.settings.description | strip_html }}</p>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <a
+                    {% if block.settings.link != blank %}
+                      href="{{ block.settings.link }}"
+                    {% endif %}
+                    class="text-box__button button button--secondary"
+                  >
+                    {% render 'icon-arrow' %}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
         {% endcase %}
       {% endfor %}
     </div>
@@ -124,8 +143,7 @@
     {
       "type": "text",
       "id": "heading",
-      "label": "Título de la sección",
-      "default": "Nuestras colecciones"
+      "label": "Título de la sección"
     },
     {
       "type": "select",
@@ -193,17 +211,23 @@
       "type": "range",
       "id": "border_radius",
       "min": 0,
-      "max": 10,
+      "max": 40,
       "step": 1,
       "unit": "px",
       "label": "Radio de borde",
-      "default": 0
+      "default": 32
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "Color del texto",
       "default": "#fff"
+    },
+    {
+      "type": "color_scheme",
+      "id": "text_box_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
     },
     {
       "type": "range",
@@ -229,29 +253,12 @@
   "blocks": [
     {
       "type": "category",
-      "name": "Categoría",
+      "name": "Imagen",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
           "label": "Imagen"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Título de la categoría",
-          "default": "Heading"
-        },
-        {
-          "type": "text",
-          "id": "link_label",
-          "label": "Texto del botón",
-          "default": "Botón"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "URL del botón"
         }
       ]
     },
@@ -266,6 +273,61 @@
           "limit": 1
         }
       ]
+    },
+    {
+      "type": "text-box",
+      "name": "Caja de texto",
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Leyenda",
+          "default": "Agrega una leyenda"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Título",
+          "default": "Título"
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Pequeño"
+            },
+            {
+              "value": "h1",
+              "label": "Mediano"
+            },
+            {
+              "value": "h0",
+              "label": "Grande"
+            }
+          ],
+          "default": "h2",
+          "label": "Tamaño del título"
+        },
+        {
+          "type": "checkbox",
+          "id": "accent_color",
+          "label": "Color de acento",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Descripción",
+          "default": "<p>Descripción de la caja de texto</p>"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "URL del botón"
+        }
+      ]
     }
   ],
   "presets": [
@@ -276,19 +338,17 @@
           "type": "category"
         },
         {
-          "type": "category"
+          "type": "text-box",
+          "settings": {
+            "title_size": "h0",
+            "link": "#"
+          }
         },
         {
           "type": "category"
         },
         {
-          "type": "category"
-        },
-        {
-          "type": "category"
-        },
-        {
-          "type": "category"
+          "type": "text-box"
         }
       ]
     }

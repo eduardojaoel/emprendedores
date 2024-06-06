@@ -81,8 +81,7 @@
           {%- endfor -%}
         {%- else -%}
           {% for i in (1..section.settings.post_limit) -%}
-            {%- assign placeholder_image_index = forloop.index0 | modulo: 3 | plus: 1 -%}
-            {%- assign placeholder_image = 'blog-apparel-' | append: placeholder_image_index -%}
+            {%- assign placeholder_image = 'image' -%}
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="blog__post grid__item article slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -101,13 +100,13 @@
                   style=" {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}"
                 >
                   <div
-                    class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
+                    class="card__inner ratio"
                     style="--ratio-percent: 80%;"
                   >
                     {%- if section.settings.show_image == true -%}
                       <div class="article-card__image-wrapper card__media">
                         <div class="article-card__image media">
-                          {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}
+                          {{ placeholder_image | placeholder_svg_tag: 'placeholder' }}
                         </div>
                       </div>
                     {%- endif -%}

@@ -1,0 +1,79 @@
+.cs-media-with-text__image-container .cs-media-with-text__image {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 750px) {
+  .cs-media-with-text__image-container .cs-media-with-text__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.cs-media-with-text .cs-media-with-text__item {
+  z-index: 1;
+}
+.cs-media-with-text .cs-media-with-text__item-media {
+  display: flex;
+  gap: 2.4rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 750px) {
+  .cs-media-with-text .cs-media-with-text__item-media {
+    flex-direction: row;
+  }
+}
+.cs-media-with-text .cs-media-with-text__video-container {
+  flex: 2;
+}
+.cs-media-with-text .cs-media-with-text__image-container {
+  flex: 1;
+}
+.cs-media-with-text .cs-media-with-text__container > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cs-media-with-text .cs-media-with-text__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cs-media-with-text .cs-media-with-text__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.cs-media-with-text .cs-media-with-text__container .cs-media-with-text__item:empty {
+  display: none;
+}
+.cs-media-with-text .cs-media-with-text__item-button {
+  display: flex;
+  justify-content: center;
+}
+.cs-media-with-text .cs-media-with-text__description {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* Background texture */
+
+.cs-media-with-text .cs-media-with-text__background-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.cs-media-with-text .cs-media-with-text__background-texture-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cs-media-with-text .background-texture-enabled {
+  background-color: transparent;
+  position: relative;
+}
+.cs-media-with-text .background-texture-enabled .cs-media-with-text__video-container,
+.cs-media-with-text .background-texture-enabled .cs-media-with-text__image-container {
+  background-color: rgb(var(--color-background));
+}

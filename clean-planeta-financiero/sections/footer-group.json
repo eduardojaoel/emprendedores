@@ -5,37 +5,67 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
+        "brand_information_MB4rBJ": {
+          "type": "brand_information",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_planeta-financiero_original.png",
+            "image_width": 230,
+            "alignment": "left",
+            "show_icons": true,
+            "email_label": "correo@correocorp.com",
+            "email_link": "",
+            "whatsapp_label": "",
+            "whatsapp_link": "",
+            "phone_label": "6XXXXXXX",
+            "phone_link": "",
+            "location_label": "",
+            "location_link": ""
+          }
+        },
+        "link_list_FCbLLQ": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick",
+            "heading": "Enlaces rápidos",
             "menu": "footer"
           }
         },
-        "footer-1": {
+        "link_list_FY3FRq": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "Enlaces rápidos",
+            "menu": "footer-2"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "link_list_Qpzf9L": {
+          "type": "link_list",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "Enlaces rápidos",
+            "menu": "footer-3"
           }
         }
       },
-      "block_order": ["footer-0", "footer-1", "footer-2"],
+      "block_order": [
+        "brand_information_MB4rBJ",
+        "link_list_FCbLLQ",
+        "link_list_FY3FRq",
+        "link_list_Qpzf9L"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
+        "show_payments": true,
+        "payment_visa": false,
+        "payment_mastercard": false,
+        "payment_ach": true,
+        "payment_yappy": true,
+        "payment_clave": true,
+        "payment_efectivo": false,
         "show_policy": false,
         "margin_top": 48,
         "padding_top": 36,
@@ -43,5 +73,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

@@ -1,60 +1,351 @@
 {
   "sections": {
-    "multicolumn": {
-      "type": "multicolumn",
+    "cs_media_with_text_BhJk7z": {
+      "type": "cs-media-with-text",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "title_GP4DNX": {
+          "type": "title",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title": "Inicia con <em>inversiones a largo plazo<\/em> y prepárate para <strong>un mejor futuro<\/strong>",
+            "title_size": "h0",
+            "title_alignment": "center"
           }
         },
-        "column2": {
-          "type": "column",
+        "media_HBdgtd": {
+          "type": "media",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "",
+            "show_image": false
           }
         },
-        "column3": {
-          "type": "column",
+        "description_yGN4qc": {
+          "type": "description",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
+            "description": "Nada es más importante que sentirte cómodo a la hora de hacer una inversión. Aprenderás a administrarte y pensar a largo plazo.",
+            "description_size": "h2",
+            "description_alignment": "center"
+          }
+        },
+        "button_jDN4q3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Reserva tu llamada",
+            "button_link": "shopify:\/\/pages\/contactanos",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "title_GP4DNX",
+        "media_HBdgtd",
+        "description_yGN4qc",
+        "button_jDN4q3"
+      ],
+      "settings": {
+        "enable_background_texture": true,
+        "background_texture": "shopify:\/\/shop_images\/background_static.png",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_collapsible_cards_cMR4tf": {
+      "type": "cs-collapsible-cards",
+      "blocks": {
+        "card_NTX8jm": {
+          "type": "card",
+          "settings": {
+            "title": "ETFs",
+            "link": "",
+            "subtitle": "Inversión pasiva",
+            "collapsible_title_1": "Es para ti si",
+            "collapsible_content_1": "<p>Contenido 1<\/p>",
+            "collapsible_title_2": "Incluye",
+            "collapsible_content_2": "<p>Contenido 2<\/p>",
+            "collapsible_title_3": "Al terminar el curso",
+            "collapsible_content_3": "<p>Contenido 3<\/p>",
+            "collapsible_title_4": "",
+            "collapsible_content_4": "",
+            "collapsible_title_5": "",
+            "collapsible_content_5": ""
+          }
+        },
+        "card_iTpWqG": {
+          "type": "card",
+          "settings": {
+            "title": "Acciones",
+            "link": "",
+            "subtitle": "Inversión activa",
+            "collapsible_title_1": "Es para ti si",
+            "collapsible_content_1": "<p>Contenido 1<\/p>",
+            "collapsible_title_2": "Incluye",
+            "collapsible_content_2": "<p>Contenido 2<\/p>",
+            "collapsible_title_3": "Al terminar el curso",
+            "collapsible_content_3": "<p>Contenido 3<\/p>",
+            "collapsible_title_4": "",
+            "collapsible_content_4": "",
+            "collapsible_title_5": "",
+            "collapsible_content_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_NTX8jm",
+        "card_iTpWqG"
+      ],
+      "settings": {
+        "heading": "Cursos Planetarios",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "columns_desktop": "2",
+        "image_aspect_ratio": "3-2",
+        "color_scheme": "",
+        "card_color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_marquee_wcddbi": {
+      "type": "cs-marquee",
+      "settings": {
+        "text": "Talk about",
+        "text_size": "h2",
+        "color_scheme": "scheme-3bafc646-8f42-4f78-a1c4-22c11c7be7cc",
+        "padding": 36
+      }
+    },
+    "cs_collage_HJgxQE": {
+      "type": "cs-collage",
+      "blocks": {
+        "category_gdwpLY": {
+          "type": "category",
+          "settings": {
+          }
+        },
+        "text_box_xgdVan": {
+          "type": "text-box",
+          "settings": {
+            "caption": "Educación financiera",
+            "title": "TODOS TENEMOS <em>UN FUTURO “YO”.<\/em>",
+            "title_size": "h0",
+            "accent_color": false,
+            "description": "<p>La inversión a largo plazo es la forma menos riesgosa y más predecible de invertir con éxito.<\/p>",
+            "link": "#"
+          }
+        },
+        "category_3enz4d": {
+          "type": "category",
+          "settings": {
+          }
+        },
+        "text_box_WeXqmJ": {
+          "type": "text-box",
+          "settings": {
+            "caption": "Educación financiera",
+            "title": "Talk about your brand",
+            "title_size": "h2",
+            "accent_color": true,
+            "description": "<p>Share information about your brand<\/p>",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "category_gdwpLY",
+        "text_box_xgdVan",
+        "category_3enz4d",
+        "text_box_WeXqmJ"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
+        "heading": "",
+        "heading_size": "2.5",
+        "large_item_position": "left",
+        "overlay_opacity": 40,
+        "border_radius": 32,
+        "text_color": "#ffffff",
+        "text_box_color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 30
+      }
+    },
+    "rich_text_e6AGN3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eM9n7c": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>”OJALÁ HUBIESE<br\/>EMPEZADO<\/strong><em><strong> A INVERTIR ANTES<\/strong><\/em><strong>”<\/strong><br\/>-TODOS<\/p>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eM9n7c"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_Ez8KFA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_E3geFe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Conoce <em>nuestra pasión<\/em> por las <strong>inversiones<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_k7Pear": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vincula un texto con una imagen para atraer la atención hacia tu producto, colección o artículo de blog seleccionados. Agrega detalles sobre disponibilidad y estilo, o incluso ofrece una reseña.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_E3geFe",
+        "text_k7Pear"
+      ],
+      "custom_css": [
+        ".image-with-text-container {border-radius: 4rem 4rem 0 0;}",
+        "@media screen and (min-width: 750px) {.image-with-text-container {border-radius: 8rem 8rem 0 0; }}"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ncTbN4": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_L3Weph": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vincula un texto con una imagen para atraer la atención hacia tu producto, colección o artículo de blog seleccionados. Agrega detalles sobre disponibilidad y estilo, o incluso ofrece una reseña.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_L3Weph"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_video_grid_iGrA3z": {
+      "type": "cs-video-grid",
+      "blocks": {
+        "video_eeH9Ww": {
+          "type": "video",
+          "settings": {
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
+          }
+        },
+        "video_4QrCH3": {
+          "type": "video",
+          "settings": {
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
+          }
+        },
+        "video_TpJcTL": {
+          "type": "video",
+          "settings": {
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
+          }
+        },
+        "video_3UVipp": {
+          "type": "video",
+          "settings": {
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_eeH9Ww",
+        "video_4QrCH3",
+        "video_TpJcTL",
+        "video_3UVipp"
+      ],
+      "settings": {
+        "heading": "+30k Suscriptores en YouTube",
+        "heading_size": "h0",
+        "subtitle": "Suscríbete a mi canal y no te pierdas de nuevos tutoriales gratuitos.",
+        "heading_alignment": "center",
+        "columns_desktop": "2",
+        "button_label": "Ver Canal de Youtube",
         "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "button_style_secondary": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog_mtR7cT": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-4",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "multicolumn"
+    "cs_media_with_text_BhJk7z",
+    "cs_collapsible_cards_cMR4tf",
+    "cs_marquee_wcddbi",
+    "cs_collage_HJgxQE",
+    "rich_text_e6AGN3",
+    "image_with_text_Ez8KFA",
+    "image_with_text_ncTbN4",
+    "cs_video_grid_iGrA3z",
+    "featured_blog_mtR7cT"
   ]
 }

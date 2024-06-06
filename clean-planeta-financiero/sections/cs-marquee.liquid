@@ -1,0 +1,121 @@
+{% comment %} Requiere la extensión de splide autoscroll y declararla en mount() {% endcomment %}
+{{ 'cs-marquee.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+  	padding-top: calc({{ section.settings.padding }}px * 0.75);
+  	padding-bottom: calc({{ section.settings.padding }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+  	.section-{{ section.id }}-padding {
+  		padding-top: {{ section.settings.padding }}px;
+  		padding-bottom: {{ section.settings.padding }}px;
+  	}
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding">
+    <div class="cs-marquee__container">
+      <div
+        id="cs-slider__{{ section.id }}"
+        class="cs-marquee splide"
+        section-id="shopify-section-{{ section.id }}"
+        role="group"
+        aria-label="Texto en movimiento"
+        data-splide='
+          {
+            "type": "loop",
+            "drag": "free",
+            "focus": "center",
+            "autoWidth": true,
+            "gap": "70px",
+            "arrows": false,
+            "pagination": false,
+            "autoScroll": {
+              "speed": 2,
+              "pauseOnHover": false
+            }
+          }
+        '
+      >
+        <div
+          class="splide__track"
+        >
+          <ul class="splide__list">
+            {% for i in (1..10) %}
+              <li class="cs-marquee__item splide__slide {{ section.settings.text_size }}">
+                <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.9722 2.56274C9.06564 5.75312 8.7344 6.43304 7.74067 7.30473C6.92128 8.03695 6.74694 8.10669 3.03354 9.18758C1.76087 9.55369 0.714844 9.90237 0.714844 9.95467C0.714844 10.007 1.70857 10.3557 2.94637 10.7043C6.5203 11.7329 6.86898 11.8724 7.47916 12.3257C8.56006 13.1451 8.96104 13.947 9.86759 16.9631C10.3383 18.567 10.7742 19.8745 10.8439 19.8745C10.8962 19.8745 11.332 18.6018 11.7853 17.0328C12.7267 13.8598 12.8662 13.5286 13.5636 12.8313C14.383 11.9944 14.7142 11.855 17.7302 10.9658C19.3342 10.5126 20.6591 10.0941 20.7114 10.0593C20.816 9.95467 18.4973 9.13528 16.8411 8.69944C14.1214 7.98465 12.7442 6.72942 12.2212 4.42815C11.855 2.87654 10.9485 -3.43323e-05 10.8265 -3.43323e-05C10.7567 -3.43323e-05 10.3732 1.1506 9.9722 2.56274Z" fill="currentColor"/>
+                </svg>
+                {{ section.settings.text }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Texto en movimiento",
+  "tag": "section",
+  "class": "section cs-marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texto deslizable",
+      "default": "Texto en desplazamiento"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Pequeño"
+        },
+        {
+          "value": "h1",
+          "label": "Mediano"
+        },
+        {
+          "value": "h0",
+          "label": "Grande"
+        }
+      ],
+      "default": "h1",
+      "label": "Tamaño del texto"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Relleno superior e inferior",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texto en movimiento"
+    }
+  ]
+}
+{% endschema %}
