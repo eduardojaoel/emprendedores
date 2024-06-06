@@ -1,0 +1,72 @@
+/* Heading */
+.cs-product-slider .cs-heading {
+  margin-top: 0;
+  line-height: 1.15;
+}
+/* Splide */
+.cs-product-slider .cs-slider.is-overflow.has-pagination .splide__track {
+  margin-bottom: 4.2rem;
+}
+.cs-product-slider .cs-slider.insufficent-slides:not(.is-loop) .splide__list {
+  justify-content: center;
+}
+.cs-product-slider .splide__pagination {
+  top: 100%;
+  bottom: auto;
+  padding: 2.5rem 1rem 0;
+}
+.cs-product-slider .splide__pagination__page {
+  background-color: rgba(var(--color-foreground), 0.5);
+}
+.cs-product-slider .splide__pagination__page.is-active {
+  background-color: rgba(var(--color-foreground), 1);
+  transform: scale(1);
+}
+/* Custom */
+/* .cs-product-slider .cs-placeholder-container {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (min-width: 750px) {
+  .cs-product-slider .cs-placeholder-container {
+    gap: 2.4rem;
+  }
+}
+.cs-product-slider .cs-placeholder-container > .placeholder-item:nth-child(n + 3) {
+  display: none;
+}
+@media only screen and (min-width: 750px) {
+  .cs-product-slider .cs-placeholder-container > .placeholder-item:nth-child(n + 3) {
+    display: block;
+  }
+}
+.cs-product-slider .cs-placeholder-container .card-wrapper {
+  width: 100%;
+}
+.cs-product-slider .cs-placeholder-container .placeholder-item {
+  width: calc(50% - (1rem / 2));
+}
+@media only screen and (min-width: 750px) {
+  .cs-product-slider .cs-placeholder-container .placeholder-item {
+    width: calc(25% - 2.4rem * 3 / 4);
+  }
+} */
+.cs-product-slider .placeholder-svg {
+  background-color: rgba(var(--color-foreground), 0.04);
+  color: rgba(var(--color-foreground), 0.55);
+  fill: rgba(var(--color-foreground), 0.55);
+}
+.cs-product-slider .splide__arrow {
+  height: 4rem;
+  width: 4rem;
+  top: 42.5%;
+  background-color: rgba(255, 255, 255, 1);
+}
+.cs-product-slider .cs-slider:not(.has-items) .splide__arrow {
+  top: 44.5%;
+}
+.cs-product-slider .splide__arrow svg {
+  fill: rgb(var(--color-foreground));
+  height: 1em;
+  width: 1em;
+}
