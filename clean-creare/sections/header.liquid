@@ -215,10 +215,6 @@
     if section.settings.menu != blank
       render 'header-drawer', highlighted_links: highlighted_links
     endif
-
-    if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-      render 'header-search', input_id: 'Search-In-Modal-1'
-    endif
   -%}
 
   {%- if section.settings.logo_position != 'middle-center' -%}
@@ -321,8 +317,6 @@
         </localization-form>
       {%- endif -%}
     </div>
-
-    {% render 'header-search', input_id: 'Search-In-Modal' %}
 
     <a
       href="#"

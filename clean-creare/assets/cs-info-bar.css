@@ -1,0 +1,38 @@
+.cs-info-bar .icon.icon-whatsapp {
+  height: 2.7rem;
+  width: 2.7rem;
+}
+.cs-info-bar .icon.icon-email {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.cs-info-bar .cs-info-bar__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cs-info-bar .cs-info-bar__item {
+  flex: 0 0 auto;
+}
+.cs-info-bar .cs-info-bar__item a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cs-info-bar .page-width {
+  padding: 10px 3rem 10px 3rem;
+}
+@media only screen and (min-width: 750px) {
+  .cs-info-bar .page-width {
+    padding-left: 2.3rem;
+    padding-right: 2.7rem;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .cs-info-bar .page-width {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
