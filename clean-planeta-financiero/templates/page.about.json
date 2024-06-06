@@ -2,13 +2,449 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "cs_media_with_text_xMFQGf": {
+      "type": "cs-media-with-text",
+      "blocks": {
+        "title_yEzWJ3": {
+          "type": "title",
+          "settings": {
+            "title": "Somos una <em>comunidad<\/em> que está en continuo  <strong>crecimiento <\/strong>",
+            "title_size": "h0",
+            "title_alignment": "left"
+          }
+        },
+        "media_7hJUJm": {
+          "type": "media",
+          "settings": {
+            "enable_video_looping": false,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "",
+            "show_image": true
+          }
+        },
+        "description_WC4dph": {
+          "type": "description",
+          "settings": {
+            "description": "Ayudamos a nuestros clientes a conectar con información educativa, simple, transparente y genuina.",
+            "description_size": "h2",
+            "description_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "title_yEzWJ3",
+        "media_7hJUJm",
+        "description_WC4dph"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {p {max-width: 70%; }}"
+      ],
+      "settings": {
+        "enable_background_texture": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_imaKzd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bHhVdm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tú puedes <strong>construir el futuro que deseas<\/strong>, pero no sucederá de la noche a la mañana",
+            "heading_size": "h1"
+          }
+        },
+        "text_fqYfGb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Por eso te enseñamos los beneficios de invertir a largo plazo y como hacerlo por ti mismo, en base a tus objetivos para obtener los resultados que tú deseas<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_8LDtej": {
+          "type": "button",
+          "settings": {
+            "button_label": "Solicitar Asesoría",
+            "button_link": "shopify:\/\/pages\/contactanos",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_bHhVdm",
+        "text_fqYfGb",
+        "button_8LDtej"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_bento_grid_GjLhGW": {
+      "type": "cs-bento-grid",
+      "blocks": {
+        "text_box_NqF4TG": {
+          "type": "text-box",
+          "settings": {
+            "enable_accent_color": false,
+            "title_bottom": false,
+            "title": "<strong>+4<\/strong>",
+            "title_size": "h00",
+            "accent_color": false,
+            "caption": "Años",
+            "description": "<p>de experiencia en la bolsa<\/p>"
+          }
+        },
+        "text_box_BqyKBw": {
+          "type": "text-box",
+          "settings": {
+            "enable_accent_color": false,
+            "title_bottom": false,
+            "title": "<em><strong>+600<\/strong><\/em>",
+            "title_size": "h00",
+            "accent_color": false,
+            "caption": "Video de Youtube",
+            "description": "<p>sobre inversiones en acciones<\/p>"
+          }
+        },
+        "text_box_cUkbLf": {
+          "type": "text-box",
+          "settings": {
+            "enable_accent_color": false,
+            "title_bottom": false,
+            "title": "<strong>+200<\/strong>",
+            "title_size": "h00",
+            "accent_color": false,
+            "caption": "Asesorías",
+            "description": "<p>personalizadas exitosas<\/p>"
+          }
+        },
+        "text_box_Nzr9N8": {
+          "type": "text-box",
+          "settings": {
+            "enable_accent_color": false,
+            "title_bottom": false,
+            "title": "<em><strong>+200<\/strong><\/em>",
+            "title_size": "h00",
+            "accent_color": false,
+            "caption": "Estudiantes",
+            "description": "<p>de cursos de inversión<\/p>"
+          }
+        },
+        "category_Vr84gX": {
+          "type": "category",
+          "settings": {
+          }
+        },
+        "text_box_gFeEjW": {
+          "type": "text-box",
+          "settings": {
+            "enable_accent_color": true,
+            "title_bottom": true,
+            "title": "<em><strong>18%<\/strong><\/em>",
+            "title_size": "h00",
+            "accent_color": false,
+            "caption": "Rendimiento promedio",
+            "description": "<p>anualizado de inversión de<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_box_NqF4TG",
+        "text_box_BqyKBw",
+        "text_box_cUkbLf",
+        "text_box_Nzr9N8",
+        "category_Vr84gX",
+        "text_box_gFeEjW"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "2.5",
+        "large_item_position": "left",
+        "overlay_opacity": 40,
+        "border_radius": 32,
+        "text_color": "#ffffff",
+        "text_box_color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 60
+      }
+    },
+    "collapsible_content_custom_qDjVjc": {
+      "type": "collapsible-content-custom",
+      "blocks": {
+        "collapsible_row_bckafb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Misión",
+            "icon": "none",
+            "row_content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hBhP4M": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Visión",
+            "icon": "none",
+            "row_content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_49dTmk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Metas",
+            "icon": "none",
+            "row_content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bckafb",
+        "collapsible_row_hBhP4M",
+        "collapsible_row_49dTmk"
+      ],
+      "custom_css": [
+        ".gradient:not(.media) {border-radius: 3.2rem 3.2rem 0 0;}",
+        "@media screen and (min-width: 750px) {.gradient:not(.media) {border-radius: 6.4rem 6.4rem 0 0; }}"
+      ],
+      "settings": {
+        "heading": "Conoce nuestro compromiso con la excelencia",
+        "heading_size": "h1",
+        "text": "<p>Encuentra inspiración en nuestra misión, visión y metas para alcanzar tus objetivos más ambiciosos.<\/p>",
+        "text_style": "subtitle",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_ABeVCy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YbhPfp": {
+          "type": "column",
+          "settings": {
+            "title": "Kayser Pravia",
+            "text": "<p>Ingeniero Financiero<br\/>Fiundador<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mJnFdJ": {
+          "type": "column",
+          "settings": {
+            "title": "Vamui",
+            "text": "<p>Estudio Creativo<br\/>Equipo de marketing<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dHQbeW": {
+          "type": "column",
+          "settings": {
+            "title": "Paraíso Visual",
+            "text": "<p>Creatividad y Desarrollo<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YbhPfp",
+        "column_mJnFdJ",
+        "column_dHQbeW"
+      ],
+      "custom_css": [
+        "h2 {width: 100%; text-align: center;}"
+      ],
+      "settings": {
+        "title": "Conoce a nuestro <em>equipo<\/em>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_card_slider_XFPiJc": {
+      "type": "cs-card-slider",
+      "blocks": {
+        "item_bVGjK7": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_T34YcA": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_Jd7wbb": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_Vm7tUH": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_rexNzF": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_wi4GTA": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción del hito o evento importante de este año. Destaque los aspectos clave y su impacto.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        }
+      },
+      "block_order": [
+        "item_bVGjK7",
+        "item_T34YcA",
+        "item_Jd7wbb",
+        "item_Vm7tUH",
+        "item_rexNzF",
+        "item_wi4GTA"
+      ],
+      "settings": {
+        "heading": "Testimonios y <em>Casos de Éxito<\/em>",
+        "heading_size": "2.5",
+        "heading_alignment": "center",
+        "content_alignment": "left",
+        "border_radius": 32,
+        "slider_type": "loop",
+        "enable_arrows": true,
+        "enable_pagination": true,
+        "slides_per_view": 2,
+        "slides_gap": 24,
+        "slides_padding": 70,
+        "enable_arrows_mobile": false,
+        "slides_mobile_per_view": "1",
+        "slides_mobile_gap": 20,
+        "slides_mobile_padding": 0,
+        "color_scheme": "scheme-4",
+        "card_color_scheme": "scheme-2",
+        "section_width": 1200,
+        "padding_top": 20,
+        "padding_bottom": 50
+      }
+    },
+    "collapsible_content_custom_TDGkRd": {
+      "type": "collapsible-content-custom",
+      "blocks": {
+        "collapsible_row_9triky": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Experiencia",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_i3zH8a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Simplicidad",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_4hUAca": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Transparencia",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_9triky",
+        "collapsible_row_i3zH8a",
+        "collapsible_row_4hUAca"
+      ],
+      "custom_css": [
+        ".gradient:not(.media) {border-radius: 0 0 3.2rem 3.2rem;}",
+        "@media screen and (min-width: 750px) {.gradient:not(.media) {border-radius: 0 0 6.4rem 6.4rem; }}"
+      ],
+      "settings": {
+        "heading": "Tenemos más de 5 años de experiencia investigando, recopilando y administrando información para que sea más simple para ti.",
+        "heading_size": "h2",
+        "text": "<p>Nos preocupamos por que la información que compartimos sea transparente y real para que puedas sentirte cómodo controlando el riesgo de tus inversiones.<\/p>",
+        "text_style": "subtitle",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "cs_media_with_text_xMFQGf",
+    "image_with_text_imaKzd",
+    "cs_bento_grid_GjLhGW",
+    "collapsible_content_custom_qDjVjc",
+    "multicolumn_ABeVCy",
+    "cs_card_slider_XFPiJc",
+    "collapsible_content_custom_TDGkRd"
   ]
 }

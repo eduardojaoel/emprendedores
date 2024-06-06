@@ -48,9 +48,25 @@
             "show_gift_card_recipient": false
           }
         },
+        "text_Bi4cNY": {
+          "type": "text",
+          "settings": {
+            "text": "Duración: {{ product.metafields.custom.duration.value }} Clases: {{ product.metafields.custom.number_of_lessons.value }}",
+            "text_style": "body"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
+          }
+        },
+        "collapsible_tab_VAqNJt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Temario del curso",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.summary | metafield_tag }}<\/p>",
+            "page": ""
           }
         },
         "share": {
@@ -68,14 +84,21 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "text_Bi4cNY",
         "description",
+        "collapsible_tab_VAqNJt",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "",
         "media_size": "medium",
         "constrain_to_viewport": false,
+        "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "enable_vertical_thumbnails": false,
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -88,6 +111,7 @@
       "settings": {
         "heading": "También te puede gustar",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",

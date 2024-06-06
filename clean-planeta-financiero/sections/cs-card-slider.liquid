@@ -1,0 +1,479 @@
+{{ 'cs-card-slider.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .cs-card-slider .cs-container {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @media screen and (min-width: 750px) {
+    .cs-card-slider .cs-container {
+      padding: 0 50px;
+    }
+  }
+  #cs-{{ section.id }} {
+    max-width: {{ section.settings.section_width }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  :root {
+    --cs-body-font-size: 16px
+  }
+  #cs-{{ section.id }} .cs-heading {
+    font-size: calc((var(--cs-body-font-size) * {{ section.settings.heading_size }}) * 0.8);
+    text-align: {{ section.settings.heading_alignment }};
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} .cs-heading {
+      font-size: calc(var(--cs-body-font-size) * {{ section.settings.heading_size }});
+    }
+  }
+
+  #cs-{{ section.id }} .cs-card-slider-item__content,
+  #cs-{{ section.id }} .cs-card-slider-item {
+    text-align: {{ section.settings.content_alignment }};
+    align-items: {{ section.settings.content_alignment }};
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+  #cs-{{ section.id }} .splide__track {
+    margin-left: {{ section.settings.slides_mobile_padding }}px;
+    margin-right: {{ section.settings.slides_mobile_padding }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #cs-{{ section.id }} .splide__track {
+      margin-left: {{ section.settings.slides_padding }}px;
+      margin-right: {{ section.settings.slides_padding }}px;
+    }
+  }
+{% endstyle %}
+<div class="color-{{ section.settings.color_scheme }}">
+  <div id="cs-{{ section.id }}" class="cs-container ">
+    <div class="cs-wrapper">
+      {% comment %} Heading {% endcomment %}
+      {% if section.settings.heading != blank %}
+        <div class="cs-section-heading">
+          <h2 class="cs-heading">{{ section.settings.heading }}</h2>
+        </div>
+      {% endif %}
+      {% comment %} Slider {% endcomment %}
+      {% if section.blocks.size > 0 %}
+        {% assign enable_drag = true %}
+        {% assign enable_arrows = true %}
+        {% assign enable_pagination = true %}
+        {% assign insufficent_slides = false %}
+
+        {% if section.blocks.size <= section.settings.slides_per_view %}
+          {% assign insufficent_slides = true %}
+        {% endif %}
+        {% if insufficent_slides and section.settings.slider_type != 'loop' %}
+          {% assign enable_drag = false %}
+        {% endif %}
+        {% if section.settings.enable_arrows != true %}
+          {% assign enable_arrows = false %}
+        {% elsif insufficent_slides and section.settings.slider_type != 'loop' %}
+          {% assign enable_arrows = false %}
+        {% endif %}
+        {% if insufficent_slides or section.settings.enable_pagination != true %}
+          {% assign enable_pagination = false %}
+        {% endif %}
+
+        <div
+          id="cs-slider__{{ section.id }}"
+          class="
+            cs-slider splide
+            {% if enable_pagination %}has-pagination{% endif %}
+            {% if insufficent_slides %}insufficent-slides{% endif %}
+            {% if section.settings.slider_type == 'loop' %}is-loop{% endif %}
+          "
+          role="group"
+          section-id="shopify-section-{{ section.id }}"
+          aria-label="Deslizador de tarjetas"
+          data-splide='
+            {
+              "type": "{{ section.settings.slider_type }}",
+              "perPage": {{ section.settings.slides_per_view }},
+              "drag": {{ enable_drag }},
+              "arrows": {{ enable_arrows }},
+              "pagination": {{ enable_pagination }},
+              "perPage": {{ section.settings.slides_per_view }},
+              "gap": "{{ section.settings.slides_gap }}px",
+              "perMove": 1,
+              "breakpoints": {
+                "749": {
+                  "perPage": {{ section.settings.slides_mobile_per_view }},
+                  "gap": "{{ section.settings.slides_mobile_gap }}px",
+                  "arrows": {{ section.settings.enable_arrows_mobile }}
+                }
+              }
+            }
+          '
+        >
+          <div
+            class="splide__track"
+          >
+            <ul class="splide__list">
+              {% for block in section.blocks %}
+                <li class="cs-card-slider-item splide__slide color-{{ section.settings.card_color_scheme }}">
+                  <div class="cs-card-slider-item__content">
+                    {% if block.settings.content != blank %}
+                      <p class="cs-card-slider-item__text">
+                        {{ block.settings.content }}
+                      </p>
+                    {% endif %}
+                    {% if block.settings.title != blank %}
+                      <h3 class="cs-card-slider-item__title h4">{{ block.settings.title }}</h3>
+                    {% endif %}
+                    {% if block.settings.subtitle != blank %}
+                      <p class="cs-card-slider-item__subtitle">{{ block.settings.subtitle }}</p>
+                    {% endif %}
+                    {% comment %}
+                      <div class="cs-card-slider__image-container cs-card-slider__aspect-ratio--1-1 {% if block.settings.image == blank %}cs-card-slider__image-container-placeholder{% endif %}">
+                        {% if block.settings.image %}
+                          {% capture sizes %}(min-width: 750px) calc((100vw / {{ section.settings.slides_per_view }}) / 2), calc((100vw / {{ section.settings.slides_mobile_per_view }}) / 2){% endcapture %}
+                          {{
+                            block.settings.image
+                            | image_url: width: 1000
+                            | image_tag:
+                              widths: '200, 250, 300, 400, 500, 750, 900, 1000',
+                              sizes: sizes,
+                              class: 'cs-card-slider__image'
+                          }}
+                        {% else %}
+                          {{
+                            'image'
+                            | placeholder_svg_tag: 'cs-card-slider__image cs-card-slider__image-placeholder placeholder'
+                          }}
+                        {% endif %}
+                      </div>
+                    {% endcomment %}
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Deslizador de tarjetas",
+  "class": "cs-section cs-card-slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Título de la sección"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Deslizador de tarjetas"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        {
+          "value": "3.0",
+          "label": "Muy grande"
+        },
+        {
+          "value": "2.5",
+          "label": "Extra grande"
+        },
+        {
+          "value": "2.0",
+          "label": "Grande"
+        },
+        {
+          "value": "1.7",
+          "label": "Mediano"
+        },
+        {
+          "value": "1.4",
+          "label": "Pequeño"
+        },
+        {
+          "value": "1.2",
+          "label": "Muy pequeño"
+        }
+      ],
+      "default": "2.0"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Alineación del título",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Carrusel"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Alineación del contenido",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Radio de borde",
+      "default": 8,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes generales del carrusel"
+    },
+    {
+      "type": "select",
+      "id": "slider_type",
+      "label": "Tipo de carrusel",
+      "default": "loop",
+      "options": [
+        {
+          "value": "slide",
+          "label": "Deslizante"
+        },
+        {
+          "value": "loop",
+          "label": "Bucle"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Habilitar flechas",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Habilitar paginación",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para escritorio"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view",
+      "label": "Items por vista",
+      "default": 3,
+      "min": 1,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "slides_gap",
+      "label": "Espaciado entre items",
+      "default": 24,
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_padding",
+      "label": "Espaciado lateral",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajustes para dispositivos móviles"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows_mobile",
+      "label": "Habilitar flechas (móvil)",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "slides_mobile_per_view",
+      "label": "Items por vista (móvil)",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_gap",
+      "label": "Espaciado entre items (móvil)",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slides_mobile_padding",
+      "label": "Espaciado lateral (móvil)",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "Esquema de colores para tarjeta",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "Estructura de la sección"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "label": "Ancho de la sección",
+      "min": 1000,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espaciado superior",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espaciado inferior",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item del carrusel",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "Ingrese una breve descripción."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Título del item"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtítulo",
+          "default": "Subtítulo del item"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Deslizador de tarjetas",
+      "category": "CS",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

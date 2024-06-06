@@ -69,6 +69,11 @@
   height: 100%;
   object-fit: contain;
 }
+@media screen and (max-width: 749px) {
+  .cs-media-with-text .cs-media-with-text__background-texture-image {
+    object-fit: cover;
+  }
+}
 .cs-media-with-text .background-texture-enabled {
   background-color: transparent;
   position: relative;

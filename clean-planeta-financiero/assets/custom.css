@@ -56,6 +56,7 @@
   .cs-media-with-text__title em {
     -webkit-text-stroke: 1px white;
     -webkit-text-fill-color: rgb(var(--color-background));
+    font-style: normal;
   }
   /* .cs-media-with-text__title strong {
     -webkit-text-stroke: 1px white;
@@ -63,20 +64,14 @@
   } */
 }
 @media screen and (min-width: 750px) {
-  .cs-media-with-text__title {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .cs-media-with-text__description {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .cs-media-with-text__title.h0 {
     font-size: calc(var(--font-heading-scale) * 6.4rem);
     font-weight: 700;
   }
+}
+.cs-media-with-text__image-container {
+  border-radius: 3.2rem;
+  overflow: hidden;
 }
 
 @supports (-webkit-text-stroke: 1px black) {
@@ -101,6 +96,7 @@ deferred-media {
   .text-box__title em {
     -webkit-text-stroke: 1px rgb(var(--color-foreground));
     -webkit-text-fill-color: rgb(var(--color-background));
+    font-style: normal;
   }
 }
 .text-box__title strong {
@@ -109,17 +105,25 @@ deferred-media {
 .text-box__title.h0 {
   line-height: 1.25;
 }
-.rich-text__heading strong {
+.rich-text__heading strong,
+.multicolumn__title strong,
+.cs-card-slider .cs-heading strong {
   color: rgb(var(--color-button));
 }
 @supports (-webkit-text-stroke: 1px black) {
-  .rich-text__heading em {
+  .rich-text__heading em,
+  .multicolumn__title em,
+  .cs-card-slider .cs-heading em {
     -webkit-text-stroke: 1px rgb(var(--color-foreground));
     -webkit-text-fill-color: rgb(var(--color-background));
+    font-style: normal;
   }
-  .rich-text__heading em strong {
+  .rich-text__heading em strong,
+  .multicolumn__title em strong,
+  .cs-card-slider .cs-heading em strong {
     -webkit-text-stroke: 1px rgb(var(--color-button));
     -webkit-text-fill-color: rgb(var(--color-background));
+    font-style: normal;
   }
 }
 @media screen and (min-width: 990px) {
@@ -135,6 +139,7 @@ deferred-media {
   .image-with-text__heading em {
     -webkit-text-stroke: 1px rgb(var(--color-foreground));
     -webkit-text-fill-color: rgb(var(--color-background));
+    font-style: normal;
   }
 }
 .footer-block__details-content .link.list-menu__item--link {
@@ -160,4 +165,105 @@ div.footer-block--newsletter {
 }
 div.footer__content-bottom {
   padding-top: 0;
+}
+
+.button,
+button {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+}
+.cart__footer-wrapper:last-child div.cart__footer {
+  padding-bottom: 6rem;
+}
+.cart-count-bubble {
+  height: 2rem;
+  width: 2rem;
+  bottom: 1.5rem;
+  padding-top: 0.02rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 989px) {
+  .header__heading,
+  a.header__heading-link {
+    padding-bottom: 0;
+  }
+  .header {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+.cc-custom .collapsible-content__media {
+  border-radius: 3.2rem;
+}
+.cc-custom .grid {
+  align-items: flex-start;
+}
+.cc-custom .image-with-text__heading {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+.cc-custom .image-with-text__text {
+  margin-bottom: 2.5rem;
+}
+.cc-custom .icon-plus {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.cc-custom .accordion {
+  border: 0;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+.cc-custom .accordion summary {
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  border: 1px solid rgba(var(--color-foreground), 0.4);
+  border-radius: 100px;
+}
+.cc-custom .accordion__content {
+  margin: 2rem 0;
+}
+@media screen and (min-width: 750px) {
+  .cc-custom .grid__item:not(.collapsible-content__grid-item) {
+    padding: 4rem 0;
+  }
+}
+.multicolumn-card__image-wrapper img,
+.multicolumn-card__image-wrapper svg {
+  border-radius: 3.2rem;
+  overflow: hidden;
+}
+
+div.product__accordion {
+  border: 0;
+  padding: 2rem 2rem 2rem 3rem;
+  border: 1px solid rgba(var(--color-foreground), 1);
+  border-radius: 3.2rem;
+}
+div.product__accordion.accordion .summary__title + .icon-caret,
+div.product__accordion.accordion details[open] > summary .icon-caret {
+  height: 1rem;
+}
+div.product__accordion summary .icon-caret {
+  top: calc(50% - 0.4rem);
+}
+div.product__accordion .accordion__title {
+  font-size: 1.8rem;
+}
+div.product__accordion .accordion__content {
+  margin: 2rem 0 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.4);
+  padding-left: 2rem;
+}
+div.product__accordion.accordion + .accordion {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(var(--color-foreground), 1);
+}
+.price--large .price-item {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: rgb(var(--color-button));
 }

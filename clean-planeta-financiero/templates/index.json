@@ -43,6 +43,9 @@
         "description_yGN4qc",
         "button_jDN4q3"
       ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {h2, p {width: 70%; margin-left: auto; margin-right: auto; }}"
+      ],
       "settings": {
         "enable_background_texture": true,
         "background_texture": "shopify:\/\/shop_images\/background_static.png",

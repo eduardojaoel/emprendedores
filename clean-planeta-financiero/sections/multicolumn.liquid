@@ -116,8 +116,16 @@
                         class: 'multicolumn-card__image'
                     }}
                   </div>
+                  {% if section.settings.image_ratio == 'square' and block.settings.image == blank %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg multicolumn-card__image' }}
+                  {% endif %}
                 </div>
               {%- endif -%}
+              <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                {% if section.settings.image_ratio == 'square' and block.settings.image == blank %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder multicolumn-card__image' }}
+                {% endif %}
+              </div>
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>

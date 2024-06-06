@@ -27,18 +27,18 @@
     "variant_pills_shadow_blur": 5,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 0,
+    "inputs_radius": 8,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
-    "card_style": "standard",
-    "card_image_padding": 0,
+    "card_style": "card",
+    "card_image_padding": 20,
     "card_text_alignment": "left",
     "card_color_scheme": "scheme-2",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
-    "card_corner_radius": 0,
+    "card_corner_radius": 32,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 4,
@@ -245,6 +245,17 @@
           "text": "#050505",
           "button": "#050505",
           "button_label": "#f5eb71",
+          "secondary_button_label": "#050505",
+          "shadow": "rgba(0,0,0,0)"
+        }
+      },
+      "scheme-c14e3329-b266-4c97-a09a-cdeb34c732fc": {
+        "settings": {
+          "background": "#f5f5f5",
+          "background_gradient": "",
+          "text": "#050505",
+          "button": "#f5eb71",
+          "button_label": "#050505",
           "secondary_button_label": "#050505",
           "shadow": "rgba(0,0,0,0)"
         }
