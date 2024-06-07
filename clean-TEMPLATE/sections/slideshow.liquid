@@ -178,7 +178,7 @@
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
-    <div class="slideshow__controls slider-buttons{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+    <div class="slideshow__controls slider-buttons{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %} color-{{ section.settings.color_scheme }}">
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -306,7 +306,7 @@
           "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
         }
       ],
-      "default": "counter",
+      "default": "dots",
       "label": "t:sections.slideshow.settings.slider_visual.label"
     },
     {
@@ -353,7 +353,7 @@
       "type": "checkbox",
       "id": "show_text_below",
       "label": "t:sections.slideshow.settings.show_text_below.label",
-      "default": true
+      "default": false
     },
     {
       "type": "header",
@@ -365,6 +365,12 @@
       "label": "t:sections.slideshow.settings.accessibility.label",
       "info": "t:sections.slideshow.settings.accessibility.info",
       "default": "t:sections.slideshow.settings.accessibility.default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
     }
   ],
   "blocks": [
@@ -401,7 +407,7 @@
               "label": "t:sections.all.heading_size.options__3.label"
             }
           ],
-          "default": "h1",
+          "default": "h0",
           "label": "t:sections.all.heading_size.label"
         },
         {
@@ -477,7 +483,7 @@
           "type": "checkbox",
           "id": "show_text_box",
           "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
-          "default": true
+          "default": false
         },
         {
           "type": "select",
@@ -507,13 +513,13 @@
           "step": 10,
           "unit": "%",
           "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
-          "default": 0
+          "default": 40
         },
         {
           "type": "color_scheme",
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
-          "default": "scheme-1"
+          "default": "scheme-4"
         },
         {
           "type": "header",

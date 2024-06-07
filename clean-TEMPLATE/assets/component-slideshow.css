@@ -235,3 +235,15 @@ slideshow-component:not(.page-width) .slider-buttons {
 .slideshow__controls {
   background-color: transparent;
 }
+/* Custom */
+@media screen and (max-width: 749px) {
+  .slider-counter__link--dots span.dot {
+    border: 0.1rem solid rgba(var(--color-background), 0.5);
+  }
+  .slider-counter__link--active.slider-counter__link--dots span.dot {
+    background-color: rgba(var(--color-background), 0.7);
+  }
+}
+.shopify-section.slideshow-section {
+  overflow: hidden;
+}
