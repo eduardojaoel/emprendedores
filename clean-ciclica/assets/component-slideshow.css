@@ -96,7 +96,7 @@ slideshow-component .slideshow.banner {
 @media screen and (min-width: 750px) {
   .slideshow__text-wrapper.banner__content {
     height: 100%;
-    padding: 5rem;
+    padding: 0 16rem;
   }
 }
 
@@ -221,7 +221,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     right: 5rem;
   }
   .slideshow__controls .slider-button .icon {
-    color: rgba(var(--color-background), 0.75);
+    color: rgba(var(--color-button), 0.75);
     height: 0.9rem;
   }
   .slideshow__controls .slider-counter {
@@ -238,10 +238,10 @@ slideshow-component:not(.page-width) .slider-buttons {
 /* Custom */
 @media screen and (max-width: 749px) {
   .slider-counter__link--dots span.dot {
-    border: 0.1rem solid rgba(var(--color-background), 0.5);
+    border: 0.1rem solid rgba(var(--color-button), 0.5);
   }
   .slider-counter__link--active.slider-counter__link--dots span.dot {
-    background-color: rgba(var(--color-background), 0.7);
+    background-color: rgba(var(--color-button), 0.7);
   }
 }
 .shopify-section.slideshow-section {

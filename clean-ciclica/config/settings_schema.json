@@ -8,6 +8,39 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Color del tema",
+    "settings": [
+      {
+        "type": "select",
+        "id": "theme_color",
+        "options": [
+          {
+            "value": "default",
+            "label": "Por defecto"
+          },
+          {
+            "value": "30, 177, 188",
+            "label": "Fresca"
+          },
+          {
+            "value": "4, 173, 157",
+            "label": "Eco"
+          },
+          {
+            "value": "84, 32, 96",
+            "label": "Poder"
+          },
+          {
+            "value": "181, 118, 118",
+            "label": "Íntima"
+          }
+        ],
+        "default": "default",
+        "label": "Color del tema"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

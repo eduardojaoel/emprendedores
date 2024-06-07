@@ -1,210 +1,303 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_dxP6BH": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_96XNAB": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Bienvenidos a Cíclica, donde cuidamos de ti y del planeta",
+            "heading_size": "h0",
+            "subheading": "Descubre nuestra gama de productos íntimos y menstruales, diseñados para brindar comodidad, protección y sostenibilidad.",
+            "button_label": "Comprar",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 40,
+            "color_scheme": "scheme-4",
+            "text_alignment_mobile": "center"
           }
         },
-        "text": {
-          "type": "text",
+        "slide_9yJBap": {
+          "type": "slide",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "heading": "Diapositiva de imagen",
+            "heading_size": "h0",
+            "subheading": "Cuenta la historia de tu marca a través de imágenes",
+            "button_label": "Etiqueta de botón",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 40,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "slide_96XNAB",
+        "slide_9yJBap"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Presentación de diapositivas sobre tu marca",
+        "color_scheme": ""
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "collection_list_FJBzxw": {
+      "type": "collection-list",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "featured_collection_BgxMge": {
+          "type": "featured_collection",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "collection": ""
           }
         },
-        "text": {
-          "type": "text",
+        "featured_collection_B8abbD": {
+          "type": "featured_collection",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "collection": ""
+          }
+        },
+        "featured_collection_ErRtnM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_qAtD73": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "featured_collection_BgxMge",
+        "featured_collection_B8abbD",
+        "featured_collection_ErRtnM",
+        "featured_collection_qAtD73"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
+        "title": "Productos para una menstruación sostenible y tu cuidado femenino",
         "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
+        "title_alignment": "left",
+        "image_ratio": "portrait",
         "columns_desktop": 4,
-        "show_view_all": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
+        "collection_title_alignment": "center",
+        "color_scheme": "",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
+        "padding_top": 60,
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
+    "cs_icon_grid_8wqQDf": {
+      "type": "cs-icon-grid",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "card_AmYNFY": {
+          "type": "card",
           "settings": {
-            "collection": ""
+            "icon": "shopify:\/\/shop_images\/Recycling.svg",
+            "icon_width": 50,
+            "title": "Eco amigables",
+            "description": "En 10 años, 12,000 kg basura menstrual. Elige productos sostenible."
           }
         },
-        "product": {
-          "type": "product",
+        "card_zELiKN": {
+          "type": "card",
           "settings": {
-            "product": "",
-            "second_image": false
+            "icon": "shopify:\/\/shop_images\/Economicas.svg",
+            "icon_width": 55,
+            "title": "Económicas",
+            "description": "Gastas más de ₡80,000 anuales en desechables. Con Cíclica, desde ₡2,000, dura 3 años o más."
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "card_M876Lt": {
+          "type": "card",
           "settings": {
-            "collection": ""
+            "icon": "shopify:\/\/shop_images\/Mas_proteccion.svg",
+            "icon_width": 55,
+            "title": "Más protección",
+            "description": "Uso hasta 12 horas sin preocupaciones por filtraciones, cualquier actividad  que vayas a realizar."
+          }
+        },
+        "card_ykRNCL": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Reutilizable.svg",
+            "icon_width": 50,
+            "title": "Reutilizables",
+            "description": "Copa menstrual hasta 10 años, toalla de tela hasta 3.  ¡hacé cálculos!"
+          }
+        },
+        "card_bWMh7J": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Hipoalargenicas.svg",
+            "icon_width": 55,
+            "title": "Hipoalergénicas",
+            "description": "Nuestros productos son hipoalergénicos, sin molestias ni alergias, libres de químicos."
+          }
+        },
+        "card_BpVfAM": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Happy.svg",
+            "icon_width": 50,
+            "title": "Cómodas",
+            "description": "Ejercicio, natación, sueño, sin preocupaciones. ¡Únete a la menstruación sostenible!"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "card_AmYNFY",
+        "card_zELiKN",
+        "card_M876Lt",
+        "card_ykRNCL",
+        "card_bWMh7J",
+        "card_BpVfAM"
       ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "heading_alignment": "left",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "icon_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_BUkGJL": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Productos destacados",
+        "heading_size": "h1",
         "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
         "full_width": false,
-        "color_scheme": "scheme-1",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "cs_card_slider_acG3LL": {
+      "type": "cs-card-slider",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "item_9eq9qK": {
+          "type": "item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
           }
         },
-        "column2": {
-          "type": "column",
+        "item_YDrDtL": {
+          "type": "item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
           }
         },
-        "column3": {
-          "type": "column",
+        "item_j9xQi4": {
+          "type": "item",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_hrLeQx": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_iYMgTY": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_jbe6JN": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "item_9eq9qK",
+        "item_YDrDtL",
+        "item_j9xQi4",
+        "item_hrLeQx",
+        "item_iYMgTY",
+        "item_jbe6JN"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Súmate a la experiencia",
+        "heading_size": "2.5",
+        "heading_alignment": "left",
+        "show_rating": true,
+        "content_alignment": "left",
+        "border_radius": 8,
+        "slider_type": "loop",
+        "enable_arrows": false,
+        "enable_pagination": true,
+        "slides_per_view": 3,
+        "slides_gap": 24,
+        "slides_padding": 0,
+        "enable_arrows_mobile": false,
+        "slides_mobile_per_view": "1",
+        "slides_mobile_gap": 20,
+        "slides_mobile_padding": 0,
+        "color_scheme": "",
+        "card_color_scheme": "scheme-2",
+        "section_width": 1400,
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "slideshow_dxP6BH",
+    "collection_list_FJBzxw",
+    "cs_icon_grid_8wqQDf",
+    "featured_collection_BUkGJL",
+    "cs_card_slider_acG3LL"
   ]
 }

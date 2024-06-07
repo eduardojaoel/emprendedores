@@ -1,1 +1,31 @@
-
+.icon-logo {
+  color: rgb(var(--color-button));
+}
+.button,
+.shopify-challenge__button,
+.customer button {
+  padding: 0 4rem;
+}
+@media screen and (min-width: 750px) {
+  div.slideshow__text.banner__box {
+    max-width: 71rem;
+  }
+}
+.collection-list div.card__inner {
+  border-radius: 25% 0 20% 0;
+  overflow: hidden;
+}
+.cs-icon-grid__title {
+  color: rgb(var(--color-button));
+}
+@media screen and (min-width: 750px) {
+  .cs-icon-grid div.cs-icon-grid__container {
+    row-gap: 5rem;
+  }
+}
+.cs-card-slider-item__subtitle {
+  margin: 0;
+}
+.announcement-bar__message {
+  font-family: var(--font-heading-family);
+}

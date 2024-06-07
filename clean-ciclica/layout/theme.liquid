@@ -50,18 +50,46 @@
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
+      @font-face {
+        font-family: 'Vera Humana 95';
+        src: url('https://cdn.shopify.com/s/files/1/0629/4277/3402/files/verah___-webfont.woff2?v=1717783149') format('woff2'),
+             url('https://cdn.shopify.com/s/files/1/0629/4277/3402/files/verah___-webfont.woff?v=1717783149') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* After push */
+      /* @font-face {
+        font-family: 'Vera Humana 95';
+        src: url('{{ 'vera.woff2' | asset_url }}') format('woff2'),
+             url('{{ 'vera.woff' | asset_url }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      } */
+
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+        {% assign scheme_index = scheme.id | remove: 'scheme-' %}
+        {% if settings.theme_color != 'default' %}
+          {% assign theme_not_default = true %}
+        {% else %}
+          {% assign theme_not_default = false %}
+        {% endif %}
         {% if forloop.index == 1 -%}
           :root,
         {%- endif %}
         .color-{{ scheme.id }} {
+        {% if theme_not_default and scheme_index == '3' or scheme_index == '4' %}
+          --color-background: {{ settings.theme_color }};
+        {% else %}
           --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-        {% if scheme.settings.background_gradient != empty %}
+        {% endif %}
+
+        {% comment %} {% if scheme.settings.background_gradient != empty %}
           --gradient-background: {{ scheme.settings.background_gradient }};
         {% else %}
           --gradient-background: {{ scheme.settings.background }};
-        {% endif %}
+        {% endif %} {% endcomment %}
 
         {% liquid
           assign background_color = scheme.settings.background
@@ -76,12 +104,24 @@
         %}
 
         --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        {% if theme_not_default and scheme_index == '3' or scheme_index == '4' %}
+          --color-background-contrast: {{ settings.theme_color }};
+        {% else %}
+          --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        {% endif %}
         --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
-        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        {% if theme_not_default and scheme_index == '1' or scheme_index == '2' or scheme_index == '4' %}
+          --color-button: {{ settings.theme_color }};
+        {% else %}
+          --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        {% endif %}
         --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
         --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if theme_not_default and scheme_index == '1' or scheme_index == '2' %}
+          --color-secondary-button-text: {{ settings.theme_color }};
+        {% else %}
         --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        {% endif %}
         --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
         --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
@@ -101,9 +141,9 @@
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-family: 'Vera Humana 95', sans-serif;
+        --font-heading-style: normal;
+        --font-heading-weight: normal;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -229,6 +269,9 @@
         font-size: calc(var(--font-body-scale) * 62.5%);
         height: 100%;
       }
+      .button {
+        letter-spacing: 0.03rem;
+      }
 
       body {
         display: grid;
@@ -237,7 +280,7 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        letter-spacing: 0.03rem;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
@@ -246,6 +289,15 @@
 
       @media screen and (min-width: 750px) {
         body {
+          font-size: 1.6rem;
+        }
+      }
+
+      .announcement-bar__message {
+        font-size: 1.5rem;
+      }
+      @media screen and (min-width: 750px) {
+        .announcement-bar__message {
           font-size: 1.6rem;
         }
       }

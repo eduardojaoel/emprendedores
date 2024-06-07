@@ -1,0 +1,41 @@
+.cs-icon-grid__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .cs-icon-grid__wrapper {
+    gap: 2rem;
+  }
+}
+.cs-icon-grid__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cs-icon-grid__icon-wrapper {
+  margin-bottom: 0;
+  display: flex;
+}
+.cs-icon-grid__title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+@media screen and (min-width: 750px) {
+  .cs-icon-grid__title {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+.cs-icon-grid__description {
+  font-size: 1.6rem;
+  color: rgba(var(--color-foreground), 0.75);
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .cs-icon-grid__wrapper.icon-position-left {
+    flex-direction: row;
+  }
+}
