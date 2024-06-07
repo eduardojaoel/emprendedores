@@ -1,0 +1,617 @@
+{% comment %}
+  Requiere snippet cs-icon-accordion.liquid
+{% endcomment %}
+
+{{ 'cs-contact-info.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% assign desktop_columns = section.settings.desktop_columns %}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-{{ section.id }}-padding page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="contact-info-title inline-richtext {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    <div class="cs-contact-info__container{% if desktop_columns == '2' %} two-columns-desktop{% else %} one-column-desktop{% endif %}">
+      {% if section.blocks.size > 0 %}
+        {% if desktop_columns == '1' %}
+          <div class="cs-contact-info__info cs-contact-info__wrapper cs-contact-info__info-1">
+            {% for block in section.blocks %}
+              <div class="cs-contact-info__item" {{ block.shopify_attributes }}>
+                {% if block.settings.title != blank %}
+                  <h3 class="title cs-contact-info__info-title">
+                    {{ block.settings.title }}
+                  </h3>
+                {% endif %}
+                {% if block.settings.content != blank %}
+                  <p class="rte subtitle cs-contact-info__info-content">
+                    {{ block.settings.content }}
+                  </p>
+                {% endif %}
+                {% if block.settings.button_label != blank %}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button cs-contact-info__item-button button--tertiary"
+                  >
+                    {% render 'cs-icon-accordion', icon: block.settings.icon %}
+                    <span>{{ block.settings.button_label | escape }}</span>
+                  </a>
+                {% endif %}
+                {% if block.settings.social_icons == true %}
+                  {% render 'social-icons' %}
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% elsif desktop_columns == '2' %}
+          <div class="cs-contact-info__info cs-contact-info__wrapper cs-contact-info__info-1">
+            {% for block in section.blocks %}
+              {% if block.settings.column == 'first' %}
+                <div class="cs-contact-info__item" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <h3 class="title cs-contact-info__info-title">
+                      {{ block.settings.title }}
+                    </h3>
+                  {% endif %}
+                  {% if block.settings.content != blank %}
+                    <p class="rte subtitle cs-contact-info__info-content">
+                      {{ block.settings.content }}
+                    </p>
+                  {% endif %}
+                  {% if block.settings.button_label != blank %}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button cs-contact-info__item-button button--{{ block.settings.button_style }}"
+                    >
+                      {% render 'cs-icon-accordion', icon: block.settings.icon %}
+                      <span>{{ block.settings.button_label | escape }}</span>
+                    </a>
+                  {% endif %}
+                  {% if block.settings.social_icons == true %}
+                    {% render 'social-icons' %}
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="cs-contact-info__info cs-contact-info__wrapper cs-contact-info__info-2">
+            {% for block in section.blocks %}
+              {% if block.settings.column == 'second' %}
+                <div class="cs-contact-info__item" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <h3 class="title cs-contact-info__info-title">
+                      {{ block.settings.title }}
+                    </h3>
+                  {% endif %}
+                  {% if block.settings.content != blank %}
+                    <p class="rte subtitle cs-contact-info__info-content">
+                      {{ block.settings.content }}
+                    </p>
+                  {% endif %}
+                  {% if block.settings.button_label != blank %}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button cs-contact-info__item-button button--{{ block.settings.button_style }}"
+                    >
+                      {% render 'cs-icon-accordion', icon: block.settings.icon %}
+                      <span>{{ block.settings.button_label | escape }}</span>
+                    </a>
+                  {% endif %}
+                  {% if block.settings.social_icons == true %}
+                    {% render 'social-icons' %}
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+      {% if section.settings.location_title != blank
+        or section.settings.location_content != blank
+        or section.settings.location_image != blank
+        or section.settings.location_map != blank
+        or section.settings.location_button_label != blank
+        or section.settings.location_social_icons == true
+      %}
+        <div class="cs-contact-info__info cs-contact-info__wrapper cs-contact-info__item cs-contact-info__location">
+          {% if section.settings.location_title != blank %}
+            <h3 class="title cs-contact-info__info-title">
+              {{ section.settings.location_title }}
+            </h3>
+          {% endif %}
+          {% if section.settings.location_content != blank %}
+            <p class="rte subtitle cs-contact-info__info-content">
+              {{ section.settings.location_content }}
+            </p>
+          {% endif %}
+          {% if section.settings.location_image != blank %}
+            {% if section.settings.location_image != blank %}
+              <div class="cs-contact-info__image-container cs-contact-info__aspect-ratio--{{ section.settings.image_aspect_ratio }}">
+                {{
+                  section.settings.location_image
+                  | image_url: width: 3200
+                  | image_tag:
+                    widths: '300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                    sizes: '(min-width: 750px) calc(100vw / 2), calc(100vw / 1)',
+                    class: 'cs-contact-info__image'
+                }}
+              </div>
+            {% endif %}
+          {% endif %}
+          {% if section.settings.location_iframe != blank %}
+            <div class="cs-contact-info__info-iframe">
+              {{ section.settings.location_iframe }}
+            </div>
+          {% endif %}
+          {% if section.settings.location_button_label != blank %}
+            <a
+              {% if section.settings.location_button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.location_button_link }}"
+              {% endif %}
+              class="button cs-contact-info__item-button button--{{ section.settings.location_button_style }}"
+            >
+              {% render 'cs-icon-accordion', icon: section.settings.location_icon %}
+              <span>{{ section.settings.location_button_label | escape }}</span>
+            </a>
+          {% endif %}
+          {% if section.settings.location_social_icons == true %}
+            {% render 'social-icons' %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Información de contacto",
+  "tag": "section",
+  "class": "section cs-contact-info",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Información de contacto",
+      "label": "t:sections.collage.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left",
+      "label": "Alineación del título"
+    },
+    {
+      "type": "select",
+      "id": "desktop_columns",
+      "label": "Columnas en escritorio",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Ubicación"
+    },
+    {
+      "type": "text",
+      "id": "location_title",
+      "label": "Título",
+      "default": "Ubicación"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "location_content",
+      "label": "Contenido",
+      "default": "Calle, Numero de Calle, descripción detallada del local"
+    },
+    {
+      "type": "image_picker",
+      "id": "location_image",
+      "label": "Imagen del local o ubicación"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Relación de aspecto",
+      "default": "4-3",
+      "options": [
+        {
+          "value": "none",
+          "label": "Adaptar a la imagen"
+        },
+        {
+          "value": "1-1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "4-3",
+          "label": "Horizontal (4:3)"
+        },
+        {
+          "value": "16-9",
+          "label": "Horizontal (16:9)"
+        },
+        {
+          "value": "3-2",
+          "label": "Horizontal (3:2)"
+        },
+        {
+          "value": "3-4",
+          "label": "Vertical (3:4)"
+        },
+        {
+          "value": "2-3",
+          "label": "Vertical (2:3)"
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "id": "location_iframe",
+      "label": "Código incrustado de Google Maps"
+    },
+    {
+      "type": "text",
+      "id": "location_button_label",
+      "label": "Etiqueta de botón",
+      "info": "Deja la etiqueta en blanco para ocultar el botón.",
+      "default": "Visítanos"
+    },
+    {
+      "type": "url",
+      "id": "location_button_link",
+      "label": "Enlace de botón"
+    },
+    {
+      "type": "select",
+      "id": "location_button_style",
+      "default": "secondary",
+      "label": "Estilo del botón",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Principal"
+        },
+        {
+          "value": "secondary",
+          "label": "Secundario"
+        },
+        {
+          "value": "tertiary",
+          "label": "Enlace"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "location_icon",
+      "label": "Ícono del botón",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ninguno"
+        },
+        {
+          "value": "whatsapp",
+          "label": "WhatsApp"
+        },
+        {
+          "value": "mail",
+          "label": "Correo"
+        },
+        {
+          "value": "chat",
+          "label": "Mensaje"
+        },
+        {
+          "value": "phone",
+          "label": "Teléfono"
+        },
+        {
+          "value": "pin",
+          "label": "Localización"
+        },
+        {
+          "value": "waze",
+          "label": "Waze"
+        },
+        {
+          "value": "google_maps",
+          "label": "Google Maps"
+        },
+        {
+          "value": "map",
+          "label": "Mapa"
+        }
+      ],
+      "default": "map"
+    },
+    {
+      "type": "checkbox",
+      "id": "location_social_icons",
+      "label": "Habilitar íconos de redes sociales",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Ítem",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "label": "Columna",
+          "options": [
+            {
+              "value": "first",
+              "label": "Primera"
+            },
+            {
+              "value": "second",
+              "label": "Segunda"
+            }
+          ],
+          "default": "first",
+          "info": "Selecciona la columna en la que va el item en escritorio"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Título del ítem"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "content",
+          "label": "Contenido",
+          "default": "Contenido del ítem"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Etiqueta de botón",
+          "info": "Deja la etiqueta en blanco para ocultar el botón."
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Enlace de botón"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "default": "primary",
+          "label": "Estilo del botón",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Principal"
+            },
+            {
+              "value": "secondary",
+              "label": "Secundario"
+            },
+            {
+              "value": "tertiary",
+              "label": "Enlace"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ícono del botón",
+          "options": [
+            {
+              "value": "none",
+              "label": "Ninguno"
+            },
+            {
+              "value": "whatsapp",
+              "label": "WhatsApp"
+            },
+            {
+              "value": "mail",
+              "label": "Correo"
+            },
+            {
+              "value": "chat",
+              "label": "Mensaje"
+            },
+            {
+              "value": "phone",
+              "label": "Teléfono"
+            },
+            {
+              "value": "pin",
+              "label": "Localización"
+            },
+            {
+              "value": "waze",
+              "label": "Waze"
+            },
+            {
+              "value": "google_maps",
+              "label": "Google Maps"
+            },
+            {
+              "value": "map",
+              "label": "Mapa"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icons",
+          "label": "Habilitar íconos de redes sociales",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Información de contacto",
+      "settings": {
+        "heading": "Contáctanos"
+      },
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "column": "1",
+            "title": "Escríbenos al WhatsApp",
+            "content": "",
+            "button_label": "Whatsapp",
+            "button_style": "tertiary",
+            "icon": "whatsapp"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "column": "1",
+            "title": "Teléfono",
+            "content": "",
+            "button_label": " +507 6XXX-XXXX",
+            "button_style": "tertiary",
+            "icon": "phone"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "column": "1",
+            "title": "Correo electrónico",
+            "content": "",
+            "button_label": " email@email.com",
+            "button_style": "tertiary",
+            "icon": "mail"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "column": "1",
+            "title": "Horario",
+            "content": "Lunes a Viernes: 8am - 5pm"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "column": "1",
+            "title": "Redes Sociales",
+            "content": "",
+            "social_icons": true
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

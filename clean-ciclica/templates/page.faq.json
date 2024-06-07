@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_content_mCRgUY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_L78HXU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_U9w9xi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_eJ9Ajp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ePUkLy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_L78HXU",
+        "collapsible_row_U9w9xi",
+        "collapsible_row_eJ9Ajp",
+        "collapsible_row_ePUkLy"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Preguntas Frecuentes",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_mCRgUY"
+  ]
+}
