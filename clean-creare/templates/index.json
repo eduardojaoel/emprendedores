@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "heading": "Diapositiva de imagen",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "subheading": "Cuenta la historia de tu marca a través de imágenes",
             "button_label": "Cotiza Ahora",
             "link": "",
@@ -24,7 +24,7 @@
           "type": "slide",
           "settings": {
             "heading": "Diapositiva de imagen",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "subheading": "Cuenta la historia de tu marca a través de imágenes",
             "button_label": "Etiqueta de botón",
             "link": "",
@@ -218,10 +218,72 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "scheme-2",
+        "full_width": false,
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_JA7dRc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FMqUgq": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Quieres disfrutar de las ventajas de suscribirse?",
+            "heading_size": "h1"
+          }
+        },
+        "text_tqHWiL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "newsletter_E6d8aa": {
+          "type": "newsletter",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_FMqUgq",
+        "text_tqHWiL",
+        "newsletter_E6d8aa"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_blog_f3tcax": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-2",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
@@ -229,6 +291,8 @@
     "slideshow_J4zcVt",
     "cs_comparison_cards_MaTTgw",
     "cs_collection_slider_Jp3t3A",
-    "image_with_text_XXhxJF"
+    "image_with_text_XXhxJF",
+    "image_with_text_JA7dRc",
+    "featured_blog_f3tcax"
   ]
 }

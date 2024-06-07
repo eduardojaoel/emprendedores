@@ -2,13 +2,207 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_GMhW3E": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TBeBUn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Garantía de Calidad ISO 9001",
+            "heading_size": "h1"
+          }
+        },
+        "text_9HWE3J": {
+          "type": "text",
+          "settings": {
+            "text": "Comprometidos con la excelencia en cada impresión",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TBeBUn",
+        "text_9HWE3J"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_9XXiCr": {
+      "type": "rich-text",
+      "blocks": {
+        "text_N3PLXb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En Creare Printing and Marketing, nos enorgullecemos de ofrecer productos impresos de la más alta calidad. Nuestra certificación ISO 9001 respalda nuestro compromiso con la excelencia y la satisfacción del cliente.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_N3PLXb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 32
+      }
+    },
+    "multicolumn_FK9Uhn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WjYngM": {
+          "type": "column",
+          "settings": {
+            "title": "Calidad garantizada",
+            "text": "<p>Cada producto que entregamos cumple con rigurosos estándares de calidad.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7y3ekA": {
+          "type": "column",
+          "settings": {
+            "title": "Procesos estandarizados",
+            "text": "<p>Garantizamos la consistencia en cada impresión gracias a nuestros procesos bien definidos.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yj3JqL": {
+          "type": "column",
+          "settings": {
+            "title": "Confianza",
+            "text": "<p>Nuestra certificación ISO 9001 es un testimonio de nuestro compromiso con la calidad y la excelencia en el servicio.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_WjYngM",
+        "column_7y3ekA",
+        "column_yj3JqL"
+      ],
+      "custom_css": [
+        ".multicolumn__title {width: 100%; justify-content: center;}"
+      ],
+      "settings": {
+        "title": "Beneficios",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Contáctanos",
+        "button_link": "shopify:\/\/pages\/contacto",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_collection_slider_aTDYiQ": {
+      "type": "cs-collection-slider",
+      "blocks": {
+        "collection_DjHR3J": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        },
+        "collection_BPU4ec": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        },
+        "collection_HV8Afp": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        },
+        "collection_qrXNmC": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        },
+        "collection_nnzVcw": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        },
+        "collection_wkETmk": {
+          "type": "collection",
+          "settings": {
+            "title": "Colección",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_DjHR3J",
+        "collection_BPU4ec",
+        "collection_HV8Afp",
+        "collection_qrXNmC",
+        "collection_nnzVcw",
+        "collection_wkETmk"
+      ],
+      "settings": {
+        "heading": "Colecciones más vendidas",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "border_radius": 8,
+        "image_aspect_ratio": "1-1",
+        "slider_type": "loop",
+        "enable_arrows": true,
+        "enable_pagination": true,
+        "slides_per_view": 5,
+        "slides_gap": 24,
+        "slides_padding": 0,
+        "enable_arrows_mobile": false,
+        "slides_mobile_per_view": "1",
+        "slides_mobile_gap": 20,
+        "slides_mobile_padding": 0,
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_GMhW3E",
+    "rich_text_9XXiCr",
+    "multicolumn_FK9Uhn",
+    "cs_collection_slider_aTDYiQ"
   ]
 }

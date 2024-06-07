@@ -2,13 +2,139 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_AejyDh": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_wprxfH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hola somos Creare Printing and Marketing",
+            "heading_size": "h1"
+          }
+        },
+        "text_GHRDxD": {
+          "type": "text",
+          "settings": {
+            "text": "Ayudamos a dar vida a las marcas",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wprxfH",
+        "text_GHRDxD"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_FyGjnV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DVdWpL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Somos una empresa de impresión que aporta a la mejora de los objetivos de nuestros clientes",
+            "heading_size": "h2"
+          }
+        },
+        "text_TCVcNF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Creamos y administramos una apariencia cohesiva para todo su material de marca y nos enfocamos en entregar lo que nuestros clientes necesitan.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DVdWpL",
+        "text_TCVcNF"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_Rczd7g": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dgJdJr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Certificados",
+            "heading_size": "h1"
+          }
+        },
+        "text_jjLAtg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Para mantener los estándares de calidad nos encontramos certificados en ISO:9001<\/p>",
+            "text_style": "body"
+          }
+        },
+        "image_3Xepcc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iso-9001.svg",
+            "image_width": 100,
+            "alignment": ""
+          }
+        },
+        "button_tfWcQf": {
+          "type": "button",
+          "settings": {
+            "button_label": "Más información",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dgJdJr",
+        "text_jjLAtg",
+        "image_3Xepcc",
+        "button_tfWcQf"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "full_width": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_AejyDh",
+    "rich_text_FyGjnV",
+    "image_with_text_Rczd7g"
   ]
 }

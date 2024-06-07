@@ -5,41 +5,92 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_information_4kqXjc": {
+          "type": "brand_information",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/creare_logo_original.png",
+            "image_width": 200,
+            "alignment": "left",
+            "title": "",
+            "show_icons": true,
+            "location_label": "",
+            "location_link": "",
+            "opening_hours": "",
+            "email_label": "",
+            "email_link": "",
+            "whatsapp_label": "",
+            "whatsapp_link": "",
+            "phone_label": "",
+            "phone_link": "",
+            "show_social": true
+          }
+        },
+        "brand_information_J4CwGY": {
+          "type": "brand_information",
+          "settings": {
+            "image_width": 100,
+            "alignment": "left",
+            "title": "Horarios de atención",
+            "show_icons": true,
+            "location_label": "Localización",
+            "location_link": "",
+            "opening_hours": "<p>Lunes-Viernes: X:XXam - X:XXpm<\/p>",
+            "email_label": "correo@correocorp.com",
+            "email_link": "",
+            "whatsapp_label": "",
+            "whatsapp_link": "",
+            "phone_label": "6XXXXXXX",
+            "phone_link": "",
+            "show_social": false
+          }
+        },
+        "image_FpiLkA": {
+          "type": "image",
+          "settings": {
+            "title": "Confianza",
+            "image": "shopify:\/\/shop_images\/iso-9001.svg",
+            "image_width": 120,
+            "alignment": ""
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Enlaces de interés",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Términos",
+            "menu": "footer-2"
           }
         }
       },
       "block_order": [
+        "brand_information_4kqXjc",
+        "brand_information_J4CwGY",
+        "image_FpiLkA",
         "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-1"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "show_social": true,
+        "enable_follow_on_shop": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
+        "show_payments": false,
+        "payment_visa": false,
+        "payment_mastercard": false,
+        "payment_ach": false,
+        "payment_yappy": false,
+        "payment_clave": false,
+        "payment_efectivo": false,
         "show_policy": false,
         "margin_top": 48,
         "padding_top": 36,

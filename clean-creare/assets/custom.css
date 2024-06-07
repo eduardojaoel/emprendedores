@@ -20,6 +20,7 @@
 
 .button {
   font-size: 1.5rem;
+  letter-spacing: 0.02rem;
 }
 @media screen and (min-width: 750px) {
   .button {
@@ -34,6 +35,26 @@
     background-color: rgba(var(--color-background), 0.7);
   }
 }
-.shopify-section {
+.shopify-section.slideshow-section {
   overflow: hidden;
+}
+@media screen and (min-width: 750px) {
+  .footer-block.grid__item ul.list-social {
+    justify-content: flex-start;
+  }
+  .footer-block.grid__item ul.list-social li:first-child a {
+    padding-left: 0;
+  }
+}
+.footer-block__icons .icon {
+  color: rgb(var(--color-button));
+}
+footer.footer {
+  border: 0;
+}
+div.footer__content-bottom {
+  padding-top: 0;
+}
+.header__icons {
+  align-items: center;
 }
