@@ -107,7 +107,7 @@
         "card_AmYNFY": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Recycling.svg",
+            "icon": "eco",
             "icon_width": 50,
             "title": "Eco amigables",
             "description": "En 10 años, 12,000 kg basura menstrual. Elige productos sostenible."
@@ -116,7 +116,7 @@
         "card_zELiKN": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Economicas.svg",
+            "icon": "savings",
             "icon_width": 55,
             "title": "Económicas",
             "description": "Gastas más de ₡80,000 anuales en desechables. Con Cíclica, desde ₡2,000, dura 3 años o más."
@@ -125,7 +125,7 @@
         "card_M876Lt": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Mas_proteccion.svg",
+            "icon": "cup",
             "icon_width": 55,
             "title": "Más protección",
             "description": "Uso hasta 12 horas sin preocupaciones por filtraciones, cualquier actividad  que vayas a realizar."
@@ -134,7 +134,7 @@
         "card_ykRNCL": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Reutilizable.svg",
+            "icon": "recycle",
             "icon_width": 50,
             "title": "Reutilizables",
             "description": "Copa menstrual hasta 10 años, toalla de tela hasta 3.  ¡hacé cálculos!"
@@ -143,7 +143,7 @@
         "card_bWMh7J": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Hipoalargenicas.svg",
+            "icon": "feather",
             "icon_width": 55,
             "title": "Hipoalergénicas",
             "description": "Nuestros productos son hipoalergénicos, sin molestias ni alergias, libres de químicos."
@@ -152,7 +152,7 @@
         "card_BpVfAM": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Happy.svg",
+            "icon": "happy",
             "icon_width": 50,
             "title": "Cómodas",
             "description": "Ejercicio, natación, sueño, sin preocupaciones. ¡Únete a la menstruación sostenible!"
@@ -289,7 +289,55 @@
         "card_color_scheme": "scheme-2",
         "section_width": 1400,
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_bottom": 60
+      }
+    },
+    "image_banner_YEhJyb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8ER4fJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Banner de imagen",
+            "heading_size": "h0"
+          }
+        },
+        "text_KqaCrn": {
+          "type": "text",
+          "settings": {
+            "text": "Ofrece a los clientes información sobre las imágenes del banner o el contenido de la plantilla.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_R7mWk8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Impacto Cíclica",
+            "button_link_1": "shopify:\/\/pages\/impacto-ciclica",
+            "button_style_secondary_1": true,
+            "button_label_2": "Puntos de ventas",
+            "button_link_2": "shopify:\/\/pages\/puntos-de-ventas",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_8ER4fJ",
+        "text_KqaCrn",
+        "buttons_R7mWk8"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
       }
     }
   },
@@ -298,6 +346,7 @@
     "collection_list_FJBzxw",
     "cs_icon_grid_8wqQDf",
     "featured_collection_BUkGJL",
-    "cs_card_slider_acG3LL"
+    "cs_card_slider_acG3LL",
+    "image_banner_YEhJyb"
   ]
 }

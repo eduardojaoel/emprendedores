@@ -40,20 +40,34 @@
             class="cs-icon-grid__wrapper icon-position-{{ section.settings.icon_position }}"
             {{ block.shopify_attributes }}
           >
-            {% if block.settings.icon != blank %}
-              <div class="cs-icon-grid__icon-wrapper">
+            {% if block.settings.icon != 'none' %}
+              <div class="cs-icon-grid__icon-wrapper icon-index-{{ forloop.index }}">
+                {% comment %}
+                  {% style %}
+                    @media screen and (max-width: 749px) {
+                      #shopify-section-{{ section.id }} .cs-icon-grid__icon {
+                        width: {{ block.settings.icon_width | times: 0.75 }}px;
+                      }
+                    }
+                  {% endstyle %}
+                  {{
+                    block.settings.icon
+                    | image_url: width: block.settings.icon_width
+                    | image_tag: widths: '50, 75, 150, 200, 300, 400, 500', class: 'cs-icon-grid__icon'
+                  }}
+                {% endcomment %}
                 {% style %}
                   @media screen and (max-width: 749px) {
-                    #shopify-section-{{ section.id }} .cs-icon-grid__icon {
+                    #shopify-section-{{ section.id }} .icon-index-{{ forloop.index }} svg {
                       width: {{ block.settings.icon_width | times: 0.75 }}px;
                     }
                   }
                 {% endstyle %}
-                {{
-                  block.settings.icon
-                  | image_url: width: block.settings.icon_width
-                  | image_tag: widths: '50, 75, 150, 200, 300, 400, 500', class: 'cs-icon-grid__icon'
-                }}
+                {% render 'cs-icon-accordion',
+                  icon: block.settings.icon,
+                  class: 'cs-icon-grid__icon',
+                  width: block.settings.icon_width
+                %}
               </div>
             {% endif %}
             <div class="cs-icon-grid__content {{ section.settings.content_alignment }}">
@@ -221,9 +235,40 @@
       "name": "Tarjeta",
       "settings": [
         {
-          "type": "image_picker",
+          "type": "select",
           "id": "icon",
-          "label": "Ícono"
+          "label": "Ícono",
+          "options": [
+            {
+              "value": "none",
+              "label": "Ninguno"
+            },
+            {
+              "value": "eco",
+              "label": "Eco"
+            },
+            {
+              "value": "savings",
+              "label": "Ahorro"
+            },
+            {
+              "value": "cup",
+              "label": "Copa"
+            },
+            {
+              "value": "recycle",
+              "label": "Reutilizar"
+            },
+            {
+              "value": "feather",
+              "label": "Pluma"
+            },
+            {
+              "value": "happy",
+              "label": "Feliz"
+            }
+          ],
+          "default": "none"
         },
         {
           "type": "range",

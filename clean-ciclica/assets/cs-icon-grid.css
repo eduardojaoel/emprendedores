@@ -39,3 +39,6 @@
     flex-direction: row;
   }
 }
+.cs-icon-grid svg {
+  color: rgb(var(--color-button));
+}

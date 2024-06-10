@@ -10,11 +10,11 @@
 {% endcomment %}
 
 <ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
-  {%- if settings.social_facebook_link != blank -%}
+  {%- if settings.social_tiktok_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-        {%- render 'icon-facebook' -%}
-        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+      <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
+        {%- render 'icon-tiktok' -%}
+        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
       </a>
     </li>
   {%- endif -%}
@@ -26,11 +26,11 @@
       </a>
     </li>
   {%- endif -%}
-  {%- if settings.social_linkedin_link != blank -%}
+  {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
-        {%- render 'icon-linkedin' -%}
-        <span class="visually-hidden">LinkedIn</span>
+      <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+        {%- render 'icon-facebook' -%}
+        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
       </a>
     </li>
   {%- endif -%}
@@ -42,11 +42,11 @@
       </a>
     </li>
   {%- endif -%}
-  {%- if settings.social_tiktok_link != blank -%}
+  {%- if settings.social_linkedin_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-        {%- render 'icon-tiktok' -%}
-        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+      <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
+        {%- render 'icon-linkedin' -%}
+        <span class="visually-hidden">LinkedIn</span>
       </a>
     </li>
   {%- endif -%}
@@ -87,6 +87,14 @@
       <a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
         {%- render 'icon-vimeo' -%}
         <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_apple_podcasts_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_apple_podcasts_link }}" class="link list-social__link">
+        {%- render 'icon-apple-podcasts' -%}
+        <span class="visually-hidden">Apple Podcasts</span>
       </a>
     </li>
   {%- endif -%}

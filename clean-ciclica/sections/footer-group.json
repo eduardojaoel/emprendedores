@@ -5,44 +5,70 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
+        "brand_information_iiaEa7": {
+          "type": "brand_information",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Logo-Ciclica.svg",
+            "image_width": 140,
+            "alignment": "left",
+            "show_icons": true,
+            "email_label": "correo@correocorp.com",
+            "email_link": "",
+            "whatsapp_label": "6XXXXXXX",
+            "whatsapp_link": "",
+            "phone_label": "",
+            "phone_link": "",
+            "location_label": "Dirección",
+            "location_link": ""
+          }
+        },
+        "link_list_TYY6hp": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Enlaces rápidos",
             "menu": "footer"
           }
         },
-        "footer-1": {
+        "link_list_EpeaJ3": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Enlaces rápidos",
             "menu": "footer"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "newsletter_tqqfbX": {
+          "type": "newsletter",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "title": "Suscríbete al newsletter",
+            "subtitle": ""
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "brand_information_iiaEa7",
+        "link_list_TYY6hp",
+        "link_list_EpeaJ3",
+        "newsletter_tqqfbX"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
+        "show_payments": false,
+        "payment_visa": false,
+        "payment_mastercard": false,
+        "payment_ach": false,
+        "payment_yappy": false,
+        "payment_clave": false,
+        "payment_efectivo": false,
         "show_policy": false,
         "margin_top": 48,
-        "padding_top": 36,
+        "padding_top": 60,
         "padding_bottom": 36
       }
     }
