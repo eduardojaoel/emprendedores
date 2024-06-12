@@ -2,13 +2,436 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_bmepC4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_WBpTbD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Conocé la copa menstrual",
+            "heading_size": "h0"
+          }
+        },
+        "text_ztE6La": {
+          "type": "text",
+          "settings": {
+            "text": "La copita mentrual es la opción alternativa a las toallas y tampones desechables, un tipo de barrera que se inserta dentro de la vagina durante la menstruación y su función principal es contener el flujo menstrual.",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WBpTbD",
+        "text_ztE6La"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_BfV8w6": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_WQ7f4E": {
+          "type": "caption",
+          "settings": {
+            "caption": "Es reutilizable y luego de utilizarla, se extrae, se desecha el contenido, se limpia y se vuelve a utilizar hasta por 12 horas, sin incomodidades ni molestas alergias. Una sola copa mentrual puede durarte hasta 10 años, pero recomendamos cambiarla cada 5 o 6.",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "button_V3JXDz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Encontrá tu talla ideal",
+            "button_link": "shopify:\/\/products\/nueva-copa-menstrual-ciclica",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_WQ7f4E",
+        "button_V3JXDz"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 32
+      }
+    },
+    "multicolumn_JGz4HL": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9K76qt": {
+          "type": "column",
+          "settings": {
+            "title": "Paso 1",
+            "text": "<p>Antes de utilizar tu copita menstrual al inicio de tu ciclo, esterilízala colocándola por 5 minutos en un recipiente con agua hirviendo. Una vez terminado el flujo menstrual, podés hervirla nuevamente y guardarla en un lugar fresco y seco.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JqB6ff": {
+          "type": "column",
+          "settings": {
+            "title": "Paso 2",
+            "text": "<p>Para insertar la copita menstrual podés doblarla como se muestra en el ejemplo.<br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TXpycY": {
+          "type": "column",
+          "settings": {
+            "title": "Paso 3",
+            "text": "<p>Encontrá una posición cómoda para insertarla en el canal vaginal, puede ser de cuclillas o con una pierna arriba. Te recomendamos mucha relajación.<br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cEDaTg": {
+          "type": "column",
+          "settings": {
+            "title": "Paso 4",
+            "text": "<p>Para confirmar si se abrió correctamente, podés girar tu copita menstrual levemente para ambas direcciones y colocar tu dedo al borde.<br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9K76qt",
+        "column_JqB6ff",
+        "column_TXpycY",
+        "column_cEDaTg"
+      ],
+      "custom_css": [
+        "h3.inline-richtext {font-size: 2.2rem;}"
+      ],
+      "settings": {
+        "title": "¿Cómo se usa?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_TJyUUW": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_diX7RF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_UiANeT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_FymeJA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_TCMGfL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_diX7RF",
+        "collapsible_row_UiANeT",
+        "collapsible_row_FymeJA",
+        "collapsible_row_TCMGfL"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Preguntas más frecuentes",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_e9qypV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_THGU7L": {
+          "type": "heading",
+          "settings": {
+            "heading": "Orgullo nacional",
+            "heading_size": "h1"
+          }
+        },
+        "heading_rVxC7E": {
+          "type": "heading",
+          "settings": {
+            "heading": "Producto 100% costarricense 🇨🇷",
+            "heading_size": "h2"
+          }
+        },
+        "text_XLiMxw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hemos creado la primer copa menstrual producida 100% en suelo costarricense convirtiendose así no solo en la única copa menstrual hecha en Costa Rica sino también en todo Centroamérica.<br\/><br\/>Producida por Central American Silicone Suppliers (casilicone.com) para Mi Copita S.A, ambas empresas 100% costarricenses.<\/p>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_THGU7L",
+        "heading_rVxC7E",
+        "text_XLiMxw"
+      ],
+      "settings": {
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_icon_grid_MKyYHK": {
+      "type": "cs-icon-grid",
+      "blocks": {
+        "card_aHiViq": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "icon_width": 40,
+            "title": "<strong>AS9100<\/strong>",
+            "description": ""
+          }
+        },
+        "card_zwiXWD": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "icon_width": 40,
+            "title": "<strong>ISO 9001<\/strong>",
+            "description": ""
+          }
+        },
+        "card_iUkdqE": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "icon_width": 40,
+            "title": "<strong>ISO 13485<\/strong>",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_aHiViq",
+        "card_zwiXWD",
+        "card_iUkdqE"
+      ],
+      "settings": {
+        "heading": "Certificaciones",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "icon_position": "top",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_card_slider_PEfCAF": {
+      "type": "cs-card-slider",
+      "blocks": {
+        "item_wMQgWx": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_f96CAQ": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_Vm9QzL": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_9ggDjW": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_ixk8Lx": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_UJxBRJ": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        },
+        "item_RzzPtN": {
+          "type": "item",
+          "settings": {
+            "content": "Ingrese una breve descripción.",
+            "title": "Título del item",
+            "subtitle": "Subtítulo del item"
+          }
+        }
+      },
+      "block_order": [
+        "item_wMQgWx",
+        "item_f96CAQ",
+        "item_Vm9QzL",
+        "item_9ggDjW",
+        "item_ixk8Lx",
+        "item_UJxBRJ",
+        "item_RzzPtN"
+      ],
+      "settings": {
+        "heading": "Testimonios",
+        "heading_size": "2.5",
+        "heading_alignment": "center",
+        "show_rating": true,
+        "content_alignment": "left",
+        "border_radius": 8,
+        "slider_type": "loop",
+        "enable_arrows": false,
+        "enable_pagination": true,
+        "slides_per_view": 3,
+        "slides_gap": 24,
+        "slides_padding": 0,
+        "enable_arrows_mobile": false,
+        "slides_mobile_per_view": "1",
+        "slides_mobile_gap": 20,
+        "slides_mobile_padding": 0,
+        "color_scheme": "",
+        "card_color_scheme": "scheme-2",
+        "section_width": 1200,
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "featured_collection_wqAWLj": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Productos destacados",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_bmepC4",
+    "rich_text_BfV8w6",
+    "multicolumn_JGz4HL",
+    "collapsible_content_TJyUUW",
+    "image_with_text_e9qypV",
+    "cs_icon_grid_MKyYHK",
+    "cs_card_slider_PEfCAF",
+    "featured_collection_wqAWLj"
   ]
 }

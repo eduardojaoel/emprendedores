@@ -50,7 +50,7 @@
                     {% else %}
                       href="{{ block.settings.button_link }}"
                     {% endif %}
-                    class="button cs-contact-info__item-button button--tertiary"
+                    class="button cs-contact-info__item-button button--{{ block.settings.button_style }}"
                   >
                     {% render 'cs-icon-accordion', icon: block.settings.icon %}
                     <span>{{ block.settings.button_label | escape }}</span>

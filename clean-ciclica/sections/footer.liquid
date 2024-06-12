@@ -88,7 +88,7 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--2-col-tablet grid--4-col-desktop {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -146,12 +146,7 @@
                           >
                         </div>
                       {%- else -%}
-                        <div
-                          class="placeholder-container"
-                          style="width: {{ block.settings.image_width }}px; max-width: 100%"
-                        >
-                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                        </div>
+                        {% render 'icon-logo' %}
                       {%- endif -%}
                     </div>
                     <div class="footer-block__icons">
@@ -235,6 +230,10 @@
                         </a>
                       {% endif %}
                     </div>
+
+                    {%- if block.settings.show_social and has_social_icons -%}
+                      {%- render 'social-icons', class: 'footer__list-social' -%}
+                    {%- endif -%}
                   {%- when 'image' -%}
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                       {%- if block.settings.image != blank -%}
@@ -261,9 +260,7 @@
                       {%- if block.settings.title != blank -%}
                         <h2 class="footer-block__heading inline-richtext">{{ block.settings.title }}</h2>
                       {%- endif -%}
-                      {% if block.settings.subtitle != blank %}
-                        <p class="footer-block__subtitle">{{ block.settings.subtitle }}</p>
-                      {% endif %}
+
                       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                         <input type="hidden" name="contact[tags]" value="newsletter">
                         <div class="newsletter-form__field-wrapper">
@@ -291,16 +288,22 @@
                             <label class="field__label" for="NewsletterForm--{{ section.id }}">
                               {{ 'newsletter.label' | t }}
                             </label>
-                            <button
-                              type="submit"
-                              class="newsletter-form__button field__button"
-                              name="commit"
-                              id="Subscribe"
-                              aria-label="{{ 'newsletter.button_label' | t }}"
-                            >
-                              {% render 'icon-arrow' %}
-                            </button>
                           </div>
+                          <div class="accepts-marketing">
+                            <input type="hidden" name="customer[accepts_marketing]" value="false">
+
+                            <input id="accepts-marketing" type="checkbox" name="customer[accepts_marketing]">
+                            <label for="accepts-marketing">Enviarme novedades y ofertas por correo</label>
+                          </div>
+                          <button
+                            type="submit"
+                            class="button button--primary"
+                            name="commit"
+                            id="Subscribe"
+                            aria-label="{{ 'newsletter.button_label' | t }}"
+                          >
+                            Inscribirse
+                          </button>
                           {%- if form.errors -%}
                             <small class="newsletter-form__message form__message" id="ContactFooter-error">
                               {%- render 'icon-error' -%}
@@ -321,6 +324,10 @@
                           </h3>
                         {%- endif -%}
                       {%- endform -%}
+
+                      {% if block.settings.subtitle != blank %}
+                        <p class="footer-block__subtitle">{{ block.settings.subtitle }}</p>
+                      {% endif %}
                     </div>
                 {%- endcase -%}
               </div>
@@ -661,6 +668,12 @@
           "id": "location_link",
           "label": "Enlace a Google Maps o Waze",
           "info": "Ejemplo: 'https://maps.app.goo.gl/[ID]'"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "label": "Mostrar íconos de redes sociales",
+          "default": true
         }
       ]
     },
