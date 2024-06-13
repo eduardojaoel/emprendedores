@@ -2,13 +2,146 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_JMgzNm": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TgKBi9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Equipo de Cíclica",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TgKBi9"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_e76VqQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yNepGG": {
+          "type": "heading",
+          "settings": {
+            "heading": "El equipo Cíclica está compuesto en su mayoría por mujeres porque somos una empresa de mujeres para mujeres. Te presentamos a quienes hacen realidad nuestras operaciones de manera diaria.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yNepGG"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_team_LfUzKQ": {
+      "type": "multicolumn-team",
+      "blocks": {
+        "column_nJ6EEb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square.jpg",
+            "title": "Mª Laura Gutierrez García",
+            "caption": "Gerente general",
+            "text": "<a href=\"mailto:mgutierrez@ciclicaoficial.com\" target=\"_blank\" title=\"mailto:mgutierrez@ciclicaoficial.com\">mgutierrez@ciclicaoficial.com<\/a>",
+            "subtitle": "Cofundadora"
+          }
+        },
+        "column_mN3zD6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square.jpg",
+            "title": "Gizeh Ibarra Oquendo",
+            "caption": "Gerente de operaciones",
+            "text": "<a href=\"mailto:gibarra@ciclicaoficial.com\" target=\"_blank\" title=\"mailto:gibarra@ciclicaoficial.com\">gibarra@ciclicaoficial.com<\/a>",
+            "subtitle": "Cofundadora"
+          }
+        },
+        "column_ftynze": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square.jpg",
+            "title": "Angie Sánchez Boniche",
+            "caption": "Gerente de proyectos",
+            "text": "<a href=\"mailto:educación@ciclicaoficial.com\" target=\"_blank\" title=\"mailto:educación@ciclicaoficial.com\">educación@ciclicaoficial.com<\/a>",
+            "subtitle": "Cofundadora"
+          }
+        },
+        "column_nNhwfK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square.jpg",
+            "title": "Kaliana Vargas",
+            "caption": "Atención al cliente para Costa Rica",
+            "text": "<a href=\"mailto:info@ciclicaoficial.com\" target=\"_blank\" title=\"mailto:info@ciclicaoficial.com\">info@ciclicaoficial.com<\/a>",
+            "subtitle": ""
+          }
+        },
+        "column_rdKiMF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square.jpg",
+            "title": "Valeska Reyes",
+            "caption": "Atención al cliente para Panamá y Guatemala",
+            "text": "<a href=\"mailto:info@ciclicaoficial.com\" target=\"_blank\" title=\"mailto:info@ciclicaoficial.com\">info@ciclicaoficial.com<\/a>",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nJ6EEb",
+        "column_mN3zD6",
+        "column_ftynze",
+        "column_nNhwfK",
+        "column_rdKiMF"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_JMgzNm",
+    "rich_text_e76VqQ",
+    "multicolumn_team_LfUzKQ"
   ]
 }

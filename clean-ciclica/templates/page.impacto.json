@@ -2,13 +2,332 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_ccYGBY": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Xdgnc7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Impacto Cíclica",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Xdgnc7"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "image_with_text_pdMj3z": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_kFzKq3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En este momento, hay más de 300 millones de personas que están menstruando a nivel mundial. De esta cantidad de personas, la cuarta parte de la población femenina en edad reproductiva enfrenta limitaciones para gestionar su salud íntima de diferentes maneras. Muy especialmente en: <br\/><br\/>●\tFalta de información certera sobre salud íntima, sexual y reproductiva<br\/>●\tFalta de opciones amigables con el ambiente y su salud para el manejo de su salud íntima<br\/>●\tDesigualdad económica por la constante compra de productos desechables <br\/>●\tFalta de acceso a infraestructura y servicios de agua, saneamiento<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_kFzKq3"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Uq6EiK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VrwpW9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cuando una mujer desea desarrollarse en sociedad, pero su contexto es similar a lo que se describió anteriormente. Se está hablando, que la necesidad de gestionar la salud íntima va más allá de poder “sentirse limpias y aseadas”; sino que, en Cíclica hablamos de: <em>DERECHOS HUMANOS<\/em>.",
+            "heading_size": "h3"
+          }
+        },
+        "text_XwxjXD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Porque si bien es cierto el manejo de salud e higiene menstrual no es un derecho humano en sí mismo, está íntimamente relacionado con la capacidad de las personas para ejercer sus derechos diariamente. Y es justamente por esto que Cíclica existe, porque aunque la salud e higiene menstrual no se muestre como un Objetivo de Desarrollo Sostenible como tal, sí tiene implicaciones en 6 de estas metas.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VrwpW9",
+        "text_XwxjXD"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_UxdqhF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TL3ffU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>1. Salud y bienestar <\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_4pmf47": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En Cíclica hay tolerancia cero a los productos tradicionales de gestión menstrual como toallas y tampones desechables pues se ha demostrado científicamente que durante muchos años han sido la causa de graves problemas para la salud como:<br\/><br\/>●\tInfecciones vaginales<br\/>●\tCáncer<br\/>●\tTrastornos neurológicos<br\/>●\tParkinson<br\/>●\tDesequilibrio hormonal<br\/>●\tRiesgo de Síndrome de Shock Tóxico<br\/><br\/>Por eso los productos Cíclica son 100% amigables con la salud, los cuales no intervienen directamente con el cuerpo; permitiendo que la persona pueda vivir su salud menstrual de la manera más natural posible. <br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TL3ffU",
+        "text_4pmf47"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_kmY7hG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_G7gjXU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>2. Educación de calidad<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_cNWTFK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Según datos de la UNICEF: “si bien no todas dejan de ir a la escuela durante su periodo menstrual, más de un tercio (35,6%) falta al colegio, todos los meses, durante los días de su menstruación”<br\/><br\/>Esto no es crecer bajo igualdad de condiciones. Cuando una mujer está en la escuela, tiene menos probabilidades de casarse temprano, de tener hijos dentro o fuera del matrimonio, les dará herramientas de vida para querer planificar un futuro como profesionales, les permitirá tomar el control de su vida y poder tomar decisiones sobre lo que desean; pues efectivamente, se empoderan de su vida y su futuro. <br\/><br\/>Para el momento en el que decidan tener hijos, tendrán una familia con mayores posibilidades económicas, más saludables, mejor educadas. Y así sucesivamente.<br\/>Es por esta razón, que los productos Cíclica se dirigen a todas las mujeres sin importar su edad. Porque el desarrollo educativo no termina en ningún momento, y queremos estar con nuestras soluciones para que no se sientan limitadas. <br\/>Por otro lado, con la plataforma educativa la empresa ha logrado insertarse poco a poco al sistema educativo para dar acceso a educación que le permitirán a hombres y mujeres tomar decisiones informadas.<br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_G7gjXU",
+        "text_cNWTFK"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_YVjBP7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_k8HaH7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>3. Igualdad de género<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_HtMCbw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>El manejo adecuado de la salud íntima y en particular de la higiene menstrual le  permite a la mujer tener un vida sin límites para poder desarrollarse en plenitud, en cualquier aspecto de su vida. A  la par de nuestros compañeros, los hombres.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k8HaH7",
+        "text_HtMCbw"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_KzBgKj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4VR94Q": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>4. Agua limpia<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_rMXDyT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La primera toalla desechable que usaste, aún sigue en el planeta Tierra. Si se piense en términos generales: una persona aproximadamente menstrua durante 40 años y de este tiempo son de 3 a 5 días por mes y en promedio usa 5 toallas por día; eso quiere decir que en un año menstrua 60 días y en 34 años son 2040 días; es decir, 10.200 toallas higiénicas por cada persona menstruante en el mundo.<br\/><br\/>Todas estas toallas y tampones no biodegradables llegan a los ríos y mares y continuarán contaminando el agua que se necesita para vivir, por los siguientes 300 años hasta que se convierta en millones de micro plásticos. <br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4VR94Q",
+        "text_rMXDyT"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_H9YgCR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BUmpjg": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>5. Trabajo decente y crecimiento económico<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_acP39t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Como se habló, en el apartado de la educación un mayor conocimiento sobre la saud íntima, sexual y reproductiva puede conducir a una mayor alfabetización y autonomía corporal que probablemente tenga un impacto positivo en las mujeres, las niñas y sus compañeros hombres. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BUmpjg",
+        "text_acP39t"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_aTWyKw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hTiPLW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>6. Producción y consumo responsables <\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_cfMCgt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Como se mencionó anteriormente, la industria de productos tradicionales como toallas y tampones desechables se genera en dinámicas productivas que son éticamente difíciles de comprender. Pues se habla de dinámicas de trabajo infrahumanas y explotadoras, con uso de componentes tan dañinos para quienes lo usan como para quienes forman parte de la cadena productiva.<br\/><br\/>Por eso en Cíclica, producimos, comercializamos, educamos y facilitamos el acceso a los productos y a la información sobre temas de salud íntima, sexual y reproductiva para lograr hacer un cambio integral en la industria pero sobre todo en la vida de millones de mujeres. <br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hTiPLW",
+        "text_cfMCgt"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_ccYGBY",
+    "image_with_text_pdMj3z",
+    "rich_text_Uq6EiK",
+    "image_with_text_UxdqhF",
+    "image_with_text_kmY7hG",
+    "image_with_text_YVjBP7",
+    "image_with_text_KzBgKj",
+    "image_with_text_H9YgCR",
+    "image_with_text_aTWyKw"
   ]
 }

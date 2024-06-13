@@ -2,13 +2,195 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_6B4GiL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cdDkE7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Cíclica & TuConsejería<\/em>",
+            "heading_size": "h0"
+          }
+        },
+        "text_BEbtr3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La alianza entre Cíclica y TuConsejería responde a la necesidad de atender a las clientas de Cíclica que requieren de algún tipo de acompañamiento psicológico.<br\/><br\/>TuConsejería busca cerrar la brecha del acceso a la salud mental de una manera asequible y confidencial. Somos una herramienta tecnológica que ofrece una variedad de servicios de salud mental, la cual permite a cualquier persona, especialmente jóvenes y mujeres, comunicarse con profesionales de salud mental y obtener apoyo emocional en línea de forma inmediata. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cdDkE7",
+        "text_BEbtr3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_collapsible_cards_THffGk": {
+      "type": "cs-collapsible-cards",
+      "blocks": {
+        "card_8UX7aA": {
+          "type": "card",
+          "settings": {
+            "product": "producto-de-prueba",
+            "subtitle": "Subtítulo de la tarjeta 1",
+            "collapsible_title_1": "Descripción",
+            "collapsible_content_1": "<p>Contenido 1<\/p>",
+            "collapsible_title_2": "Objetivo",
+            "collapsible_content_2": "<p>Contenido 2<\/p>",
+            "collapsible_title_3": "Detalles",
+            "collapsible_content_3": "<p>Contenido 3<\/p>",
+            "collapsible_title_4": "",
+            "collapsible_content_4": "",
+            "collapsible_title_5": "",
+            "collapsible_content_5": ""
+          }
+        },
+        "card_Hj4XiT": {
+          "type": "card",
+          "settings": {
+            "product": "",
+            "subtitle": "Subtítulo de la tarjeta 2",
+            "collapsible_title_1": "Descripción",
+            "collapsible_content_1": "<p>Contenido 1<\/p>",
+            "collapsible_title_2": "Objetivo",
+            "collapsible_content_2": "<p>Contenido 2<\/p>",
+            "collapsible_title_3": "Detalles",
+            "collapsible_content_3": "<p>Contenido 3<\/p>",
+            "collapsible_title_4": "",
+            "collapsible_content_4": "",
+            "collapsible_title_5": "",
+            "collapsible_content_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_8UX7aA",
+        "card_Hj4XiT"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "columns_desktop": "2",
+        "image_aspect_ratio": "3-2",
+        "color_scheme": "",
+        "card_color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cs_icon_grid_gEVDCJ": {
+      "type": "cs-icon-grid",
+      "blocks": {
+        "card_FPEzCn": {
+          "type": "card",
+          "settings": {
+            "icon": "customer_service",
+            "icon_width": 50,
+            "title": "Atención personalizada con profesionales",
+            "description": ""
+          }
+        },
+        "card_hbrWAN": {
+          "type": "card",
+          "settings": {
+            "icon": "web_search",
+            "icon_width": 55,
+            "title": "Servicio de calidad y rapidez de respuesta",
+            "description": ""
+          }
+        },
+        "card_CbhWki": {
+          "type": "card",
+          "settings": {
+            "icon": "time",
+            "icon_width": 60,
+            "title": "Accesible en cualquier momento y lugar",
+            "description": ""
+          }
+        },
+        "card_Qr3FJM": {
+          "type": "card",
+          "settings": {
+            "icon": "laptop",
+            "icon_width": 55,
+            "title": "Consejería académica yeducativa",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_FPEzCn",
+        "card_hbrWAN",
+        "card_CbhWki",
+        "card_Qr3FJM"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "icon_position": "top",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_EdFK3B": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Hp3Mcb": {
+          "type": "text",
+          "settings": {
+            "text": "<p> ¿Querés conocer más sobre los servicios de TuConsejería? <br\/>Contactá a un agente de servicio al cliente en este momento<\/p>"
+          }
+        },
+        "button_nVFXyh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contacto",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Hp3Mcb",
+        "button_nVFXyh"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_6B4GiL",
+    "cs_collapsible_cards_THffGk",
+    "cs_icon_grid_gEVDCJ",
+    "rich_text_EdFK3B"
   ]
 }

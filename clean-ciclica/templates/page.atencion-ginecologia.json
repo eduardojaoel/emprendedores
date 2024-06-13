@@ -2,13 +2,92 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_rE4NJc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tc3PkN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Cíclica & HuliHealth<\/em>",
+            "heading_size": "h0"
+          }
+        },
+        "text_ALNQVG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La alianza entre Cíclica y HuliHealth responde a la necesidad tan grande que hay en Costa Rica de tener acceso a una base de datos de profesionales en ginecología alrededor de todo el país.  HuliHealth es un servicio para realizar citas médicas que proporciona toda la información necesaria en la palma de tus manos. Haciendo todo lo posible para reducir la falta de información, para movernos más hacia una transparencia total de la industria de la salud y acercarte más a un mejor estado de salud. <br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tc3PkN",
+        "text_ALNQVG"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_CaRtWU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VanGqB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Estamos para ayudarte con tu salud íntima<\/em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_tatTmQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En este directorio médico encontrarás especialistas certificados y verificados que te pueden tratar con seguridad en temas de salud ginecológica. Revisá los perfiles y sacá una cita en línea <br\/><br\/>1. Elegí un médico <br\/>2. Elegí un horario <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_erttLf": {
+          "type": "button",
+          "settings": {
+            "button_label": "Directorio en línea",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VanGqB",
+        "text_tatTmQ",
+        "button_erttLf"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_rE4NJc",
+    "image_with_text_CaRtWU"
   ]
 }

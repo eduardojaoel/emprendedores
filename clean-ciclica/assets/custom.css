@@ -4,7 +4,7 @@
 .button,
 .shopify-challenge__button,
 .customer button {
-  padding: 0 4rem;
+  padding: 1.5rem 4rem;
 }
 @media screen and (min-width: 750px) {
   div.slideshow__text.banner__box {
@@ -112,5 +112,26 @@ ul.footer__list-social .list-social__item .list-social__link svg {
 @media screen and (min-width: 750px) {
   .cc-custom .grid__item:not(.collapsible-content__grid-item) {
     padding: 4rem 0;
+  }
+}
+.rich-text__heading.h3 {
+  font-size: calc(var(--font-heading-scale) * 2rem);
+}
+@media screen and (min-width: 750px) {
+  .rich-text__heading.h3 {
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
+  }
+}
+.rich-text__heading em {
+  color: rgb(var(--color-button));
+  font-style: normal;
+}
+.image-with-text__heading em {
+  color: rgb(var(--color-button));
+  font-style: normal;
+}
+@media screen and (min-width: 750px) {
+  .multicolumn .multicolumn-card .button {
+    margin-top: 2rem;
   }
 }

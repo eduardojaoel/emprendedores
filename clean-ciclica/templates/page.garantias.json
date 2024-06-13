@@ -2,13 +2,58 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "cs_columns_info_WYk4Jy": {
+      "type": "cs-columns-info",
+      "blocks": {
+        "text_FApYHx": {
+          "type": "text",
+          "settings": {
+            "title": "Garantías",
+            "caption": "Compromiso de Calidad y Transparencia",
+            "content": "Nuestro compromiso va más allá de ofrecerte productos de calidad; nos esforzamos por garantizar tu satisfacción y confianza en cada compra."
+          }
+        },
+        "image_LAxJcM": {
+          "type": "image",
+          "settings": {
+            "image_aspect_ratio": "3-4"
+          }
+        },
+        "buttons_CpiG4z": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Garantía de Adaptabilidad",
+            "button_link_1": "",
+            "button_style_1": "secondary",
+            "button_label_2": "Garantía de 3pack - Toallas de Tela",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_label_3": "Términos y condiciones",
+            "button_link_3": "shopify:\/\/pages\/terminos-y-condiciones",
+            "button_style_3": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "text_FApYHx",
+        "image_LAxJcM",
+        "buttons_CpiG4z"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "cs_columns_info_WYk4Jy"
   ]
 }

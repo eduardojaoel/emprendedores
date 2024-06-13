@@ -1,4 +1,5 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+{{ 'section-multicolumn-team.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
@@ -94,7 +95,7 @@
                       assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
                       assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
                       if section.settings.image_width == 'half'
-                        assign image_width = 0.5
+                        assign image_width = 0.6
                       elsif section.settings.image_width == 'third'
                         assign image_width = 0.33
                       else
@@ -118,25 +119,18 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class="multicolumn-card__info rte">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                {%- if block.settings.caption != blank -%}
+                  <p class="multicolumn-team__caption">{{ block.settings.caption }}</p>
                 {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="button button--secondary"
-                    {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.link }}"
-                    {% endif %}
-                  >
-                    {{- block.settings.link_label | escape -}}
-                    {% comment %} <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span> {% endcomment %}
-                  </a>
+                {%- if block.settings.text != blank -%}
+                  <p>{{ block.settings.text }}</p>
+                {%- endif -%}
+                {%- if block.settings.subtitle != blank -%}
+                  <p>{{ block.settings.subtitle }}</p>
                 {%- endif -%}
               </div>
             </div>
@@ -190,8 +184,8 @@
 
 {% schema %}
 {
-  "name": "t:sections.multicolumn.name",
-  "class": "section",
+  "name": "Equipo",
+  "class": "section multicolumn-team",
   "tag": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -200,7 +194,6 @@
     {
       "type": "inline_richtext",
       "id": "title",
-      "default": "t:sections.multicolumn.settings.title.default",
       "label": "t:sections.multicolumn.settings.title.label"
     },
     {
@@ -240,7 +233,7 @@
           "label": "t:sections.multicolumn.settings.image_width.options__3.label"
         }
       ],
-      "default": "full",
+      "default": "half",
       "label": "t:sections.multicolumn.settings.image_width.label"
     },
     {
@@ -264,7 +257,7 @@
           "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
         }
       ],
-      "default": "adapt",
+      "default": "square",
       "label": "t:sections.multicolumn.settings.image_ratio.label"
     },
     {
@@ -289,7 +282,7 @@
           "label": "t:sections.multicolumn.settings.column_alignment.options__2.label"
         }
       ],
-      "default": "left",
+      "default": "center",
       "label": "t:sections.multicolumn.settings.column_alignment.label"
     },
     {
@@ -305,7 +298,7 @@
           "label": "t:sections.multicolumn.settings.background_style.options__2.label"
         }
       ],
-      "default": "primary",
+      "default": "none",
       "label": "t:sections.multicolumn.settings.background_style.label"
     },
     {
@@ -389,31 +382,32 @@
         {
           "type": "inline_richtext",
           "id": "title",
-          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
-          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+          "default": "Nombre",
+          "label": "Nombre"
         },
         {
-          "type": "richtext",
+          "type": "inline_richtext",
+          "id": "caption",
+          "default": "Puesto",
+          "label": "Puesto"
+        },
+        {
+          "type": "inline_richtext",
           "id": "text",
-          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
-          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+          "default": "Correo electrónico",
+          "label": "Correo electrónico"
         },
         {
-          "type": "text",
-          "id": "link_label",
-          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+          "type": "inline_richtext",
+          "id": "subtitle",
+          "label": "Cargo"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Equipo",
       "blocks": [
         {
           "type": "column"

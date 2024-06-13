@@ -1,0 +1,87 @@
+.cs-collapsible-cards .cs-collapsible-cards__item {
+  padding: 3.2rem 3.2rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 0.8rem;
+}
+.cs-collapsible-cards .cs-collapsible-cards__item-title-container {
+  display: flex;
+}
+.cs-collapsible-cards .cs-collapsible-cards__item-title-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cs-collapsible-cards .cs-collapsible-cards__item-button {
+  flex: 0 0 auto;
+  padding: 0;
+  min-width: 0;
+  max-width: 100%;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.cs-collapsible-cards .cs-collapsible-cards__item-button .icon {
+  transform: rotate(315deg);
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.cs-collapsible-cards .cs-collapsible-cards__item-title-wrapper > * {
+  margin: 0;
+}
+.cs-collapsible-cards__image-container {
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.cs-collapsible-cards__image-container .cs-collapsible-cards__image {
+  width: 100%;
+  height: auto;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--1-1 {
+  aspect-ratio: 1/1;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--3-2 {
+  aspect-ratio: 3/2;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--2-3 {
+  aspect-ratio: 2/3;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--4-3 {
+  aspect-ratio: 4/3;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--3-4 {
+  aspect-ratio: 3/4;
+}
+.cs-collapsible-cards__image-container.cs-collapsible-cards__aspect-ratio--16-9 {
+  aspect-ratio: 16/9;
+}
+.cs-collapsible-cards__image-container:not(.cs-collapsible-cards__aspect-ratio--none) .cs-collapsible-cards__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.cs-collapsible-cards .cs-collapsible-cards__content .icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.cs-collapsible-cards .accordion {
+  margin-top: 1.5rem;
+  border: 0;
+}
+.cs-collapsible-cards .accordion summary {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  padding: 1.75rem 2rem 1.75rem 0;
+}
+.cs-collapsible-cards .accordion__content {
+  padding: 2rem 0.8rem;
+}
+.cs-collapsible-cards .accordion__title {
+  font-weight: 400;
+}
+.cs-collapsible-cards__heading {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}

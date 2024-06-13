@@ -1,0 +1,17 @@
+.multicolumn-team .multicolumn-list {
+  --grid-desktop-horizontal-spacing: 6rem;
+  --grid-desktop-vertical-spacing: 6rem;
+  justify-content: center;
+}
+.multicolumn-team .multicolumn-team__caption {
+  color: rgb(var(--color-button));
+  font-family: var(--font-heading-family);
+  margin-bottom: 1rem;
+}
+.multicolumn-team .multicolumn-card__image-wrapper {
+  border-radius: 40% 0 40% 0;
+  overflow: hidden;
+}
+.multicolumn-team .multicolumn-card__info {
+  padding-bottom: 0;
+}
