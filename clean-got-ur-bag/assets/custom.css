@@ -1,1 +1,91 @@
-
+.announcement-bar__message {
+  font-size: 1.4rem;
+}
+.link,
+.customer a {
+  font-size: 1.5rem;
+}
+.header__heading-link {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 990px) {
+  header.header {
+    grid-template-areas:
+      'heading search icons'
+      'navigation navigation navigation';
+    grid-template-columns: auto auto 1fr;
+    row-gap: 2rem;
+  }
+  .header__inline-menu > .list-menu {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 989px) {
+  .header .search-modal__form {
+    display: none;
+  }
+}
+.search-modal__form .field:after {
+  box-shadow: 0 0 0 var(--inputs-border-width) var(--search-border-color-hsl);
+}
+.header .field:hover.field:after,
+.header .select:hover.select:after,
+.header .select__select:hover.select__select:after,
+.header .customer .field:hover.field:after,
+.header .customer select:hover.select:after,
+.header .localization-form__select:hover.localization-form__select:after {
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) var(--search-border-color-hsl);
+  outline: 0;
+  border-radius: var(--inputs-radius);
+}
+.header .field__label {
+  font-size: 1.5rem;
+  top: calc(1.1rem + var(--inputs-border-width));
+}
+.slideshow-section .button.button--secondary {
+  color: rgb(var(--color-button));
+}
+.slideshow-section .button.button--secondary:after {
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+      rgba(var(--color-button), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  background-color: rgb(var(--color-button-text));
+  z-index: -1;
+}
+.button {
+  text-transform: uppercase;
+  padding: 0 4rem;
+  letter-spacing: 0;
+}
+.featured-collection-section .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 749px) {
+  .featured-collection-section .title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.featured-collection-section .title-container {
+  flex: 1;
+  gap: 2rem;
+}
+.featured-collection-section .title-wrapper .title {
+  margin-top: 0;
+}
+.featured-collection-section .hide-desktop .button {
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 750px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 749px) {
+  .hide-mobile {
+    display: none;
+  }
+}

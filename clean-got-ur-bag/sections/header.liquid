@@ -152,6 +152,9 @@
       gap: 1.5rem;
     }
   }
+  .header {
+    --search-border-color-hsl: hsl({{ section.settings.search_color_scheme.settings.button | color_extract: 'hue' }}, 10%, 90%);
+  }
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -254,6 +257,8 @@
     {%- endif -%}
   {%- endif -%}
 
+  {% render 'search-bar', input_id: 'header-search-bar' %}
+
   {%- liquid
     if section.settings.menu != blank
       if section.settings.menu_type_desktop == 'dropdown'
@@ -322,7 +327,7 @@
       {%- endif -%}
     </div>
 
-    {% render 'header-search', input_id: 'Search-In-Modal' %}
+    {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
 
     <a
       href="#"
@@ -648,6 +653,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "search_color_scheme",
+      "label": "Esquema de colores del buscador",
+      "default": "scheme-6"
     },
     {
       "type": "color_scheme",

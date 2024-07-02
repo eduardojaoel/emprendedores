@@ -99,6 +99,7 @@
             {%- assign placeholder_image = 'image' -%}
             {% render 'card-collection',
               card_collection: block.settings.collection,
+              card_image: block.settings.image,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
               placeholder_image: placeholder_image
@@ -323,6 +324,11 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
         }
       ]
     }
