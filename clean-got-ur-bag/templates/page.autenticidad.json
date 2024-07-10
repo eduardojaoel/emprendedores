@@ -2,13 +2,238 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_BeFtxM": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UB666C": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Por qué confiar en Got Ur Bag?",
+            "heading_size": "h0"
+          }
+        },
+        "text_UA9cKh": {
+          "type": "text",
+          "settings": {
+            "text": "Somos la autoridad en reventa de lujo",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UB666C",
+        "text_UA9cKh"
+      ],
+      "settings": {
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "reduce_to_page_width": false
+      }
+    },
+    "rich_text_6WnFCA": {
+      "type": "rich-text",
+      "blocks": {
+        "text_g4Jdkz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¡Tu tranquilidad y confianza es muy importante para nosotros! Es por ello que además de autenticar las piezas que consignamos, ahora también brindamos la opción de obtener un certificado con garantía de Entrupy.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_g4Jdkz"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 32
+      }
+    },
+    "image_with_text_KwiwKC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ARXkQD": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Cómo funciona ENTRUPY?",
+            "heading_size": "h1"
+          }
+        },
+        "text_mh9zwB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A través de un dispositivo con cámara microscópica, se analizan varios sectores del artículo (cuero, logo, metales y telas), ampliando 260x el tamaño real y detectando detalles imperceptibles al ojo humano. El algoritmo compara la información con una base de datos de más de 30,000 artículos auténticos de la marca, con un éxito de predicción de 98,5%. Luego, el equipo de Entrupy expide un certificado de autenticidad.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_RiXV4L": {
+          "type": "button",
+          "settings": {
+            "button_label": "Etiqueta de botón",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ARXkQD",
+        "text_mh9zwB",
+        "button_RiXV4L"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cs_logo_list_xwg8Gz": {
+      "type": "cs-logo-list",
+      "blocks": {
+        "logo_4hge7w": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_WJQEhV": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_XBxBYP": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_XMHj3w": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_CM9kex": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_DE6ixJ": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_dpJcDt": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_HgjrGb": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_rkmHz4": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_ArcrDk": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_HKRNxg": {
+          "type": "logo",
+          "settings": {
+          }
+        },
+        "logo_DQH34c": {
+          "type": "logo",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "logo_4hge7w",
+        "logo_WJQEhV",
+        "logo_XBxBYP",
+        "logo_XMHj3w",
+        "logo_CM9kex",
+        "logo_DE6ixJ",
+        "logo_dpJcDt",
+        "logo_HgjrGb",
+        "logo_rkmHz4",
+        "logo_ArcrDk",
+        "logo_HKRNxg",
+        "logo_DQH34c"
+      ],
+      "settings": {
+        "heading": "Marcas que autenticamos",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "columns_desktop": 6,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_igKhPg": {
+      "type": "rich-text",
+      "blocks": {
+        "button_tfeYVk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Comprar Pre-amado",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_tfeYVk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_BeFtxM",
+    "rich_text_6WnFCA",
+    "image_with_text_KwiwKC",
+    "cs_logo_list_xwg8Gz",
+    "rich_text_igKhPg"
   ]
 }

@@ -1,0 +1,92 @@
+.cs-cards-grid__image-container .cs-cards-grid__image {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 990px) {
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--1-1 {
+    aspect-ratio: 1/1;
+  }
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--3-2 {
+    aspect-ratio: 3/2;
+  }
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--2-3 {
+    aspect-ratio: 2/3;
+  }
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--4-3 {
+    aspect-ratio: 4/3;
+  }
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--3-4 {
+    aspect-ratio: 3/4;
+  }
+  .cs-cards-grid__image-container.cs-cards-grid__aspect-ratio--16-9 {
+    aspect-ratio: 16/9;
+  }
+}
+@media screen and (max-width: 989px) {
+  .cs-cards-grid .cs-cards-grid__image-container {
+    height: 40rem;
+  }
+}
+.cs-cards-grid__image-container:not(.cs-cards-grid__aspect-ratio--none) .cs-cards-grid__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cs-cards-grid .cs-cards-grid__item {
+  position: relative;
+}
+.cs-cards-grid .cs-cards-grid__image-container {
+  position: relative;
+}
+.cs-cards-grid .cs-cards-grid__image {
+  display: flex;
+}
+.cs-cards-grid .background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cs-cards-grid .card__content {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background-color: transparent;
+  z-index: 2;
+}
+@media screen and (min-width: 750px) {
+  .cs-cards-grid .card__content {
+    padding: 3rem;
+  }
+}
+
+.cs-cards-grid .card__title {
+  margin: 0;
+}
+@media screen and (min-width: 990px) {
+  .cs-cards-grid .card__title {
+    font-size: 3.2rem;
+  }
+}
+
+.cs-cards-grid__description {
+  margin-bottom: 3.5rem;
+}
+.cs-cards-grid .card__content > * {
+  margin: 0;
+}
+.cs-cards-grid .card__content {
+  gap: 2rem;
+}

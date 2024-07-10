@@ -1,0 +1,28 @@
+.cs-logo-list__image-container .cs-logo-list__image {
+  width: 100%;
+  height: auto;
+}
+.cs-logo-list__image-container {
+  display: flex;
+  justify-content: center;
+}
+.cs-logo-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-logo-list__image {
+  max-height: 10rem;
+  object-fit: contain;
+  max-width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 990px) {
+  .cs-logo-list__image {
+    max-height: 6rem;
+    max-width: 90%;
+  }
+  .cs-logo-list__item {
+    margin-bottom: 1rem;
+  }
+}

@@ -2,13 +2,198 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_eYkHX6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Ry9GyV": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Cómo funciona?",
+            "heading_size": "h1"
+          }
+        },
+        "text_4tWzNz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¡Es tiempo de dejar ir tus piezas de diseñador que no usas y darles una segunda oportunidad! Consignar tus piezas es la forma más inteligente y sostenible de comprar. Si estás lista para vender tus productos, sigue los sencillos pasos a continuación:<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ry9GyV",
+        "text_4tWzNz"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_iainnM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DgDjQa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Busca en tu closet",
+            "heading_size": "h1"
+          }
+        },
+        "text_9rCEaG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Revisa en tu closet y separa aquellas piezas de diseñador que ya no usas y están en excelente estado.<br\/><br\/>Llena el formulario de consignación y adjunta fotos con una breve descripción de tus productos. También puedes enviar un correo a info@shopgoturbag.com<br\/><br\/>No olvides adjuntar información suplementaria que apoye la autenticidad de tus productos, tales como: recibo original, tarjeta de autenticidad, lugar y fecha aproximada en que se compró.<br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DgDjQa",
+        "text_9rCEaG"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_E8qMrK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ct66zE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consigna",
+            "heading_size": "h1"
+          }
+        },
+        "text_4CBAKE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una vez recibido el formulario de consignación o el email con las fotos de tus piezas, GUB se comunicará contigo para coordinar una cita para revisar los artículos personalmente e iniciar el proceso de evaluación y verificación de autenticidad de las piezas. <br\/><br\/>Las citas se darán de Lunes a Sábado, en nuestro Showroom (ubicado en San Francisco, Panamá). O si lo prefieres también podemos pasar por las piezas en caso que te encuentres ubicada en el centro de la ciudad. <br\/><br\/>El proceso de verificación de autenticidad puede durar 3  días hábiles. Si vives en el interior del país, puedes enviarnos las piezas por Uno Express.<br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ct66zE",
+        "text_4CBAKE"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_V7qrg9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Axddkm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Recibe Tu Pago",
+            "heading_size": "h1"
+          }
+        },
+        "text_4XfBx3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una vez vendido el producto, te informaremos vía celular o correo, recibirás el pago correspondiente al porcentaje estipulado en el acuerdo de consignación en base al precio de reventa del producto. Realizamos los pagos semanalmente, todos los viernes.<br\/><br\/>Si el producto fue vendido por medio de nuestro plan de abonos, el pago será realizado una vez se completen los pagos en su totalidad.<br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Axddkm",
+        "text_4XfBx3"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_VF8dMk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TY7zAF": {
+          "type": "heading",
+          "settings": {
+            "heading": "¡Nos encantaría trabajar contigo! Llena nuestro formulario de consignación y te contactaremos lo antes posible. ¡No olvides adjuntar fotos de tus productos! <a href=\"mailto:info@shopgoturbag.com\" target=\"_blank\" title=\"mailto:info@shopgoturbag.com\">info@shopgoturbag.com<\/a>",
+            "heading_size": "h2"
+          }
+        },
+        "button_NhqLad": {
+          "type": "button",
+          "settings": {
+            "button_label": "Llenar formulario",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TY7zAF",
+        "button_NhqLad"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2.0rem}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_eYkHX6",
+    "image_with_text_iainnM",
+    "image_with_text_E8qMrK",
+    "image_with_text_V7qrg9",
+    "rich_text_VF8dMk"
   ]
 }

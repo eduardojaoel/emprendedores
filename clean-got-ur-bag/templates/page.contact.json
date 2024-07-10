@@ -8,11 +8,107 @@
         "padding_bottom": 36
       }
     },
+    "cs_contact_info_8wDRVg": {
+      "type": "cs-contact-info",
+      "blocks": {
+        "item_LWhBVR": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "",
+            "content": "¡Déjanos ayudarte a alcanzar tus metas! Completa el formulario de contacto y nos pondremos en contacto contigo lo antes posible.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "icon": "none",
+            "social_icons": false
+          }
+        },
+        "item_3zibh3": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Correo electrónico",
+            "content": "",
+            "button_label": "email@email.com",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "mail",
+            "social_icons": false
+          }
+        },
+        "item_Y68U7N": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Teléfono",
+            "content": "",
+            "button_label": "+507 6XXX-XXXX",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "phone",
+            "social_icons": false
+          }
+        },
+        "item_pMLAQY": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "Ubicación",
+            "content": "",
+            "button_label": "Calle",
+            "button_link": "",
+            "button_style": "tertiary",
+            "icon": "pin",
+            "social_icons": false
+          }
+        },
+        "item_aCA4cf": {
+          "type": "item",
+          "settings": {
+            "column": "first",
+            "title": "",
+            "content": "O envíanos un mensaje por WhatsApp.",
+            "button_label": "Whatsapp",
+            "button_link": "",
+            "button_style": "secondary",
+            "icon": "whatsapp",
+            "social_icons": false
+          }
+        }
+      },
+      "block_order": [
+        "item_LWhBVR",
+        "item_3zibh3",
+        "item_Y68U7N",
+        "item_pMLAQY",
+        "item_aCA4cf"
+      ],
+      "settings": {
+        "heading": "Hablemos",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "desktop_columns": "1",
+        "location_title": "",
+        "location_content": "",
+        "location_image": "shopify:\/\/shop_images\/three-four-horizontal.png",
+        "image_aspect_ratio": "4-3",
+        "location_iframe": "",
+        "location_button_label": "Visitar Ahora",
+        "location_button_link": "",
+        "location_button_style": "primary",
+        "location_icon": "map",
+        "location_social_icons": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
         "heading": "Contáctanos",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 36
@@ -21,6 +117,7 @@
   },
   "order": [
     "main",
+    "cs_contact_info_8wDRVg",
     "form"
   ]
 }

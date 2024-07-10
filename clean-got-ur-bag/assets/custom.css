@@ -119,3 +119,125 @@
     align-items: flex-end;
   }
 }
+
+.images-with-text .image-with-text__media-item {
+  position: relative;
+  height: 50rem;
+  margin: 2.5rem 0;
+}
+
+.images-with-text .image-with-text__media {
+  object-fit: cover;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+.images-with-text .media-first {
+  top: 2.5rem;
+  left: 2.5rem;
+}
+.images-with-text .media-second {
+  top: -2.5rem;
+  right: 2.5rem;
+}
+@media screen and (max-width: 749px) {
+  .images-with-text .image-with-text__media-item {
+    height: 40rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .images-with-text .image-with-text__media-item {
+    height: 30rem;
+  }
+}
+
+.footer .list-social {
+  justify-content: center;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 750px) {
+  .footer .list-social {
+    justify-content: flex-start;
+  }
+  .footer .list-social li:first-child a {
+    padding-left: 0;
+  }
+}
+.footer .list-social .icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  color: rgb(var(--color-button));
+}
+.footer .footer-block__heading {
+  font-size: 2rem;
+}
+.footer-block__newsletter .footer-block__heading {
+  font-family: var(--body-family-font);
+  font-size: 1.6rem;
+}
+.footer .footer-block__newsletter {
+  margin-top: 2rem;
+}
+.footer .newsletter-form__button,
+.footer .newsletter-form__button:not(:focus-visible):not(.focused) {
+  background-color: rgb(var(--color-button));
+}
+
+.footer .newsletter-form__button svg {
+  color: rgb(var(--color-button-text));
+}
+footer.footer {
+  border-top: 0;
+  padding-bottom: 0;
+}
+.footer .footer__content-bottom {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer-content-bottom-wrapper {
+  background-color: rgb(var(--color-button));
+}
+.footer .footer__copyright {
+  margin-top: 0;
+}
+@media screen and (min-width: 750px) {
+  .footer .footer__payment {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 749px) {
+  .footer .list-payment {
+    padding-top: 2rem;
+  }
+}
+.certification-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.certification-container a {
+  color: rgb(var(--color-button));
+  text-decoration: none;
+}
+.certification-icon {
+  display: flex;
+}
+.certification-icon svg {
+  width: 4.5rem;
+  min-width: 4.5rem;
+  height: 4.5rem;
+  color: #a4959a;
+}
+.certification-text__title {
+  margin: 0;
+}
+.certification-text__description {
+  margin: 0;
+  margin-top: 1rem;
+}
+.cs-contact-info__item-button.button--tertiary {
+  text-transform: none;
+}
+.cs-contact-info__image-container {
+  width: 100%;
+}

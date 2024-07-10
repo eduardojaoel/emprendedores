@@ -135,7 +135,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -193,12 +193,196 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "images_with_text_3pQ3FA": {
+      "type": "images-with-text",
+      "blocks": {
+        "heading_X44PUx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consignar con nosotras",
+            "heading_size": "h1"
+          }
+        },
+        "text_A4mkta": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tenemos 7 años en el mercado de segunda mano, iniciamos en el 2017 y seguimos ofreciendo un servicio personalizado actualmente, cuando vengas a la tienda te vamos atender nosotras y nos encargaremos de explicarte el proceso y asesorarte en todo el proceso de venta de tus piezas. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_UPkb69": {
+          "type": "button",
+          "settings": {
+            "button_label": "Como consignar",
+            "button_link": "shopify:\/\/pages\/como-consignar",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_X44PUx",
+        "text_A4mkta",
+        "button_UPkb69"
+      ],
+      "settings": {
+        "height": "adapt",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_xk6cpY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Kng3Ud": {
+          "type": "heading",
+          "settings": {
+            "heading": "Visítanos en Persona",
+            "heading_size": "h0"
+          }
+        },
+        "text_eFNjCc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Compre, venda e intercambie en Gor Ur Bag<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_wnyXDQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Aprende más",
+            "button_link": "shopify:\/\/pages\/contactenos",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_Kng3Ud",
+        "text_eFNjCc",
+        "button_wnyXDQ"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "image_banner_WgDNYX": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_THVEhk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plan de Abonos",
+            "heading_size": "h0"
+          }
+        },
+        "text_dzeGaD": {
+          "type": "text",
+          "settings": {
+            "text": "Ofrece a los clientes información sobre las imágenes del banner o el contenido de la plantilla.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_btDY66": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Más información",
+            "button_link_1": "shopify:\/\/pages\/plan-de-abonos",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_THVEhk",
+        "text_dzeGaD",
+        "buttons_btDY66"
+      ],
+      "settings": {
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "reduce_to_page_width": true
+      }
+    },
+    "cs_cards_grid_WNRn46": {
+      "type": "cs-cards-grid",
+      "blocks": {
+        "card_VCAUQf": {
+          "type": "card",
+          "settings": {
+            "title": "Colecciones principales",
+            "subtitle": "Share information about your brand.",
+            "button_label": "Ver colecciones",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false
+          }
+        },
+        "card_Ljbw4Y": {
+          "type": "card",
+          "settings": {
+            "title": "Últimas tendencias",
+            "subtitle": "Share information about your brand.",
+            "button_label": "Descubrir ahora",
+            "button_link": "shopify:\/\/collections\/lo-nuevo",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "card_VCAUQf",
+        "card_Ljbw4Y"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "description": "",
+        "image_aspect_ratio": "3-2",
+        "columns_desktop": 2,
+        "background_overlay": 20,
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow_JR7gtK",
     "collection_list_i4ycgg",
     "featured_collection_fMCEci",
-    "image_with_text_logo_CbTwVz"
+    "image_with_text_logo_CbTwVz",
+    "images_with_text_3pQ3FA",
+    "image_with_text_xk6cpY",
+    "image_banner_WgDNYX",
+    "cs_cards_grid_WNRn46"
   ]
 }
