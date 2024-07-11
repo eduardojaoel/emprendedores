@@ -1,0 +1,41 @@
+.counter .multicolumn-card__info {
+  position: relative;
+}
+.counter .multicolumn-card__info h3 {
+  font-size: 6rem;
+  color: rgba(var(--color-button), 0.5);
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+@media screen and (max-width: 749px) {
+  .counter .multicolumn-card__info h3 {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .counter .multicolumn-card__info h3 {
+    font-size: 7.5rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .background-none .multicolumn-list .multicolumn-card__info,
+  .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0;
+  }
+}
+.counter .multicolumn-card__info .rte {
+  margin: 0;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(var(--color-foreground), 0.7);
+}

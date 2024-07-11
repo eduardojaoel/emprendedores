@@ -194,6 +194,55 @@
         "padding_bottom": 36
       }
     },
+    "counter_4yRAJW": {
+      "type": "counter",
+      "blocks": {
+        "column_tVGnRC": {
+          "type": "column",
+          "settings": {
+            "title": "+2000",
+            "text": "<p>Piezas han encontrado un nuevo hogar<\/p>"
+          }
+        },
+        "column_m4a4jn": {
+          "type": "column",
+          "settings": {
+            "title": "+540",
+            "text": "<p>Clientes han confiado en nosotras para vender sus piezas<\/p>"
+          }
+        },
+        "column_EBqazM": {
+          "type": "column",
+          "settings": {
+            "title": "+$550K",
+            "text": "<p>Monetizados por nuestras clientas de piezas guardadas en su closet<\/p>"
+          }
+        },
+        "column_wTYTwA": {
+          "type": "column",
+          "settings": {
+            "title": "+7",
+            "text": "<p>Años haciendo lo que nos encanta<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_tVGnRC",
+        "column_m4a4jn",
+        "column_EBqazM",
+        "column_wTYTwA"
+      ],
+      "settings": {
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-86575643-9de2-4e5c-82e5-58ff70613ac9",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "images_with_text_3pQ3FA": {
       "type": "images-with-text",
       "blocks": {
@@ -380,6 +429,7 @@
     "collection_list_i4ycgg",
     "featured_collection_fMCEci",
     "image_with_text_logo_CbTwVz",
+    "counter_4yRAJW",
     "images_with_text_3pQ3FA",
     "image_with_text_xk6cpY",
     "image_banner_WgDNYX",

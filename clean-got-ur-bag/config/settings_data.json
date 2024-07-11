@@ -2,6 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/LOGO-1_GOT_UR_BAG.svg",
     "logo_width": 150,
+    "favicon": "shopify:\/\/shop_images\/favicon-gub.jpg",
     "type_header_font": "playfair_display_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
