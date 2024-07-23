@@ -1,0 +1,31 @@
+.cs-product__image-container .cs-product__image {
+  width: 100%;
+  height: auto;
+}
+.cs-product__image-container.cs-product__aspect-ratio--1-1 {
+  aspect-ratio: 1/1;
+}
+.cs-product__image-container.cs-product__aspect-ratio--3-2 {
+  aspect-ratio: 3/2;
+}
+.cs-product__image-container.cs-product__aspect-ratio--2-3 {
+  aspect-ratio: 2/3;
+}
+.cs-product__image-container.cs-product__aspect-ratio--4-3 {
+  aspect-ratio: 4/3;
+}
+.cs-product__image-container.cs-product__aspect-ratio--3-4 {
+  aspect-ratio: 3/4;
+}
+.cs-product__image-container.cs-product__aspect-ratio--16-9 {
+  aspect-ratio: 16/9;
+}
+.cs-product__image-container .cs-product__image-placeholder {
+  background-color: #f7f7f7;
+  fill: #aaa;
+}
+.cs-product__image-container:not(.cs-product__aspect-ratio--none) .cs-product__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
